@@ -19,4 +19,6 @@ Speed -         | Increment selected mode down
 
 So that the cruise function is still usable, when cruise control is activated, the speed adjustment buttons will not cause any changes to the Whelen unit's selected operating mode.
 
+![alt text](/images/Volvo CANtrol/powered seat CAN.jpg)
+
 After looking through the Volvo S60/S80 2003 wiring diagram, I found a convenient CAN bus access point under the driver's seat. Volvo's color code for the CAN bus is White = CAN H, Green = CAN L. I tapped into the bus entering the connector for the power seat module with positaps, and began looking for packets corresponding to buttons on the steering wheel.
