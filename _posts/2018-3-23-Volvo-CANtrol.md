@@ -21,3 +21,53 @@ So that the cruise function is still usable, when cruise control is activated, t
 ![alt text](/images/Volvo CANtrol/powered seat CAN.png)
 
 After looking through the Volvo S60/S80 2003 wiring diagram, I found a convenient CAN bus access point under the driver's seat. Volvo's color code for the CAN bus is White = CAN H, Green = CAN L. I tapped into the bus entering the connector for the power seat module with positaps, and began looking for packets corresponding to buttons on the steering wheel.
+
+![alt text](/images/Volvo CANtrol/packet table.png)
+
+After messing around for quite a while, I found the ID for CAN packets containing information about the steering wheel's buttons. There are a number of other outputs for combinations of buttons, but this data is more than enough for what I want to do.
+
+It was only after wasting a lot of time finding and decoding these messages that I saw a post on Hacking Volvo that mentioned CAN messages relating to steering wheel controls.... Oh well. There's a lot more about decoding and replicating packet data on the blog. Imgur isn't agreeing with the link for some reason; you'll have to google "hacking volvo blogspot".
+
+Olaf's 2002 S80's CAN packets seem to have the same data formatting as my 2003 S60, but CAN IDs are slightly different (comparing what he's posted on his blog and what I've found experimentally). That being said, knowing what data relating to the steering wheel looks like should at least help anyone trying to sniff the CAN bus on their car.
+
+![alt text](/images/Volvo CANtrol/breadboard.jpg)
+
+Prototype controller (right half of breadboard) used for decoding CAN packets and testing control functions.
+
+![alt text](/images/Volvo CANtrol/perfboard.jpg)
+
+Controller spread out between two perf-board assemblies. The left board has the Arduino Pro Mini, a MCP2515 CAN module, and a voltage regulator. The right board as a few transistors and a 74LS138 (binary decoder) for controlling the Whelen unit.
+
+![alt text](/images/Volvo CANtrol/internal wiring.jpg)
+
+A ribbon cable will connect the siren to the controller unit. Signals such as the MAN, HORN, and SHDN lines will go to the three transistors to simulate contact closures. Seven lines from the rotary mode select switch will go to the 74LS138 to select the unit's operating mode. The rotary switch usually pulls one of the seven lines low (all lines have a pullup to 5v), which goes to a microcontroller. Since the 74LS138 has active low outputs, Y0 through Y6 can be directly connected to the seven mode select lines.
+
+
+![alt text](/images/Volvo CANtrol/testing.jpg)
+
+The ribbon cable installed, testing with the controller.
+
+
+![alt text](/images/Volvo CANtrol/testing 1.jpg)
+
+A closeup of the two controller boards.
+
+![alt text](/images/Volvo CANtrol/install.jpg)
+
+Testing the buttons/CAN/controller/Whelen interface in my car before installing everything.
+
+![alt text](/images/Volvo CANtrol/install 1.jpg)
+
+The controller installed in a small plastic box.
+
+![alt text](/images/Volvo CANtrol/install 2.jpg)
+
+The controller tapped to the side of the Whelen unit, ready for install.
+
+![alt text](/images/Volvo CANtrol/under seat.jpg)
+
+The Whelen unit sitting under the driver's seat. You'll notice a factory wire harness which would connect to powered seats. At the bottom of the photo (half obscured by the slide release handle) is the connector I used to tap into the car's CAN bus.
+
+![alt text](/images/Volvo CANtrol/under seat 1.jpg)
+
+The installed Whelen and CANtrol (this is what Whelen calls their CAN interfacing stuff) units with the PA (Public Address) hand mic hanging from a holder in the driver's footwell. The seat has been lifted and moved back for this photo; when the seat's in the position I drive in, the mic sits approximately under my knee where it doesn't bother me at all.
