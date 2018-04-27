@@ -26,7 +26,7 @@ After looking through the Volvo S60/S80 2003 wiring diagram, I found a convenien
 
 After messing around for quite a while, I found the ID for CAN packets containing information about the steering wheel's buttons. There are a number of other outputs for combinations of buttons, but this data is more than enough for what I want to do.
 
-It was only after wasting a lot of time finding and decoding these messages that I saw a post on Hacking Volvo that mentioned CAN messages relating to steering wheel controls.... Oh well. There's a lot more about decoding and replicating packet data on the blog. Imgur isn't agreeing with the link for some reason; you'll have to google "hacking volvo blogspot".
+It was only after wasting a lot of time finding and decoding these messages that I saw a post on Hacking Volvo that mentioned CAN messages relating to steering wheel controls.... Oh well. There's a lot more about decoding and replicating packet data on the blog. Check it out at the [Hacking Volvo Blog](http://hackingvolvo.blogspot.com/ "Hacking Volvo").
 
 Olaf's 2002 S80's CAN packets seem to have the same data formatting as my 2003 S60, but CAN IDs are slightly different (comparing what he's posted on his blog and what I've found experimentally). That being said, knowing what data relating to the steering wheel looks like should at least help anyone trying to sniff the CAN bus on their car.
 
