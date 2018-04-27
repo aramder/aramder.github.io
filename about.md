@@ -4,11 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hi! I'm Aram Dergevorkian.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I'm an undergraduate electrical engineering student at Cal Poly Pomona.
 
 ### Contact me
 
