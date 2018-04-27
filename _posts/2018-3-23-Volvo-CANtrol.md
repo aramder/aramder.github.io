@@ -10,10 +10,12 @@ I had looked into remote mounting for the unit before, but I couldn't come up wi
 
 I'm not one to use cruise control, so I decided to use the cruise control buttons on the steering wheel for this project. I ended up using the following buttons:
 
-*Cruise restart --> Whelen HORN button
-*Cruise hold --> Whelen MAN button
-*Speed + --> Increment selected mode up
-*Speed - --> Increment selected mode down
+Button          | Function
+----------------|-------------
+Cruise restart  | Whelen HORN button
+Cruise hold     | Whelen MAN button
+Speed +         | Increment selected mode up
+Speed -         | Increment selected mode down
 
 So that the cruise function is still usable, when cruise control is activated, the speed adjustment buttons will not cause any changes to the Whelen unit's selected operating mode.
 
