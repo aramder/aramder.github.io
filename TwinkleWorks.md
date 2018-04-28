@@ -19,4 +19,4 @@ Twinkleworks also produces several LED drivers. Currently manufactured drivers i
 
 TwinkleWorks is currently developing a RGBW strobe fixture.
 
-TwinkleWorks is currently in the process of developing a new controller, refered to as the ED128 or EDRGB. The controller will have 128 individual LED drivers, each capable of supplying up to ~34v @ 700mA.
+TwinkleWorks is currently in the process of developing a new controller, refered to as the ED128 or EDRGB. The controller will be capable of driving 128 individual, or 32 RGBW, strobes.
