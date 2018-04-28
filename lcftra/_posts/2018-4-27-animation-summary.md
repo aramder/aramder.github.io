@@ -5,7 +5,7 @@ title: Animation System Revamp Summary
 ---
 ![A picture of the original animation system](/images/lcftra/original system.jpg)
 
-As of 2018, the La Cañada Fltintridge rose parade float's animation system is nearly 20 years old. As the system continues to age, components that are no longer manufactured are slowly beginning to fail. Starting in 2017, I began work on a replacement.<!--more-->
+As of 2018, the La Cañada Flintridge rose parade float's animation system is nearly 20 years old. As the system continues to age, components that are no longer manufactured are slowly beginning to fail. Starting in 2017, I began work on a replacement.<!--more-->
 
 ![A block diagram of the original animation system closed loop feedback control system](/images/lcftra/original system diagram.png )
 
@@ -13,15 +13,15 @@ The original system is based of off Rexroth hydraulic control systems interfaced
 
 ![A block diagram of the new system's main controller](/images/lcftra/control box diagram.png)
 
-The system has been redesigned to operate using the same Gilderfluke Sd-50/40 for overall animation show control, but there are rather drastic changes to the user interface and the way control tasks are divided. Unlike the previous animation system, the unit is seperated between 5 boxes, a single main control unit, and 4 seperate "valve bank modules". The main controller is kept in the animator's compartment on the float, and is linked to each of the valve bank modules which can be mounted wherever they're needed on the float. 
+The system has been redesigned to operate using the same Gilderfluke Sd-50/40 for overall animation show control, but there are rather drastic changes to the user interface and the way control tasks are divided. Unlike the previous animation system, the unit is separated between 5 boxes, a single main control unit, and 4 separate "valve bank modules". The main controller is kept in the animator's compartment on the float, and is linked to each of the valve bank modules which can be mounted wherever they're needed on the float. 
 
 ![A block diagram of the new system's individual valve bank controllers](/images/lcftra/valve module diagram.png)
 
-The new animation system functions in a somewhat similar manner to the old one, though responsibilities are shared slightly differenctly between the Rexroth and Gilderfluke systems. In this system, closed loop control functions are carried out using a Gilderfluke Br-EFB; the Rexroth valve driver modules only serve to amplify the control signals from the Br-EFB to drive our Rexroth proportional hydraulic valves.
+The new animation system functions in a somewhat similar manner to the old one, though responsibilities are shared slightly differently between the Rexroth and Gilderfluke systems. In this system, closed loop control functions are carried out using a Gilderfluke Br-EFB; the Rexroth valve driver modules only serve to amplify the control signals from the Br-EFB to drive our Rexroth proportional hydraulic valves.
 
 ![A picture of the main controller's interfacing PCBA](/images/lcftra/controller PCBA.jpg)
 
-Another significant update to the animation system is the user interface. Instead of a box with quite literally over a hundered switches, the system will be controlled by a computer that interfaces with hardware through a custom designed PCB.
+Another significant update to the animation system is the user interface. Instead of a box with quite literally over a hundred switches, the system will be controlled by a computer that interfaces with hardware through a custom designed PCB.
 
 ![A picture of a large touchscreen with a custom GUI](/images/lcftra/controller GUI.jpg)
 
