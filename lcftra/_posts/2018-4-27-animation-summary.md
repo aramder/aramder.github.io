@@ -3,7 +3,7 @@ layout: post
 category: lcftra
 title: Animation System Summary
 ---
-![3D mockup of a PCBA](/images/Sytrol/Sytrol Controller 3D.png)
+![A picture of the original animation system](/images/lcftra/original system.jpg)
 
 Following my previous project involving accessing my car's CAN bus, I was interested in expanding on the idea by making a custom controller that can interface with a vehicle via the CAN bus to control various accesories.<!--more-->
 
