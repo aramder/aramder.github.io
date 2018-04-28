@@ -4,6 +4,6 @@ title: TwinkleWorks
 permalink: /TwinkleWorks/
 ---
 
-### TwinkleWorks, blah blah
+### TwinkleWorks LED drivers and Fixtures
 
 <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a>
