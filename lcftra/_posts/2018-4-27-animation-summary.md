@@ -1,6 +1,6 @@
 ---
 layout: post
-category: LCFTRA
+category: lcftra
 title: Animation System Summary
 ---
 ![3D mockup of a PCBA](/images/Sytrol/Sytrol Controller 3D.png)
