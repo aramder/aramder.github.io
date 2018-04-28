@@ -12,8 +12,8 @@ TwinkleWorks is a subsidiary of <a href="http://www.aescreative.com/" target="_b
 TwinkleWorks has several lines of LED strobe fixtures in various sizes and colors, made for a variety of scenic lighting applications.
 
 Twinkleworks also produces several LED drivers. Currently manufactured drivers include:
-* TwinkleWorks ED32 - 32 channel DMX controlled rack mount LED driver
-* TwinkleWorks LEDPS - 24 channel random sparkle LED driver
+* ED32 - 32 channel DMX controlled rack mount LED driver
+* LEDPS - 24 channel random sparkle LED driver
 
 ### Current Developments
 
