@@ -1,5 +1,6 @@
 ---
 layout: post
+category: projects
 title: Volvo/Whelen CANtrol
 ---
 ![Looking down into my footwell with equipment uncomfortably close to my leg](/images/Volvo CANtrol/footwell.jpg)
