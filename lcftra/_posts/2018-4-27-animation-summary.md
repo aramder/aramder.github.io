@@ -3,8 +3,8 @@ layout: post
 category: lcftra
 title: Animation System Revamp Summary
 ---
-<!---- ![A picture of the original animation system](/images/lcftra/original system.jpg) --->
- <a href="{{ site.baseurl }}/images/lcftra/original system.jpg"><img src="{{ site.baseurl }}/images/lcftra/original system.jpg" title="Open image"/></a> 
+![A picture of the original animation system](/images/lcftra/original system.jpg)
+<!----  <a href="{{ site.baseurl }}/images/lcftra/original system.jpg"><img src="{{ site.baseurl }}/images/lcftra/original system.jpg" title="Open image"/></a> --->
 
 As of 2018, the La Cañada Flintridge rose parade float's animation system is nearly 20 years old. As the system continues to age, components that are no longer manufactured are slowly beginning to fail. Starting in 2017, I began work on a replacement.<!--more-->
 
