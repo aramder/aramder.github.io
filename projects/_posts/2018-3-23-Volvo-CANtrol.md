@@ -3,7 +3,7 @@ layout: post
 category: projects
 title: Volvo/Whelen CANtrol
 ---
-![Looking down into my footwell with equipment uncomfortably close to my leg](/images/Volvo CANtrol/footwell.jpg)
+<img class="shrunk" src="/images/Volvo CANtrol/footwell.jpg" alt="Looking down into my footwell with equipment uncomfortably close to my leg">
 
 Have you ever had a piece of equipment that really REALLY doesn't belong in your car, but you want to install it somehow? Well, I had this problem with my Whelen... electric airhorn....<!--more--> I initially installed it above my leg in the footwell, since that's the only place I could fit the unit. Now, you're probably saying "won't you obliterate your leg in an accident?", and the answer to that is yes, yes I will. So a solution is needed for remote mounting and control!
 
