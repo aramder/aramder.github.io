@@ -10,4 +10,4 @@ I'm an undergraduate electrical engineering student at Cal Poly Pomona.
 
 I work part time at <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a> developing TwinkleWorks LED lighting products.
 
-I also volunteer with the <a href="https://lcftra.org/home.php" target="_blank">La Cañada Flintridge Tournament of Roses Association</a> where I'm responsible for electronics and the developoment of our new hydraulic animation system.
+I also volunteer with the <a href="https://lcftra.org/home.php" target="_blank">La Cañada Flintridge Tournament of Roses Association</a> where I'm responsible for electronics and the developoment of our new animation system.
