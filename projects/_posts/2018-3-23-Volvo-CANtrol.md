@@ -29,7 +29,7 @@ After messing around for quite a while, I found the ID for CAN packets containin
 
 It was only after wasting a lot of time finding and decoding these messages that I saw a post on Hacking Volvo that mentioned CAN messages relating to steering wheel controls.... Oh well. There's a lot more about decoding and replicating packet data on the blog. Check it out at the <a href="http://hackingvolvo.blogspot.com" target="_blank"> Hacking Volvo Blog</a>.
 
-Olaf's 2002 S80's CAN packets seem to have the same data formatting as my 2003 S60, but CAN IDs are slightly different (comparing what he's posted on his blog and what I've found experimentally). That being said, knowing what data relating to the steering wheel looks like should at least help anyone trying to sniff the CAN bus on their car.
+Olaf's 2002 S80's CAN packets seem to have the same packet formatting as my 2003 S60, but CAN IDs are slightly different (comparing what he's posted on his blog and what I've found experimentally). That being said, knowing what data relating to the steering wheel looks like should at least help anyone trying to sniff the CAN bus on their car.
 
 ![Testing electronics on a breadboard](/images/Volvo CANtrol/breadboard.jpg)
 
@@ -41,7 +41,7 @@ Controller spread out between two perf-board assemblies. The left board has the 
 
 ![Showing the internal wiring within the Whelen unit](/images/Volvo CANtrol/internal wiring.jpg)
 
-A ribbon cable will connect the siren to the controller unit. Signals such as the MAN, HORN, and SHDN lines will go to the three transistors to simulate contact closures. Seven lines from the rotary mode select switch will go to the 74LS138 to select the unit's operating mode. The rotary switch usually pulls one of the seven lines low (all lines have a pullup to 5v), which goes to a microcontroller. Since the 74LS138 has active low outputs, Y0 through Y6 can be directly connected to the seven mode select lines.
+A ribbon cable connects the Whelen and controller units. Signals such as the MAN, HORN, and SHDN lines will go to the three transistors to simulate contact closures. Seven lines from the rotary mode select switch will go to the 74LS138 to select the unit's operating mode. The rotary switch usually pulls one of the seven lines low (all lines have a pullup to 5v), which goes to a microcontroller. Since the 74LS138 has active low outputs, the first seven outputs can be directly connected to the seven mode select lines.
 
 
 ![Testing the Whelen unit and controller on a testbench](/images/Volvo CANtrol/testing.jpg)
@@ -57,7 +57,7 @@ A closeup of the two controller boards.
 
 Testing the buttons/CAN/controller/Whelen interface in my car before installing everything.
 
-![A clseup of the controller in a small plastic enclosure](/images/Volvo CANtrol/install 1.jpg)
+![A closeup of the controller in a small plastic enclosure](/images/Volvo CANtrol/install 1.jpg)
 
 The controller installed in a small plastic box.
 
@@ -71,4 +71,4 @@ The Whelen unit sitting under the driver's seat. You'll notice a factory wire ha
 
 ![The whelen unit under the driver's seat with a handheld microphone on the side of the footwell](/images/Volvo CANtrol/under seat 1.jpg)
 
-The installed Whelen and CANtrol (this is what Whelen calls their CAN interfacing stuff) units with the PA (Public Address) hand mic hanging from a holder in the driver's footwell. The seat has been lifted and moved back for this photo; when the seat's in the position I drive in, the mic sits approximately under my knee where it doesn't bother me at all.
+The installed Whelen and CANtrol (this is what Whelen calls their CAN interfacing stuff) units with the PA (Public Address) hand mic hanging from a holder in the driver's footwell. When the seat's in the position I drive in, the mic sits approximately under my knee where it doesn't bother me at all.
