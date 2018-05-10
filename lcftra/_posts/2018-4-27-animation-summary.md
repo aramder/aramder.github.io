@@ -10,11 +10,11 @@ As of 2018, the La Cañada Flintridge rose parade float's animation system is ne
 
 ![A block diagram of the original animation system closed loop feedback control system](/images/lcftra/original system diagram.png )
 
-The original system is based of off Rexroth hydraulic control systems interfaced with Gilderfluke show controls. The Gilderfluke Sd-50/40 is responsible for providing synchronized position data as well as audio for the float's sound system. The position data is sent to a Rexroth closed loop control module which then actuates hydraulic valves to move various animation mechanisms on the float.
+The original system is based of off Rexroth hydraulic control systems interfaced with Gilderfluke show controls. The Gilderfluke Sd-50/40 is responsible for providing synchronized position data for the float's animation elements, as well as audio for the float's sound system. The position data is sent to a Rexroth closed loop control module which then actuates hydraulic valves to move various animation mechanisms on the float.
 
 ![A block diagram of the new system's main controller](/images/lcftra/control box diagram.png)
 
-The system has been redesigned to operate using the same Gilderfluke Sd-50/40 for overall animation show control, but there are rather drastic changes to the user interface and the way control tasks are divided. Unlike the previous animation system, the unit is separated between 5 boxes, a single main control unit, and 4 separate "valve bank modules". The main controller is kept in the animator's compartment on the float, and is linked to each of the valve bank modules which can be mounted wherever they're needed on the float. 
+The system has been redesigned to operate using the same Gilderfluke Sd-50/40 for overall animation show control, but there are rather drastic changes to the user interface and the way control tasks are divided. Unlike the previous animation system, the animation system is separated between 5 boxes, a single main control unit, and 4 separate "valve bank modules". The main controller is kept in the animator's compartment on the float, and is linked to each of the valve bank modules which can be mounted wherever they're needed on the float. 
 
 ![A block diagram of the new system's individual valve bank controllers](/images/lcftra/valve module diagram.png)
 
