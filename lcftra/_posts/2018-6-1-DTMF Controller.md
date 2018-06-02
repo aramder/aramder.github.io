@@ -17,4 +17,6 @@ The perfboard assembly was made as a temporary solution, but as it happens with 
 
 The new revision of the controller now includes an audio amplifier (the Arduino needs a rather large signal to decode the DTMF properly) and a right-angle d-sub connector (J3 on the left of the PCB).
 
+![3D mockup of a PCBA](/images/lcftra/DTMF controller/DTMF controller 3D rear.png)
+
 This PCB is in the final stages of development.
