@@ -31,7 +31,7 @@ It was only after wasting a lot of time finding and decoding these messages that
 
 Olaf's 2002 S80's CAN packets seem to have the same packet formatting as my 2003 S60, but CAN IDs are slightly different (comparing what he's posted on his blog and what I've found experimentally). That being said, knowing what data relating to the steering wheel looks like should at least help anyone trying to sniff the CAN bus on their car.
 
-![Testing electronics on a breadboard](/images/Volvo CANtrol/breadboard.jpg)
+<img class="shrunk" src="/images/Volvo CANtrol/breadboard.jpg" alt="Testing electronics on a breadboard">
 
 Prototype controller (right half of breadboard) used for decoding CAN packets and testing control functions.
 
@@ -39,7 +39,7 @@ Prototype controller (right half of breadboard) used for decoding CAN packets an
 
 Controller spread out between two perf-board assemblies. The left board has the Arduino Pro Mini, a MCP2515 CAN module, and a voltage regulator. The right board as a few transistors and a 74LS138 (binary decoder) for controlling the Whelen unit.
 
-![Showing the internal wiring within the Whelen unit](/images/Volvo CANtrol/internal wiring.jpg)
+<img class="shrunk" src="/images/Volvo CANtrol/internal wiring.jpg" alt="Showing the internal wiring within the Whelen unit">
 
 A ribbon cable connects the Whelen and controller units. Signals such as the MAN, HORN, and SHDN lines will go to the three transistors to simulate contact closures. Seven lines from the rotary mode select switch will go to the 74LS138 to select the unit's operating mode. The rotary switch usually pulls one of the seven lines low (all lines have a pullup to 5v), which goes to a microcontroller. Since the 74LS138 has active low outputs, the first seven outputs can be directly connected to the seven mode select lines.
 
@@ -57,7 +57,7 @@ A closeup of the two controller boards.
 
 Testing the buttons/CAN/controller/Whelen interface in my car before installing everything.
 
-![A closeup of the controller in a small plastic enclosure](/images/Volvo CANtrol/install 1.jpg)
+<img class="shrunk" src="/images/Volvo CANtrol/install 1.jpg" alt="A closeup of the controller in a small plastic enclosure">
 
 The controller installed in a small plastic box.
 
