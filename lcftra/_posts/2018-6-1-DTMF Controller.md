@@ -19,4 +19,4 @@ The new revision of the controller now includes an audio amplifier (the Arduino 
 
 ![3D mockup of a PCBA](/images/lcftra/DTMF controller/DTMF controller 3D rear.png)
 
-This PCB is in the final stages of development.
+This PCB has been sent out to be manufactured. I'll begin populating the board in early July.
