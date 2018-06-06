@@ -71,4 +71,4 @@ The Whelen unit sitting under the driver's seat. You'll notice a factory wire ha
 
 ![The whelen unit under the driver's seat with a handheld microphone on the side of the footwell](/images/Volvo CANtrol/under seat 1.jpg)
 
-The installed Whelen and CANtrol (this is what Whelen calls their CAN interfacing stuff) units with the PA (Public Address) hand mic hanging from a holder in the driver's footwell. When the seat's in the position I drive in, the mic sits approximately under my knee where it doesn't bother me at all.
+The installed Whelen and homemade CANtrol (this is what Whelen calls their CAN bus interfacing equipment) units with the PA (Public Address) hand mic hanging from a holder in the driver's footwell. When the seat's in the position I drive in, the mic sits approximately under my knee where it doesn't bother me at all.
