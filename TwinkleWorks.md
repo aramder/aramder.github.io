@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TwinkleWorks
+title:
 permalink: /TwinkleWorks/
 ---
 ![TwinkleWorks logo](/images/TwinkleWorks/twinkleworks w background.png)
