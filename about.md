@@ -8,7 +8,7 @@ permalink: /about/
 
 I'm an undergraduate electrical engineering student at Cal Poly Pomona.
 
-For the last 3 summers I've been an intern at the <a href="https://www.jpl.nasa.gov/" target="_blank">Jet Propulsion Laboratory</a>, working in the Microwave Remote Sensing Instruments group. For the last two summers I've been working on low power instrument controllers for CubeSats/SmallSats using low power radhard ARMs and FPGAs.
+For the last 3 summers I've been an intern at the <a href="https://www.jpl.nasa.gov/" target="_blank">Jet Propulsion Laboratory</a>, working in the Microwave Remote Sensing Instruments group. For the last two summers I've been working on low power instrument controllers for CubeSats/SmallSats using radhard ARMs and FPGAs.
 
 I work part time at <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a> developing TwinkleWorks LED lighting products.
 
