@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-### Hello! I'm Aram Dergevorkian.
+### Hello! I'm Aram Dergevorkian
 
 I'm an undergraduate electrical engineering student at Cal Poly Pomona.
 
