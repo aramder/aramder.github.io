@@ -22,4 +22,4 @@ The new revision of the controller now includes an audio amplifier (the Arduino 
 ![3D mockup of a PCBA](/images/lcftra/DTMF controller/DTMF controller 3D rear.png)
 
 
-The main PCB has been assembled and programming is complete(July). Now I just have to install the controller in the intercom box some time before the 2019 Rose Parade.
+The main PCB has been assembled and programming is complete (July). Now I just have to install the controller in the intercom box some time before the 2019 Rose Parade.
