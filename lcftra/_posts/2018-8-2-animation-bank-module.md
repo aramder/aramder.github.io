@@ -1,7 +1,7 @@
 ---
 layout: post
 category: lcftra
-title: Animation System Revamp Summary
+title: Animation System Valve Bank Module
 ---
 ![A picture of the original animation system](/images/lcftra/original system.jpg)
 <!----  <a href="{{ site.baseurl }}/images/lcftra/original system.jpg"><img src="{{ site.baseurl }}/images/lcftra/original system.jpg" title="Open image"/></a> --->
