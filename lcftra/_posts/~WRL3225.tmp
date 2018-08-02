@@ -1,0 +1,22 @@
+﻿---
+layout: post
+category: lcftra
+title: Animation System Valve Bank Module
+---
+![A picture of the unit's internal electronics](/images/lcftra/bank module/internal electronics.jpg)
+
+The new La Cañada Flintridge rose parade float's animation system is built in several modular pieces. Four of these units will be responsible for controlling a bank of four hydraulic animation channels.<!--more-->
+
+The valve bank control modules each contain a PID controller, and drivers for the hydraulic valves. To see how this unit fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/">this summary</a> of the new animation system.
+
+![Four custom designed and built power supplies](/images/lcftra/bank module/18v power supplies.jpg)
+
+![A picture of the bottom of the enclosure, all connectors are visible](/images/lcftra/bank module/enclosure connectors.jpg)
+
+![A flat piece of gasket material placed in a laser cutter](/images/lcftra/bank module/gasket cutting.jpg)
+
+<img class="shrunk" src="/images/lcftra/bank module/mounted power supply.jpg" alt="One of the power supplies mounted to the lid of the enclosure">
+
+![A flat piece of gasket material placed in a laser cutter](/images/lcftra/bank module/unpainted panel.jpg)
+
+The new animation system functions in a somewhat similar manner to the old one, though responsibilities are shared slightly differently between the Rexroth and Gilderfluke systems. In this system, closed loop control functions are carried out using a Gilderfluke Br-EFB; the Rexroth valve driver modules only serve to amplify the control signals from the Br-EFB to drive our Rexroth proportional hydraulic valves.
