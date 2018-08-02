@@ -5,13 +5,13 @@ title: Animation System Valve Bank Module
 ---
 ![A picture of the unit's internal electronics](/images/lcftra/bank module/internal electronics.jpg)
 
-The new La Cañada Flintridge rose parade float's animation system is built in several modular pieces. Four of these units will be responsible for controlling a bank of four hydraulic animation channels.<!--more-->
+The new La Cañada Flintridge rose parade float's animation system is built in several modular pieces. Four identical units will be valve bank modules, which are responsible for controlling a bank of four hydraulic animation channels.<!--more-->
 
 The valve bank control modules each contain a PID controller, and drivers for the hydraulic valves. To see how this unit fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/" target="_blank">this summary</a> of the new animation system.
 
 These modules mostly contain commercial off-the-shelf parts, such as the Gilderfluke Br-EFB PID controller and Rexroth valve drivers, but some parts of the system were custom built.
 
-Previously, all of our boxes had openings for connectors, buttons, switches, gauges, etc. drilled by hand, but for the new animation system we took a different approach. We drew the layout of the connectors in CAD, and had thin mounting plates, as well as accompanying gaskets, made. This saved us countless hours of machining work. Though waterjeting plates for a purpose like this isn’t exactly revolutionary, we were rather relieved to find an elegant and time saving alternative to drilling and machining just over 200 holes and openings.
+Previously, all of our boxes had openings for connectors, buttons, switches, gauges, etc. drilled by hand, but for the new animation system we took a different approach. We drew the layout of the connectors in CAD, and had thin metal plates, as well as accompanying gaskets, made. This saved us countless hours of machining work. Though waterjeting plates for a purpose like this isn’t exactly revolutionary, we were rather relieved to find an elegant and time saving alternative to drilling and machining just over 200 holes and openings.
 
 ![A flat piece of gasket material placed in a laser cutter](/images/lcftra/bank module/unpainted panel.jpg)
 
