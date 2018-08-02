@@ -3,9 +3,11 @@ layout: post
 category: lcftra
 title: DTMF Controller
 ---
-<img class="shrunk" src="/images/lcftra/DTMF controller/intercom box internal.jpg" alt="Our intercom and radio box mounted on the float">
+![Completed PCB Assembly](/images/lcftra/DTMF controller/DTMF controller PCBA.jpg)
 
 Our float is equipped with a custom-built intercom and radio system to allow the float's crew to communicate both within the float, and with external crew. Since the intercom box is mounted in the middle of the float where it's not easily accessible, we needed some way to be able to remotely control the radio.<!--more--> The solution I came up with was a small perfboard assembly that used a microcontroller to decode DTMF tones received by the float's radio to change the radio's operating channel or toggle a set of relays.
+
+<img class="shrunk" src="/images/lcftra/DTMF controller/intercom box internal.jpg" alt="Our intercom and radio box mounted on the float">
 
 We chose to go with DTMF control because it requires very little extra hardware in the intercom box and doesn't require any special kind of remote (we already use handheld and mobile radios to coordinate moving the float, so we don't need to carry any additional equipment). Several of us use commercial radios which have automated autopatch dialing capabilities (an autopatch is a now outdated piece of equipment used to place a telephone call via radio), which turned out to work extremely well for sending DTMF commands. With the automated dialing feature, it's possible to send commands to the float's radio with just a few button presses.
 
@@ -19,4 +21,5 @@ The new revision of the controller now includes an audio amplifier (the Arduino 
 
 ![3D mockup of a PCBA](/images/lcftra/DTMF controller/DTMF controller 3D rear.png)
 
-This PCB has been sent out to be manufactured. I'll begin populating the board in early July.
+
+The main PCB has been assembled and programming is complete(July). Now I just have to install the controller in the intercom box some time before the 2019 Rose Parade.
