@@ -25,7 +25,7 @@ Now of course all of this has to be packaged in a suitable enclosure. Just like 
 
 **Pictures and descriptions below are for work that is currently in progress**
 
-The touchscreen, emergency stop button, and power switch actuator are mounted to the lid of the enclosure. The system's power switch functions as a safety lockout; the unit can not be opened while power is on. The switch also accomodates three lockout-tagout locks which prevent the controller from being turned on or opened.
+The touchscreen, emergency stop button, and power switch actuator are mounted to the lid of the enclosure. The system's power switch functions as a safety lockout; the unit can not be opened while power is on. The switch also accommodates three lockout-tagout locks which prevent the controller from being turned on or opened.
 
 <img class="shrunk" src="/images/lcftra/animation computer/electronics full.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
 
