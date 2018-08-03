@@ -25,7 +25,7 @@ Gaskets for the plates were also laser cut courtesy of Ben Baral.
 
 The plates were powder-coated to match the powder-coating of our Hoffman industrial enclosures.
 
-Another custom part of our system is a quad 18 volt power supply in each valve bank module. The Gilderfluke Br-EFB outputs 24v, 10v, and -10v (unused), which is adequate to power all modern position sensors, however, to maintain backwards compatibility with our older position sensors we need an 18v supply.
+Another custom part of our system is a quad 18 volt power supply in each valve bank module. The Gilderfluke Br-EFB outputs 24v, 10v, and -10v (unused), which is more than adequate for powering most position sensors, however, to maintain backwards compatibility with our older position sensors we need an 18v supply.
 
 ![Four custom designed and built power supplies](/images/lcftra/bank module/18v power supplies.jpg)
 
