@@ -23,3 +23,6 @@ The new revision of the controller now includes an audio amplifier (the Arduino 
 
 
 The main PCB has been assembled and programming is complete (July). Now I just have to install the controller in the intercom box some time before the 2019 Rose Parade.
+
+Further details on hardware and software can be found <a href="https://github.com/aramder/DTMF-controller" target="_blank">here</a>.
+
