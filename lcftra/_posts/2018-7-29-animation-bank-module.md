@@ -23,9 +23,9 @@ Gaskets for the plates were also laser cut courtesy of Ben Baral.
 
 ![A picture of the bottom of the enclosure, all connectors are visible](/images/lcftra/bank module/enclosure connectors.jpg)
 
-The plates were powder-coated to match the powder-coating of our Hoffman industrial enclosures.
+The plates were powder-coated to match the powder-coating of our Hoffman enclosures. The d-sub is missing its waterproof cover in this photo.
 
-Another custom part of our system is a quad 18 volt power supply in each valve bank module. The Gilderfluke Br-EFB outputs 24v, 10v, and -10v (unused), which is more than adequate for powering most position sensors, however, to maintain backwards compatibility with our older position sensors we need an 18v supply.
+Another custom part of our system is a quad 18 volt power supply in each valve bank module. The Gilderfluke Br-EFB outputs 24v, 10v, and -10v (unused), which is more than adequate for powering most position feedback sensors, however, to maintain backwards compatibility with our older position sensors we need an 18v supply.
 
 ![Four custom designed and built power supplies](/images/lcftra/bank module/18v power supplies.jpg)
 
@@ -33,4 +33,4 @@ The PCB assembly isn’t very complicated, consisting of a linear voltage regula
 
 <img class="shrunk" src="/images/lcftra/bank module/mounted power supply.jpg" alt="One of the power supplies mounted to the lid of the enclosure">
 
-These power supplies are mounted on the lid of the enclosure. Though they will not need to dissipate a great deal of heat, they are in close contact with the wall of the enclosure, and thermal paste will assist in dissipating heat through the enclosure’s large surface area. 
+These power supplies are mounted on the lid of the enclosure. Though they will not need to dissipate a great deal of heat, they are in close contact with the wall of the enclosure, and thermal paste will assist in dissipating heat through the lid's large surface area. 
