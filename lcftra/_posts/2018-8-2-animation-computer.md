@@ -27,12 +27,14 @@ Now of course all of this has to be packaged in a suitable enclosure. Just like 
 
 The touchscreen, emergency stop button, and power switch actuator are mounted to the lid of the enclosure. The system's power switch functions as a safety lockout; the unit can not be opened while power is on. The switch also accommodates three lockout-tagout locks which prevent the controller from being turned on or opened.
 
-<img class="shrunk" src="/images/lcftra/animation computer/electronics full.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
+<img class="shrunk" src="/images/lcftra/animation computer/WIP electronics full.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
 
-The lower half of the animation computer contains several power supplies, Gilderfluke Sd-50/40, the Raspberry Pi and controller/interface PCBA, router, and DC distribution hardware. Yes, I know what you're thinking; that does look awfully compact. We could have chosen a larger enclosure, but since this unit has to be installed in potentially small crew compartments and must be easy to install and remove, we decided to go with a cozy little enclosure.
+The lower half of the animation computer contains several power supplies, Gilderfluke Sd-50/40, the Raspberry Pi and controller/interface PCBA, router, and DC distribution hardware.
 
-![A look inside the animation computer - just the lower half, filled with electronics](/images/lcftra/animation computer/electronics lower half.jpg)
+![Assembling the back panel which secures all of the electronics](/images/lcftra/animation computer/panel assembly.jpg)
 
-The panduit shown in these photos is not cut to length properly, and has already been replaced. Some minor components are not shown, and most notably the two plates on the sides of the enclosure are missing.
+Yes, I know what you're thinking; that does look awfully compact. We could have chosen a larger enclosure, but since this unit has to be installed in potentially small crew compartments and must be easy to install and remove, we decided to go with a cozy little enclosure.
 
-Finishing the animation computer is currently the highest priority on the animation system to-do list. The system is currently on schedule to be partially functional by late August, and fully functional by September. The system will make its debut in the 2019 Rose Parade on our float, Tree Frog Night.
+![A look inside the animation computer - just the lower half, filled with electronics](/images/lcftra/animation computer/bottom half lit.jpg)
+
+The hardware for the animation computer is finished. At this point the only part of the computer that needs work is the software which interfaces the user interface with the Gilderfluke show controls. The software work is fairly trivial, so development has been delayed in favor of completing other parts of the animation system, mainly the GSE which will be required for us to begin testing.
