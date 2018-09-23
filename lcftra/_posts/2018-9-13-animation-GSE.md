@@ -5,7 +5,7 @@ title: Animation System GSE
 ---
 ![Photo of control panel](/images/lcftra/GSE/panel assembled.jpg)
 
-Testing, calibrating, and programming of the animation system requires some support hardware. The system uses several communications busses, as well as several hardware enable and status lines.<!--more-->
+Testing, calibrating, and programming of the animation system requires some support hardware. The system uses several communications busses, as well as several hardware enable and status lines which all need to be accessed for programming.<!--more-->
 
 ![Assembled main PCBA](/images/lcftra/GSE/main PCBA.jpg)
 
@@ -21,7 +21,7 @@ Aside from handling data, the GSE also provides various enable signals for the v
 
 ![Photo of GSE and remote e-stop](/images/lcftra/GSE/GSE and Estop.jpg)
 
-With the completion of this unit we are now ready to test the functionality of the animation system. My goal is to have the system functioning by Oct 6th for our T1 inspection.
+With the completion of this unit we are now ready to test the animation system. We should be ready for a small system test by the weekend of Sep 29th. My goal is to have the system functioning by Oct 6th for our T1 inspection.
 
 ![External photo of GSE enclosure](/images/lcftra/GSE/enclosure external.jpg)
 
