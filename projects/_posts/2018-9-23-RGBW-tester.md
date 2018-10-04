@@ -11,8 +11,10 @@ For TwinleWork's new line of RGBW LED strobes, we needed a new testing assembly.
 
 The unit is based off of several Meanwell LED drivers, a variety of analog sensing circuitry, a light sensor, and an Arduino Pro Mini.
 
-**This is a work in progress**
+![Completed test jig](/images/projects/RGBW tester/completed jig.jpg)
 
-The pogo stick PCB testing portion of this testing jig still needs to be made. The rendering below shows approximately how the jig is going to be assembled.
+The pogo sticks stick out of a 3D printed assembly for lining up the strobe PCBAs, which also protects the user from 1000s of lumens of light output.
 
-![Test jig rendering](/images/projects/RGBW tester/jig rendering.png)
+![Completed test jig with some strobe PCBAs](/images/projects/RGBW tester/jig with strobe PCBAs.jpg)
+
+The fixture can test PCBs in a matter of seconds. Terminal blocks (which will be connected to test clips) will also allow for completed strobes to be connected to the tester and tested once assembled.

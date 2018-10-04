@@ -35,4 +35,4 @@ Yes, I know what you're thinking; that does look awfully compact. We could have 
 
 ![A look inside the animation computer - just the lower half, filled with electronics](/images/lcftra/animation computer/bottom half lit.jpg)
 
-The hardware for the animation computer is finished. At this point the only part of the computer that needs work is the software which interfaces the user interface with the Gilderfluke show controls. The software work is fairly trivial, so development has been delayed in favor of completing other parts of the animation system, mainly the <a href="https://aramder.github.io/animation-GSE/" target="_blank">animation GSE</a> which will be required for us to begin testing.
+The hardware for the animation computer is finished. At this point the system is undergoing testing.
