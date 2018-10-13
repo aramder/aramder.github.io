@@ -29,6 +29,9 @@ TwinkleWorks is currently developing a RGBW strobe fixture. This product is curr
 
 ![CAD mockup of RGBW strobe fixture](/images/TwinkleWorks/RGBW side view.png)
 
+This strobe is currently undergoing testing before being released for production. A work in progress datasheet can be found 
+<a href="https://aramder.github.io/images/TwinkleWorks/RGBW Strobe Spec Sheet [NOT FINAL].pdf" target="_blank">here</a>. Please note that this datasheet is not final, and is only for reference.
+
 **ED128**
 
 TwinkleWorks is also in the process of developing a new LED driver, referred to as the ED128 or EDRGB. The driver will be capable of driving 128 individual, or 32 RGBW, LED fixtures. Each of the 128 channels will feature temperature compensation, and be capable of driving LEDs at 0.7A at up to 34v. 

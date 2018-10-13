@@ -18,3 +18,5 @@ The pogo sticks stick out of a 3D printed assembly for lining up the strobe PCBA
 ![Completed test jig with some strobe PCBAs](/images/projects/RGBW tester/jig with strobe PCBAs.jpg)
 
 The fixture can test PCBs in a matter of seconds. Terminal blocks (which will be connected to test clips) will also allow for completed strobes to be connected to the tester and tested once assembled.
+
+A work in proress datasheet for the RGBW strobe can be found <a href="https://aramder.github.io/images/TwinkleWorks/RGBW Strobe Spec Sheet [NOT FINAL].pdf" target="_blank">here</a>.
