@@ -5,7 +5,7 @@ title: Animation System Main Computer
 ---
 ![A picture of the unit's internal electronics](/images/lcftra/animation computer/enclosure external.jpg)
 
-The new La Cañada Flintridge rose parade float's animation system has a controller unlike anything used in the parade. The  custom controller has a 12 inch waterproof touchscreen that sports a custom control GUI and convenient system configuration capabilities.<!--more-->
+The new La Cañada Flintridge rose parade float's animation system has a controller unlike anything used in the parade. The custom controller has a 12 inch waterproof touchscreen that sports a custom control GUI and convenient system configuration capabilities.<!--more-->
 
 The animation computer contains the main show controller and various support hardware. The "animation computer" hasn't traditionally used what we would think of as a computer, but has rather been an assembly of custom or commerical off-the-shelf industrial control hardware (at least in the case of the La Cañada float). This animation computer actually contains a computer, however, it only serves to control dedicated show control hardware. To see how the main computer fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/" target="_blank">this summary</a> of the new animation system.
 
@@ -25,14 +25,14 @@ Now of course all of this has to be packaged in a suitable enclosure. Just like 
 
 The touchscreen, emergency stop button, and power switch actuator are mounted to the lid of the enclosure. The system's power switch functions as a safety lockout; the unit can not be opened while power is on. The switch also accommodates three lockout-tagout locks which prevent the controller from being turned on or opened.
 
-<img class="shrunk" src="/images/lcftra/animation computer/WIP electronics full.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
+![Assembling the back panel which secures all of the electronics](/images/lcftra/animation computer/panel assembly.jpg)
 
 The lower half of the animation computer contains several power supplies, the Gilderfluke Sd-50/40 show controller, the Raspberry Pi and controller/interface PCBA, router, and DC distribution hardware.
 
-![Assembling the back panel which secures all of the electronics](/images/lcftra/animation computer/panel assembly.jpg)
+![A look inside the animation computer - just the lower half, filled with electronics](/images/lcftra/animation computer/bottom half lit.jpg)
 
 Yes, I know what you're thinking; that does look awfully compact. We could have chosen a larger enclosure, but since this unit has to be installed in potentially small crew compartments and must be easy to install and remove, we decided to go with as cozy of an enclosure as possible.
 
-![A look inside the animation computer - just the lower half, filled with electronics](/images/lcftra/animation computer/bottom half lit.jpg)
+<img class="shrunk" src="/images/lcftra/animation computer/main controller open.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
 
-The hardware for the animation computer is finished. At this point the system is undergoing testing.
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish.

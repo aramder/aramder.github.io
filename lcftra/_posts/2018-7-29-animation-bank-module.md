@@ -34,3 +34,7 @@ The PCB assembly isn’t very complicated, consisting of a linear voltage regula
 <img class="shrunk" src="/images/lcftra/bank module/mounted power supply.jpg" alt="One of the power supplies mounted to the lid of the enclosure">
 
 These power supplies are mounted on the lid of the enclosure. Though they will not need to dissipate a great deal of heat, they are in close contact with the wall of the enclosure, and thermal paste will assist in dissipating heat through the lid's large surface area. 
+
+![One of the completed bank modules mounted in the float](/images/lcftra/bank module/installed bank module.jpg)
+
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish.
