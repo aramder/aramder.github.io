@@ -35,4 +35,5 @@ Yes, I know what you're thinking; that does look awfully compact. We could have 
 
 <img class="shrunk" src="/images/lcftra/animation computer/main controller open.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
 
-The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish.
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/" target="_blank">this page</a>.
+

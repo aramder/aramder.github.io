@@ -12,7 +12,7 @@ For the last 3 summers I've been an intern at the <a href="https://www.jpl.nasa.
 
 I work part time at <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a> developing TwinkleWorks LED lighting products.
 
-I also volunteer with the <a href="https://lcftra.org/home.php" target="_blank">La Cañada Flintridge Tournament of Roses Association</a> where I'm responsible for electronics and the developoment of our <a href="https://aramder.github.io/animation-summary" target="_blank">new animation system</a>.
+I also volunteer with the <a href="https://lcftra.org/home.php" target="_blank">La Cañada Flintridge Tournament of Roses Association</a> where I'm responsible for electronics and the developoment of our <a href="https://aramder.github.io/animation-2019" target="_blank">new animation system</a>.
 
 A current resume can be found <a href="https://aramder.github.io/Aram Dergevorkian Resume Dec 2018.pdf" target="_blank">here</a>.
 

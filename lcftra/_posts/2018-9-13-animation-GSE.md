@@ -17,11 +17,13 @@ This unit is essentially a glorified USB to serial converter. The main PCB consi
 
 ![Underside of panel, wired](/images/lcftra/GSE/panel underside.jpg)
 
-Aside from handling data, the GSE also provides various enable signals for the valve bank module electronics. Each channel's hydraulic vavle driver, as well as the Br-EFB (the PID controller for all 4 channels in each bank), has an indiviudal enable. There is also a port for a remote e-stop button which must be connected in order to enable anything in the valve bank box.
+Aside from handling data, the GSE also provides various enable signals for the valve bank module electronics. Each channel's hydraulic vavle driver, as well as the Br-EFB (the PID controller for all 4 channels in each bank), has an indiviudal enable. 
 
 ![Photo of GSE and remote e-stop](/images/lcftra/GSE/GSE and Estop.jpg)
 
-With the completion of this unit, testing of the animation system has begun.
+There is also a port for a remote e-stop button which must be connected in order to enable anything in the valve bank box.
 
 ![External photo of GSE enclosure](/images/lcftra/GSE/enclosure external.jpg)
+
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/" target="_blank">this page</a>.
 

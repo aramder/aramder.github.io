@@ -5,6 +5,10 @@ permalink: /TwinkleWorks/
 ---
 ![TwinkleWorks logo](/images/TwinkleWorks/twinkleworks w background.png)
 
+### Disclaimer
+
+This page is here to provide some information about TwinkleWorks, as TwinkleWorks does not have an official public facing website. The products and development projects are shown to provide context about my work at AES/TwinkleWorks.
+
 ### Background
 
 TwinkleWorks is a subsidiary of <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a> that specializes in LED strobe lighting.

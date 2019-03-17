@@ -29,7 +29,7 @@ Another custom part of our system is a quad 18 volt power supply in each valve b
 
 ![Four custom designed and built power supplies](/images/lcftra/bank module/18v power supplies.jpg)
 
-The PCB assembly isn’t very complicated, consisting of a linear voltage regulator and PTC fuses.
+The PCB assembly isn’t very complicated, consisting of linear voltage regulators and PTC fuses.
 
 <img class="shrunk" src="/images/lcftra/bank module/mounted power supply.jpg" alt="One of the power supplies mounted to the lid of the enclosure">
 
@@ -37,4 +37,4 @@ These power supplies are mounted on the lid of the enclosure. Though they will n
 
 ![One of the completed bank modules mounted in the float](/images/lcftra/bank module/installed bank module.jpg)
 
-The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish.
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/" target="_blank">this page</a>.
