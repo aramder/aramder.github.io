@@ -7,7 +7,7 @@ permalink: /TwinkleWorks/
 
 ### Disclaimer
 
-This page is here to provide some information about TwinkleWorks, as TwinkleWorks does not have an official public facing website. The products and development projects are shown to provide context about my work at AES/TwinkleWorks.
+This page is here to provide some information about TwinkleWorks, as TwinkleWorks does not have an official public facing website. These products and projects are only shown to provide context for my work at AES/TwinkleWorks and not for official reference.
 
 ### Background
 
