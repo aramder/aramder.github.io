@@ -13,16 +13,7 @@ We chose to go with DTMF control because it requires very little extra hardware 
 
 The DTMF controller itself is rather simple, consisting of an atmega328 microcontroller and a handful of generic components. The atmega328 constantly decodes incoming audio in order to detect DTMF tones. When the correct password and command are received, the Arduino will either toggle a relay or change the radio's channel by momentarily toggling one of four lines that are connected to the TK-8180 as shortcut buttons for selecting radio memories.
 
-The perfboard assembly was made as a temporary solution, but as it happens with many "temporary" solutions, it's been serving on the float for quite a while (2 years). It's finally time to make a nice PCB.
-
 ![3D mockup of a PCBA](/images/lcftra/DTMF controller/DTMF controller 3D front.png)
 
 The new revision of the controller now includes an audio amplifier (the Arduino needs a rather large signal to decode the DTMF properly) and a right-angle d-sub connector (J3 on the left of the PCB).
-
-![3D mockup of a PCBA](/images/lcftra/DTMF controller/DTMF controller 3D rear.png)
-
-
-The main PCB has been assembled and programming is complete (July). Now I just have to install the controller in the intercom box some time before the 2019 Rose Parade.
-
-Further details on hardware and software can be found <a href="https://github.com/aramder/DTMF-controller" target="_blank">here</a>.
 
