@@ -13,4 +13,4 @@ Connected to the Atmega328PB is a RS-485 transceiver for a DMX interface, PCA968
 
 *This is currently a work in progress. I have not had much time since the start of the semester to do much other than test basic functionality.*
 
-For further information on my senior project can be found <a href="https://aramd.net/Senior-Project-Summary/" target="_blank">here</a>.
+For further information on my senior project can be found <a href="https://aramd.net/Senior-Project-Summary/">here</a>.
