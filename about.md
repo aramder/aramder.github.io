@@ -8,7 +8,7 @@ permalink: /about/
 
 I'm a 4th year undergraduate electrical engineering student at Cal Poly Pomona.
 
-For the last 4 summers I've been an intern at the <a href="https://www.jpl.nasa.gov/" target="_blank">Jet Propulsion Laboratory</a>, first working in the Microwave Remote Sensing Instruments group, and now with the PREFIRE (<a href="https://science.jpl.nasa.gov/projects/PREFIRE/" target="_blank">Polar Radiant Energy in the Far-InfraRed Experiment</a>) CubeSat electronics team. For the last three summers I've been working on low power instrument controllers for CubeSats/SmallSats utilizing FPGAs, softcore processors, and radhard ARMs.
+For the last 4 summers I've been an intern at the <a href="https://www.jpl.nasa.gov/" target="_blank">Jet Propulsion Laboratory</a>, first working in the Microwave Remote Sensing Instruments group, and now with the PREFIRE (<a href="https://science.jpl.nasa.gov/projects/PREFIRE/" target="_blank">Polar Radiant Energy in the Far-InfraRed Experiment</a>) CubeSat electronics team. For the last three summers I've been working on low power instrument controllers for CubeSats/SmallSats utilizing FPGAs, softcore processors, and radhard ARMs. 
 
 Though not a UCLA student, I spent a summer, in addition to time part time during the schoolyear, working on UCLA’s ELFIN (<a href="https://elfin.igpp.ucla.edu/" target="_blank">Electron Loses and Fields Investigation</a>) CubeSat. As part of the communications subsystem team, I tested the spacecraft’s prototype and flight radios, performed antenna testing in the field, and aided in tests between spacecraft models and UCLA’s ground station.
 
