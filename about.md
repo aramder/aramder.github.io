@@ -18,7 +18,7 @@ Bachelor of Science in Electrical Engineering
 * Chuck Reville and Dwight Weller Memorial, 2017
 * Dr Patrick Jungwirth, PhD, WG6L, 2016
 
-### Acedemic
+### Academic
 * Dean’s List, 5 Terms
 * President’s List, 1 Term
 
