@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-
 ## Education
 **California State Polytechnic University, Pomona** <br>
 *August 2016 - May 2021* <br>
@@ -16,7 +15,7 @@ Bachelor of Science in Electrical Engineering
 * Quarter Century Wireless Association, 2017
 * Bergen Amateur Radio Association, 2017
 * Chuck Reville and Dwight Weller Memorial, 2017
-* Dr Patrick Jungwirth, PhD, WG6L, 2016
+* Dr. Patrick Jungwirth, PhD, WG6L, 2016
 
 ### Academic
 * Dean’s List, 5 Terms
