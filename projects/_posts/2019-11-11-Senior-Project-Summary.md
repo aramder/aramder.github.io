@@ -3,7 +3,7 @@ layout: post
 category: projects
 title: Senior Project Summary
 ---
-![A rendering with 2 printed circuit boards inside a plastic enclosure](/images/projects/Senior Project/addressable LED module render side.png)
+![A rendering with 2 printed circuit boards inside a plastic enclosure](/images/projects/Senior Project/addressable LED module render top.png)
 
 For my senior project, I'm working on an embedded lighting controller which is being designed to provide flexible lighting control/drive in an extremely compact package. <!--more-->
 
@@ -15,6 +15,10 @@ We hope to improve on existing lighting controllers/drivers by making the Embedd
 
 The compact unit, which we're currently trying to build into a 3.3 in x 2.2 in x 0.9 in enclosure, will be capable of being controlled by lighting industry standards such as DMX512-A, ArtNet, or sACN. We also plan to be able to read show control data from an SD card for easy stand-alone operation or use as an independant show controller.
 
-![A second rendering with 2 printed circuit boards inside a plastic enclosure viewed from above](/images/projects/Senior Project/addressable LED module render top.png)
+![A second rendering with 2 printed circuit boards inside a plastic enclosure viewed from above](/images/projects/Senior Project/motherboard render side.png)
 
-We plan to have a mother/daughter board configuration that will allow for different driver PCB assemblies to be installed. For now, we are planning on one module to support addressable RGB(W) LED tape (multiple protocols), and basic PWM MOSFET module for switching regular RGBW LED tape or other misc. lighting loads.
+We plan to have a mother/daughter board configuration that will allow for different driver PCB assemblies to be installed. 
+
+![A second rendering with 2 printed circuit boards inside a plastic enclosure viewed from above](/images/projects/Senior Project/addressable LED module render side.png)
+
+For now, we are planning on one module to support addressable RGB(W) LED tape (multiple protocols), and basic PWM MOSFET module for switching regular RGBW LED tape or other misc. lighting loads.
