@@ -13,7 +13,7 @@ We hope to improve on existing lighting controllers/drivers by making the Embedd
 
 ![A sketch showing the top motherboard PCB and the two lower daughterboard PCB modules](/images/projects/Senior Project/modular construction sketch.png)
 
-The compact unit, which we're currently trying to build into a 3.3 in x 2.2 in x 0.9 in enclosure, will be capable of being controlled by lighting industry standards such as DMX512-A, ArtNet, or sACN. We also plan to be able to read show control data from an SD card for easy stand-alone operation or use as an independant show controller.
+The compact unit, which we're currently trying to build into a 3.3 in x 2.2 in x 0.9 in enclosure, will be capable of being controlled by lighting industry standards such as DMX512-A, ArtNet, or sACN. We also plan to be able to read show control data from an SD card for easy stand-alone operation or use as an independent show controller.
 
 ![A second rendering with 2 printed circuit boards inside a plastic enclosure viewed from above](/images/projects/Senior Project/motherboard render side.png)
 
