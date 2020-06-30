@@ -41,3 +41,5 @@ This strobe is currently undergoing testing before being released for production
 We also began developing a new LED driver, referred to as the ED128 or EDRGB. The driver will be capable of driving 128 individual, or 32 RGBW, LED fixtures. Each of the 128 channels will feature temperature compensation and be capable of driving LEDs at 0.7A at up to 34v. 
 
 Some quick math should tell you we’re talking about some serious power. Though this seems like a big issue at first, TwinkleWorks fixtures are only designed to handle the thermal dissipation required for a strobing LED, meaning the controller will not have a very heavy duty cycle due to output regulation.
+
+**Note:** I am no longer involved with TwinkleWorks/AES, and this information is only meant to provide context for my work. Please contact <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a> regarding TwinkleWorks inquiries.

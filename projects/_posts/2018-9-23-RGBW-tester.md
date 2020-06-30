@@ -19,4 +19,6 @@ The pogo sticks stick out of a 3D printed assembly for lining up the strobe PCBA
 
 The fixture can test PCBs in a matter of seconds. Terminal blocks (which will be connected to test clips) will also allow for completed strobes to be connected to the tester and tested once assembled.
 
-A work in progress datasheet for the RGBW strobe can be found <a href="https://aramder.github.io/images/TwinkleWorks/RGBW Strobe Spec Sheet [NOT FINAL].pdf" target="_blank">here</a>, *for reference only*.
+A work in progress datasheet for the RGBW strobe can be found <a href="https://aramder.github.io/images/TwinkleWorks/RGBW Strobe Spec Sheet [NOT FINAL].pdf" target="_blank">here</a>, **for reference only**.
+
+**Note:** I am no longer involved with TwinkleWorks/AES, and this information is only meant to provide context for my work. Please contact <a href="http://www.aescreative.com/" target="_blank">Artistic Entertainment Services</a> regarding TwinkleWorks inquiries.
