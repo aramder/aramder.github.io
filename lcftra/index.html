@@ -3,23 +3,25 @@ layout: default
 title: LCFTRA
 category: lcftra
 ---
-{% for post in site.posts %}      
-  {% if post.categories contains 'lcftra' %}
-	<article class="post">
+<div class="posts">
+  {% for post in site.posts %}      
+    {% if post.categories contains 'lcftra' %}
+    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-      <div class="entry">
-        <!-- Jekyll code by http://briankhuu.com/blog/self/jekyll/2014/12/03/post-truncation-in-jekyll.html -->
-        <!-- based on code by http://mikeygee.com/blog/truncate.html -->
-        {% if post.content contains '<!--more-->' %}
-				  {{ post.content | split:'<!--more-->' | first }}
-			  {% else %}
-				  {{ post.excerpt }}
-			  {% endif %}
-      </div>
+        <div class="entry">
+          <!-- Jekyll code by http://briankhuu.com/blog/self/jekyll/2014/12/03/post-truncation-in-jekyll.html -->
+          <!-- based on code by http://mikeygee.com/blog/truncate.html -->
+          {% if post.content contains '<!--more-->' %}
+            {{ post.content | split:'<!--more-->' | first }}
+          {% else %}
+            {{ post.excerpt }}
+          {% endif %}
+        </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endif %}
-{% endfor %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>
