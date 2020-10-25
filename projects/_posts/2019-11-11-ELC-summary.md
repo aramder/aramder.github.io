@@ -24,3 +24,7 @@ The compact unit, which is contained in a 3.3 in x 2.2 in x 0.9 in enclosure, wi
 ![A rendering with 2 light output modules inside a plastic enclosure viewed from above](/images/projects/ELC/addrLED and 4ChanPWM modules.png)
 
 For now, we are planning on an addressable RGB(W) LED tape (multiple protocols) module (right), and basic PWM MOSFET module for switching regular RGBW LED tape or other misc. lighting loads (left). In the future, we hope to add additional modules for added flexibility in lighting or show control systems such as RC servo outputs, audio playback, and more.
+
+**Update** - *April 2020* - The boards have all been tested and are functional. Firmware development is proceeding.
+
+![Motherboard connected to small LiPo battery with various indicator LEDs active](/images/projects/ELC/motherboard functional.jpg)
