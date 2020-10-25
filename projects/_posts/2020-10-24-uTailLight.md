@@ -9,11 +9,11 @@ This summer I started riding a motorcycle, and while stuck at home, I designed a
 
 ![Spool of WS2812B LEDs](/images/projects/uTailLight/ws2812b.jpg)
 
-The system is based on WS2812B addressable RGB LEDs. The LEDs operate using a daisy-chained communication protocol, where the first LED will grab the first LED worth of data, then forward the rest of the configuration data to the next LED. The cycle repeats until all LEDs have their configuration data. I purchased a 5M roll of 60LED/M tape which has a IP65 rating thanks to a silione coating.
+The system is based on WS2812B addressable RGB LEDs. The LEDs operate using a daisy-chained communication protocol, where the first LED will grab the first LED worth of data, then forward the rest of the configuration data to the next LED. The cycle repeats until all LEDs have their configuration data. I purchased a 5M roll of 60LED/M tape which has a IP65 rating thanks to a silicone coating.
 
 ![Rendering of populated PCB](/images/projects/uTailLight/pcb render.png)
 
-The tiny board, at 0.85" x 1.44", is capable of supplying 5V at up to 5A. This is theoretically enough for more than 150 LEDs with 100% output on all RGB channels. Practically speaking, since only approximately half of the LEDs are in use at one time and white is rarely used, substancially more LEDs can be driven in this application. The controller has two outputs, for two LED strings, but only one was used for now.
+The tiny board, at 0.85" x 1.44", is capable of supplying 5V at up to 5A. This is theoretically enough for more than 150 LEDs with 100% output on all RGB channels. Practically speaking, since only approximately half of the LEDs are in use at one time and white is rarely used, substantially  more LEDs can be driven in this application. The controller has two outputs, for two LED strings, but only one was used for now.
 
 ![PCB assembled with wiring and connectors](/images/projects/uTailLight/pcb assembly.jpg)
 
