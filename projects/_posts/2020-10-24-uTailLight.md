@@ -5,7 +5,7 @@ title: uTailLight
 ---
 ![Rear view of motorcycle with brake lights illuminated](/images/projects/uTailLight/rear braking.png)
 
-This summer I started riding a motorcycle, and while stuck at home, I designed and built an auxiliary LED indicator system for added visibility. The system uses addressable LEDs, allowing the compact controller + power supply to manage potentially hundreds of LEDs. <!--more-->
+This summer I started riding a motorcycle, and while stuck at home, I designed and built an auxiliary LED indicator system for added visibility. The system uses addressable LEDs, allowing the compact controller with an integrated power supply to manage potentially hundreds of LEDs. <!--more-->
 
 ![Spool of WS2812B LEDs](/images/projects/uTailLight/ws2812b.jpg)
 
