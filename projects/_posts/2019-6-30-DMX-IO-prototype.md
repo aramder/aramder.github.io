@@ -11,4 +11,4 @@ At the core of this development board is an Atmega328PB. This seems to be a rath
 
 Connected to the Atmega328PB is a RS-485 transceiver for a DMX interface, PCA9685 (I2C 16-channel 12-bit PWM generator), 2 relays, and 4 MOSFETs (via the PCA9685 and a gate driver).
 
-The scope of my senior project shifted after some testing with this board and reevaluating our team's goals. Details on that project can be found <a href="https://aramd.net/Senior-Project-Summary/">here</a>.
+The scope of my senior project shifted after some testing with this board and reevaluating our team's goals. Details on that project can be found <a href="https://aramd.net/ELC-summary/">here</a>.
