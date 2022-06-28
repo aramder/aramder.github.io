@@ -9,7 +9,7 @@ permalink: /about/
 I'm an Electronics Engineer at the <a href="https://www.jpl.nasa.gov/" target="_blank">Jet Propulsion Laboratory</a>. Since August of 2021, I have been working on the Digital Backend Electronics for the EZIE (The Electrojet Zeeman Imaging Explorer) mission MEM (Microwave Electrojet
 Magnetogram) instrument.
 
-From 2016 to 2021, I had been an intern and contractor at the Jet Propulsion Laboratory, first working in the Microwave Remote Sensing Instruments group, and the PREFIRE (<a href="https://science.jpl.nasa.gov/projects/PREFIRE/" target="_blank">Polar Radiant Energy in the Far-InfraRed Experiment</a>) CubeSat instrument electronics team. I've mainly worked on low power instrument controllers for CubeSats/SmallSats utilizing FPGAs, softcore processors, and radhard ARMs. 
+From 2016 to 2021, I had been an intern and contractor at the Jet Propulsion Laboratory, first working in the Microwave Remote Sensing Instruments group, and the PREFIRE (<a href="https://prefire.ssec.wisc.edu/" target="_blank">Polar Radiant Energy in the Far-InfraRed Experiment</a>) CubeSat instrument electronics team. I've mainly worked on low power instrument controllers for CubeSats/SmallSats utilizing FPGAs, softcore processors, and radhard ARMs. 
 
 Though not a UCLA student at the time, I spent a summer, in addition to time part time during the schoolyear, working on UCLA’s ELFIN (<a href="https://elfin.igpp.ucla.edu/" target="_blank">Electron Loses and Fields Investigation</a>) CubeSat from 2015 to 2016. As part of the communications subsystem team, I tested the spacecraft’s prototype and flight radios, performed antenna testing in the field, and aided in tests between spacecraft models and UCLA’s ground station.
 
