@@ -5,7 +5,7 @@ title: San Diego Zoo Animation 2023
 ---
 ![Completed parade float ready to go down the route](/images/projects/San Diego Zoo/parade morning.jpg)
 
-In late 2022, I was contracted by Artistic Entertainment Services (AES) to design and program an animatronic control system for the San Diego Zoo Wild Animal Park's 2023 Tournament of Roses Entry. This rapid turnaround project leveraged compact electrical and hydraulic driven mechanisms to animate a pair of giraffes which park guests are interacting with from the back of a safari truck. <!--more-->
+In late 2022, I was contracted by Artistic Entertainment Services (AES) to design and program an animatronic control system for the San Diego Zoo Wild Animal Park's 2023 Tournament of Roses entry. This rapid turnaround project leveraged compact electrical and hydraulic driven mechanisms to animate a pair of giraffes which park guests are interacting with from the back of a safari truck. <!--more-->
 
 The two giraffes were essentially mechanically identical, using a large hydraulic cylinder for the neck lift, and two motors for head rotation and tongue actuation. These two giraffes were the only elements on the float which required closed loop control, so only 4 channels of closed loop motor control and 2 channels of hydraulic control were required. 
 
