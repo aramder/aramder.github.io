@@ -25,15 +25,7 @@ This controller was the main part of the system that I had to wire up, other tha
 
 Since the float was being worked on during regular working hours, I had to do most of the animation system setup and programming after hours. Tuning the PIDs for the feedback system was straight forward, however, but setting up the actual animations was time consuming given the numerous collision zones that the giraffes had. In the end, the proximity of the giraffes during certain portions of the animation show really added to the overall animation.
 
-<iframe
-    width="640"
-    height="480"
-    src="https://youtu.be/NDEyiNIk5Go"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
->
-</iframe>
+{% include youtubePlayer.html id="NDEyiNIk5Go" %}
 
 I'm really glad I had the opportunity to work with AES on this project. I think the results looked great... as did the Tournament of Roses. I'm quite proud that this float won the Tournament's Animation Award for most outstanding use of animation in the parade!
 
