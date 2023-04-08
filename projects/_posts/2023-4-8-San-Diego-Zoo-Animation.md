@@ -19,7 +19,7 @@ It was quite nice to work with a company who builds hardware like this regularly
 
 ![Animation system controller internal wiring](/images/projects/San Diego Zoo/controller wiring.jpg)
 
-This controller was the main part of the system that I had to wire up, other than the "G2SE" ground support equipment box which I made in parallel with this project. I'll probably make a separate post about it some other time.... It can be seen on the left side of the table during this late night programming session.
+This controller was the main part of the system that I had to wire up, other than the "Gilderfluke Ground Support Equipment" or "G2SE" box which I made in parallel with this project as a tool for myself. The unit combines 8 channels of high resolutions sliders which appear as joystick inputs to the Gilderfluke PCMACS programming software, and it also contains ethernet, RS-232, and RS-485 adapters for interfacing with the animation system. I'll probably make a separate post about it some other time.... It can be seen on the left side of the table during this late night programming session.
 
 ![Late night programming session with computer and support equipment on table with float in the background](/images/projects/San Diego Zoo/programming session.jpg)
 
