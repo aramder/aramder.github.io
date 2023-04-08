@@ -9,11 +9,11 @@ In late 2022, I was contracted by Artistic Entertainment Services (AES) to desig
 
 The two giraffes were essentially mechanically identical, using a large hydraulic cylinder for the neck lift, and two motors for head rotation and tongue actuation. These two giraffes were the only elements on the float which required closed loop control, so only 4 channels of closed loop motor control and 2 channels of hydraulic control were required. 
 
-![Animation computer panel](/images/projects/San Diego Zoo/computer panel.jpg)
+<img class="shrunk" src="/images/projects/San Diego Zoo/computer panel.jpg" alt="Animation computer panel">
 
 The main computer was based around Gilderfluke a show controller and two 4-axis PID controllers in a similar arrangement to the system I built for LCFTRA's animation system. I designed the panel shown above with 4 channels of DC brushless motor current controlled drive, and 2 channels of current controlled drive for proportional hydraulic valves. AES's skilled technical/electrical department assembled this beautiful panel (the photo doesn't show it 100% complete and tidied up) based on my drawings. For the operator interface with the system, I had AES cut out an aluminum panel for this controller which I assembled.
 
-![Animation system controller](/images/projects/San Diego Zoo/controller.jpg)
+<img class="shrunk" src="/images/projects/San Diego Zoo/controller.jpg" alt="Animation system controller">
 
 It was quite nice to work with a company who builds hardware like this regularly. I was able to have their mechanical engineers and machinist rapidly design this panel and manufacture it! The engraving infill turned out really great.
 
@@ -21,7 +21,7 @@ It was quite nice to work with a company who builds hardware like this regularly
 
 This controller was the main part of the system that I had to wire up, other than the "G2SE" ground support equipment box which I made in parallel with this project. I'll probably make a separate post about it some other time.... It can be seen on the left side of the table during this late night programming session.
 
-![Late night programming session with computer and support equipment on table with float in the background](/images/projects/San Diego Zoo/programming session.jpg)
+<img class="shrunk" src="/images/projects/San Diego Zoo/programming session.jpg" alt="Late night programming session with computer and support equipment on table with float in the background">
 
 Since the float was being worked on during regular working hours, I had to do most of the animation system setup and programming after hours. Tuning the PIDs for the feedback system was straight forward, however, but setting up the actual animations was time consuming given the numerous collision zones that the giraffes had. In the end, the proximity of the giraffes during certain portions of the animation show really added to the overall animation.
 
