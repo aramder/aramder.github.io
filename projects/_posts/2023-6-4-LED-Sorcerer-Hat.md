@@ -3,7 +3,7 @@ layout: post
 category: projects
 title: LED Sorcerer Hat
 ---
-<img class="shrunk" src="/images/projects/LED Sorcerer Hat/hat in dark.jpg" alt="Illuminated sorcerer hat in a dark room">
+![Illuminated sorcerer hat in a dark room](/images/projects/LED Sorcerer Hat/hat in dark.jpg)
 
 The basic LEDs that come in the Mickey sorcerer hat that Disney sells are rather pathetic. *We can rebuild him. We have the technology.* <!--more-->
 
