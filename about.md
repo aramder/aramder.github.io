@@ -18,4 +18,4 @@ From 2017 to 2018 I worked part time at <a href="http://www.aescreative.com/" ta
 
 From 2011 to 2019 I volunteered with the <a href="https://lcftra.org/" target="_blank">La Cañada Flintridge Tournament of Roses Association</a> where I was responsible for electronics and the development of their <a href="https://aramder.github.io/animation-2019">new animation system</a>.
 
-A current resume can be found <a href="https://aramd.net/documents/Aram Dergevorkian Resume May 2022.pdf" target="_blank">here</a>.
+A current resume can be found <a href="https://aramd.net/documents/Aram Dergevorkian Resume Sep 2024.pdf" target="_blank">here</a>.
