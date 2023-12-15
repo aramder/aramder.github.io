@@ -23,6 +23,6 @@ In addition to the stars and moon, I put three long pieces of LED tape on back s
 
 ![LEDs installed inside the hat](/images/projects/LED Sorcerer Hat/LEDs installed.jpg)
 
-Here I am on the Indiana Jones Adventure, stuck on the ride 10 feet from the unloading bay!
+Here I am looking far too excited after showing Mickey and Minnie my hat!
 
-![Me wearing the illuminated hat](/images/projects/LED Sorcerer Hat/stuck on indy.jpg)
+![Me wearing the illuminated hat](/images/projects/LED Sorcerer Hat/if you know you know.jpg)
