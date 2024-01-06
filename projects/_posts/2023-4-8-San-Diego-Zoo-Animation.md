@@ -29,4 +29,4 @@ Since the float was being worked on during regular working hours, I had to do mo
 
 I'm really glad I had the opportunity to work with AES on this project. I think the results looked great... as did the Tournament of Roses. I'm quite proud that this float won the Tournament's Animation Award for most outstanding use of animation in the parade!
 
-![Me in the back of the safari truck taking a selfie with the giraffes](/images/projectsSan Diego Zoo 2023/me and the boys.jpg)
+![Me in the back of the safari truck taking a selfie with the giraffes](/images/projects/San Diego Zoo 2023/me and the boys.jpg)
