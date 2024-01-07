@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lcftra
+category: animation
 title: Animation System Revamp Summary
 ---
 ![A picture of the original animation system](/images/Revamp Summary/original system.jpg)

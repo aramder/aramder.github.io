@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lcftra
+category: animation
 title: Animation System Main Computer
 ---
 ![A picture of the unit's internal electronics](/images/animation computer/enclosure external.jpg)

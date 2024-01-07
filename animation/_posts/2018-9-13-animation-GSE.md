@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lcftra
+category: animation
 title: Animation System GSE
 ---
 ![Photo of control panel](/images/GSE/panel assembled.jpg)

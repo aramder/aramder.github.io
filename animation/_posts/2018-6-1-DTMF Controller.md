@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lcftra
+category: animation
 title: DTMF Controller
 ---
 ![Completed PCB Assembly](/images/DTMF controller/DTMF controller PCBA.jpg)

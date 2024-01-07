@@ -1,6 +1,6 @@
 ---
 layout: post
-category: lcftra
+category: animation
 title: Animation System Valve Bank Module
 ---
 ![A picture of the unit's internal electronics](/images/bank module/internal electronics.jpg)

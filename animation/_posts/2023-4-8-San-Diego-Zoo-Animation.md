@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: animation
 title: San Diego Zoo Animation 2023
 ---
 ![Completed parade float ready to go down the route](/images/San Diego Zoo 2023/parade morning.jpg)
