@@ -5,7 +5,7 @@ title: Animation System GSE
 ---
 ![Photo of control panel](/images/GSE/panel assembled.jpg)
 
-Testing, calibrating, and programming of the animation system requires some support hardware. The system uses several communications busses, as well as several hardware enable and status lines which all need to be accessed for programming.<!--more-->
+Testing, calibrating, and programming of the La Cañada Flintridge float's animation system requires some support hardware. The system uses several communications busses, as well as several hardware enable and status lines which all need to be accessed for programming.<!--more-->
 
 ![Assembled main PCBA](/images/GSE/main PCBA.jpg)
 

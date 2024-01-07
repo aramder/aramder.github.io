@@ -5,7 +5,7 @@ title: Animation System Main Computer
 ---
 ![A picture of the unit's internal electronics](/images/animation computer/enclosure external.jpg)
 
-The new La Cañada Flintridge rose parade float's animation system has a controller unlike anything used in the parade. The custom controller has a 12 inch waterproof touchscreen that sports a custom control GUI and convenient system configuration capabilities.<!--more-->
+The new La Cañada Flintridge Rose Parade float's animation system has a controller unlike anything used in the parade. The custom controller has a 12 inch waterproof touchscreen that sports a custom control GUI and convenient system configuration capabilities.<!--more-->
 
 The animation computer contains the main show controller and various support hardware. The "animation computer" hasn't traditionally used what we would think of as a computer, but has rather been an assembly of custom or commerical off-the-shelf industrial control hardware (at least in the case of the La Cañada float). This animation computer actually contains a computer, however, it only serves to control dedicated show control hardware. To see how the main computer fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/" target="_blank">this summary</a> of the new animation system.
 

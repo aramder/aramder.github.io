@@ -5,7 +5,7 @@ title: DTMF Controller
 ---
 ![Completed PCB Assembly](/images/DTMF controller/DTMF controller PCBA.jpg)
 
-The LCFTRA Rose Parade float is equipped with a custom-built intercom and radio system to allow the float's crew to communicate both within the float, and with external crew. Since the intercom box is mounted in the middle of the float where it's not easily accessible, we needed some way to be able to remotely control the radio.<!--more--> The solution I came up with was a small perfboard assembly that used a microcontroller to decode DTMF tones received by the float's radio to change the radio's operating channel or toggle a set of relays.
+The La Cañada Flintridge Rose Parade float is equipped with a custom-built intercom and radio system to allow the float's crew to communicate both within the float, and with external crew. Since the intercom box is mounted in the middle of the float where it's not easily accessible, we needed some way to be able to remotely control the radio.<!--more--> The solution I came up with was a small perfboard assembly that used a microcontroller to decode DTMF tones received by the float's radio to change the radio's operating channel or toggle a set of relays.
 
 <img class="shrunk" src="/images/DTMF controller/intercom box internal.jpg" alt="Our intercom and radio box mounted on the float">
 
