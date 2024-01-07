@@ -1,11 +1,11 @@
 ---
 layout: post
-category: animation
+category: projects
 title: DTMF Controller
 ---
 ![Completed PCB Assembly](/images/DTMF controller/DTMF controller PCBA.jpg)
 
-Our float is equipped with a custom-built intercom and radio system to allow the float's crew to communicate both within the float, and with external crew. Since the intercom box is mounted in the middle of the float where it's not easily accessible, we needed some way to be able to remotely control the radio.<!--more--> The solution I came up with was a small perfboard assembly that used a microcontroller to decode DTMF tones received by the float's radio to change the radio's operating channel or toggle a set of relays.
+The LCFTRA Rose Parade float is equipped with a custom-built intercom and radio system to allow the float's crew to communicate both within the float, and with external crew. Since the intercom box is mounted in the middle of the float where it's not easily accessible, we needed some way to be able to remotely control the radio.<!--more--> The solution I came up with was a small perfboard assembly that used a microcontroller to decode DTMF tones received by the float's radio to change the radio's operating channel or toggle a set of relays.
 
 <img class="shrunk" src="/images/DTMF controller/intercom box internal.jpg" alt="Our intercom and radio box mounted on the float">
 
@@ -16,4 +16,3 @@ The DTMF controller itself is rather simple, consisting of an atmega328 microcon
 ![3D mockup of a PCBA](/images/DTMF controller/DTMF controller 3D front.png)
 
 The new revision of the controller now includes an audio amplifier (the Arduino needs a rather large signal to decode the DTMF properly) and a right-angle d-sub connector (J3 on the left of the PCB).
-
