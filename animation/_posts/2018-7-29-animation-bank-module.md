@@ -7,7 +7,7 @@ title: Animation System Valve Bank Module
 
 The new La Cañada Flintridge rose parade float's animation system is built in several modular pieces. Four identical units will be valve bank modules, which are responsible for controlling a bank of four hydraulic animation channels.<!--more-->
 
-The valve bank control modules each contain a PID controller, and drivers for the hydraulic valves. To see how this unit fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/" target="_blank">this summary</a> of the new animation system.
+The valve bank control modules each contain a PID controller, and drivers for the hydraulic valves. To see how this unit fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/">this summary</a> of the new animation system.
 
 These modules mostly contain commercial off-the-shelf parts, such as the Gilderfluke Br-EFB PID controller and Rexroth valve drivers, but some parts of the system were custom built.
 
@@ -15,7 +15,7 @@ Previously, all of our boxes had openings for connectors, buttons, switches, gau
 
 ![A flat piece of gasket material placed in a laser cutter](/images/bank module/unpainted panel.jpg)
 
-The plates for the connectors where cut on a waterjet, courtesy of Ben Baral and the Harvey Mudd machine shop.
+The plates for the connectors where cut on a waterjet, courtesy of Ben Baral and Paul Stovall of the Harvey Mudd machine shop.
 
 ![A flat piece of gasket material placed in a laser cutter](/images/bank module/gasket cutting.jpg)
 
@@ -37,4 +37,4 @@ These power supplies are mounted on the lid of the enclosure. Though they will n
 
 ![One of the completed bank modules mounted in the float](/images/bank module/installed bank module.jpg)
 
-The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/" target="_blank">this page</a>.
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/">this page</a>.

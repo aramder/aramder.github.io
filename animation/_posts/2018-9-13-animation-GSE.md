@@ -9,7 +9,7 @@ Testing, calibrating, and programming of the La Cañada Flintridge float's anima
 
 ![Assembled main PCBA](/images/GSE/main PCBA.jpg)
 
-This piece of GSE is capable of supplying individual <a href="https://aramder.github.io/animation-bank-module/" target="_blank">valve bank boxes</a> with the control signals needed to either emulate a connection to the <a href="https://aramder.github.io/animation-computer/" target="_blank">main computer</a>, as well as interface a valve bank module with a PC for testing purposes. For more information about how the various pieces of the animation system interface with one another, check out <a href="https://aramder.github.io/animation-summary/" target="_blank">this summary</a> of the new animation system.
+This piece of GSE is capable of supplying individual <a href="https://aramder.github.io/animation-bank-module/">valve bank boxes</a> with the control signals needed to either emulate a connection to the <a href="https://aramder.github.io/animation-computer/">main computer</a>, as well as interface a valve bank module with a PC for testing purposes. For more information about how the various pieces of the animation system interface with one another, check out <a href="https://aramder.github.io/animation-summary/">this summary</a> of the new animation system.
 
 ![Assembled layered PCBAs mounted to underside of the panel](/images/GSE/underside with PCBA.jpg)
 
@@ -25,5 +25,5 @@ There is also a port for a remote e-stop button which must be connected in order
 
 ![External photo of GSE enclosure](/images/GSE/enclosure external.jpg)
 
-The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/" target="_blank">this page</a>.
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/">this page</a>.
 
