@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: Volvo/Whelen CANtrol
 ---
 <img class="shrunk" src="/images/Volvo CANtrol/footwell.jpg" alt="Looking down into my footwell with equipment uncomfortably close to my leg">

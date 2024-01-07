@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: Embedded Lighting Controller Summary
 ---
 ![A rendering with multiple printed circuit boards inside a plastic enclosure](/images/ELC/motherboard top.png)

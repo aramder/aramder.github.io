@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: VGA to Oscilloscope (XYZ) Converter
 ---
 ![A photo of me displayed on the oscilloscope](/images/vga to oscope/profile full.jpg)

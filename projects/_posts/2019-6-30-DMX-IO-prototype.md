@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: DMX Development Board
 ---
 ![The DMX development board - a printed circuit board assembly](/images/DMX IO Prototype/DMX development board.jpg)

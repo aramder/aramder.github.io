@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: uTailLight
 ---
 ![Rear view of motorcycle with brake lights illuminated](/images/uTailLight/rear braking.png)

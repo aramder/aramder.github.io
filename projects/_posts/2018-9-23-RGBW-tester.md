@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: RGBW Strobe Tester
 ---
 ![Closeup of TwinkleWorks logo on PCBA](/images/RGBW tester/TW logo.jpg)

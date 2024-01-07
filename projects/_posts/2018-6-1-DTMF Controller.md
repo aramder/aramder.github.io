@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: DTMF Controller
 ---
 ![Completed PCB Assembly](/images/DTMF controller/DTMF controller PCBA.jpg)

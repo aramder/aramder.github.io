@@ -1,6 +1,6 @@
 ---
 layout: post
-category: projects
+category: misadventures
 title: LED Sorcerer Hat
 ---
 ![Illuminated sorcerer hat in a dark room](/images/LED Sorcerer Hat/hat in dark.jpg)
