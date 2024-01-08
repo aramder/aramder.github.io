@@ -7,7 +7,7 @@ title: Animation System Main Computer
 
 The new La Cañada Flintridge Rose Parade float's animation system has a controller unlike anything used in the parade. The custom controller has a 12 inch waterproof touchscreen that sports a custom control GUI and convenient system configuration capabilities.<!--more-->
 
-The animation computer contains the main show controller and various support hardware. The "animation computer" hasn't traditionally used what we would think of as a computer, but has rather been an assembly of custom or commerical off-the-shelf industrial control hardware (at least in the case of the La Cañada float). This animation computer actually contains a computer, however, it only serves to control dedicated show control hardware. To see how the main computer fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/" target="_blank">this summary</a> of the new animation system.
+The animation computer contains the main show controller and various support hardware. The "animation computer" hasn't traditionally used what we would think of as a computer, but has rather been an assembly of custom or commerical off-the-shelf industrial control hardware (at least in the case of the La Cañada float). This animation computer actually contains a computer, however, it only serves to control dedicated show control hardware. To see how the main computer fits in to the animation system, check out <a href="https://aramder.github.io/animation-summary/">this summary</a> of the new animation system.
 
 At the heart of the system is a controller/inerfacing PCB assembly. This board is responsible for controlling the main Gilderfluke Sd-50/40 show controller, as well as interfacing with the four Br-EFB PID controllers and 16 Rexroth proportional valve drivers.
 
@@ -19,7 +19,7 @@ The PCBA consists of 20 relays (with manual actuation tabs which serve as a manu
 
 The GUI, written in Python, allows the animation operator to control the Sd-50/40 show controller, enable/disable each valve driver individually, as well as provide a health status for each Br-EFB. The GUI has a number of customizable parameters to aid the animation operator such as configurable labels (descriptive names instead of channel numbers), customizable device configuration loading, and more.
 
-Now of course all of this has to be packaged in a suitable enclosure. Just like the <a href="https://aramder.github.io/animation-bank-module/" target="_blank">valve bank modules</a>, the connectors on the box will be mounted on powder-coated custom waterjet cut plates. Three large rectangular openings were cut in the animation controller box for the two connector plates and the touchscreen. The exposed metal on all of the boxes was painted with matching ANSI 61 gray paint.
+Now of course all of this has to be packaged in a suitable enclosure. Just like the <a href="https://aramder.github.io/animation-bank-module/">valve bank modules</a>, the connectors on the box will be mounted on powder-coated custom waterjet cut plates. Three large rectangular openings were cut in the animation controller box for the two connector plates and the touchscreen. The exposed metal on all of the boxes was painted with matching ANSI 61 gray paint.
 
 ![The empty enclosure covered in blue tape for painting the inside lip of the enclosure's cutouts](/images/animation computer/enclosure painting.jpg)
 
@@ -35,5 +35,5 @@ Yes, I know what you're thinking; that does look awfully compact. We could have 
 
 <img class="shrunk" src="/images/animation computer/main controller open.jpg" alt="A look inside the animation computer - the inside of the touchscreen can be seen on the lid of the enclosure, as well as the electronics in the bottom half">
 
-The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/" target="_blank">this page</a>.
+The animation system has since successfully been down the parade route! The float, Tree Frog Night, featured 3 frog musicians and an accompanying cast of dancing fish. For an overview of the animation system's debut, check out <a href="https://aramder.github.io/animation-2019/">this page</a>.
 
