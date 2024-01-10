@@ -19,7 +19,7 @@ It was quite nice to work with a company who builds hardware like this regularly
 
 ![Animation system controller internal wiring](/images/San Diego Zoo 2023/controller wiring.jpg)
 
-This controller was the main part of the system that I had to wire up, other than the "Gilderfluke Ground Support Equipment" or "G2SE" box which I made in parallel with this project as a tool for myself. The unit combines 8 channels of high resolutions sliders which appear as joystick inputs to the Gilderfluke PCMACS programming software, and it also contains ethernet, RS-232, and RS-485 adapters for interfacing with the animation system. I'll probably make a separate post about it some other time.... It can be seen on the left side of the table during this late night programming session.
+This controller was the main part of the system that I had to wire up, other than the "Gilderfluke Ground Support Equipment" or "G2SE" box which I made in parallel with this project as a tool for myself. The unit combines 8 channels of high resolutions sliders which appear as joystick inputs to the Gilderfluke PCMACS programming software, and it also contains ethernet, RS-232, and RS-485 adapters for interfacing with the animation system. It can be seen on the left side of the table during this late night programming session, and you can read more about it <a href="https://aramd.net/G2SE/">here</a>!
 
 ![Late night programming session with computer and support equipment on table with float in the background](/images/San Diego Zoo 2023/programming session.jpg)
 
@@ -30,3 +30,5 @@ Since the float was being worked on during regular working hours, I had to do mo
 I'm really glad I had the opportunity to work with AES on this project. I think the results looked great... as did the Tournament of Roses. I'm quite proud that this float won the Tournament's Animation Award for most outstanding use of animation in the parade!
 
 ![Me in the back of the safari truck taking a selfie with the giraffes](/images/San Diego Zoo 2023/me and the boys.jpg)
+
+**Update** - *January 2024* - Added link to <a href="https://aramd.net/G2SE/">G2SE writeup</a>.
