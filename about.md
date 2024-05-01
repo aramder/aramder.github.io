@@ -18,4 +18,4 @@ From 2017 to 2018 I worked part time at <a href="http://www.aescreative.com/" ta
 
 Though not a UCLA student at the time, I spent a summer, in addition to time part time during the schoolyear, working on UCLA’s ELFIN (<a href="https://elfin.igpp.ucla.edu/" target="_blank">Electron Loses and Fields Investigation</a>) CubeSat from 2015 to 2016. As part of the communications subsystem team, I tested the spacecraft’s prototype and flight radios, performed antenna testing in the field, and aided in tests between spacecraft models and UCLA’s ground station.
 
-A current resume can be found <a href="https://aramd.net/documents/Aram Dergevorkian Resume Sep 2024.pdf" target="_blank">here</a>.
+A current resume can be found <a href="https://aramd.net/documents/Aram_Dergevorkian_Resume_20240501.pdf" target="_blank">here</a>.
