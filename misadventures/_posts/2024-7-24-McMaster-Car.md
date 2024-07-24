@@ -1,7 +1,7 @@
 ---
 layout: post
 category: misadventures
-title: The McMaster-Car 7.5" Pedal Car
+title: The McMaster-Car - a 7.5" Gauge E-Bike Pedal Car
 ---
 ![A photo of my train - a "pedal car" which uses bicycle pedals for propulsion](/images/McMaster-Car/mcmaster-car_side.jpg)
 
@@ -52,7 +52,7 @@ With the motor mount completed, the train is looking mostly complete. Note that 
 
 ![Motor mounted on a small piece of extrusion](/images/McMaster-Car/mostly_complete.jpg)
 
-The Bafang BBS02 motor actually integrates the motor drive electronics into the motor assembly, simplifying wiring considerably. While the motor takes 48V directly from the 15Ah 13S3P 21700 Li-ion battery pack, a small DC/DC converter is used to generate 12V accessories. The box on the end of the frame contains 12V fusing, switching, and distribution for things like the headlight, horn (a small motorcycle horn), phone charger, and FRED. A FRED is a Flashing Rear End Device which is often required for operating model trains at night, so I implemented one directly on the locomotive using a cheap motorcycle brake light and a digital PWM generator module.
+The Bafang BBS02 motor actually integrates the motor drive electronics into the motor assembly, simplifying wiring considerably. The motor takes 48V directly from the 15Ah 13S3P 21700 Li-ion battery pack, and a second 48V feed was wired to a small DC/DC converter is used to generate 12V accessories. The box on the end of the frame contains 12V fusing, switching, and distribution for things like the headlight, horn (a small motorcycle horn), phone charger, and FRED. A FRED is a Flashing Rear End Device which is often required for operating scale trains at night, so I implemented one directly on the locomotive using a cheap motorcycle brake light and a digital PWM generator module.
 
 ![Enclosure at the back of the locomotive with the FRED illuminated](/images/McMaster-Car/FRED.jpg)
 
