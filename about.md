@@ -8,7 +8,7 @@ permalink: /about/
 
 ![Me at my electronics bench wearing a ridiculous lab coat and Mickey Mouse sorcerer hat outfit holding a soldering iron and smiling like an idiot](/images/profile_cringe.jpg)
 
-I'm an Electrical Engineer at the Amazon Web Service Center for Quantum Computing in Pasadena California. I've been working there as a mixed signal designer December 2024.
+I'm an Electrical Engineer at the Amazon Web Service Center for Quantum Computing in Pasadena California. I've been working there as a mixed signal designer since December 2024.
 
 Previously, I had worked at the <a href="https://www.jpl.nasa.gov/" target="_blank">Jet Propulsion Laboratory</a>, starting in 2016 as an intern and transitioning to full time in 2021. My most recent project before my departure in 2024 was designing the instrument Command and Data Handling system for the <a href="https://sbg.jpl.nasa.gov/" target="_blank">Surface Biology and Geology</a> mission's TIR (Thermal InfraRed) satellite's OTTER (Orbiting Terrestrial Thermal Emission Radiometer) instrument. From approximately 2021 through 2024, I worked on the MEM (Microwave Electrojet Magnetogram) instrument for the EZIE (<a href="https://ezie.jhuapl.edu/" target="_blank">The Electrojet Zeeman Imaging Explorer</a>) mission as the Digital Backend Electronics Cognizant Engineer. From 2016 to 2021, I worked on low power instrument control applications - culmniating in the delivery of the Command and Data Handling, and Motor Electronics assemblies for the PREFIRE (<a href="https://prefire.ssec.wisc.edu/" target="_blank">Polar Radiant Energy in the Far-InfraRed Experiment</a>) CubeSat as Motor Electronics Cognizant Engineer.
 
