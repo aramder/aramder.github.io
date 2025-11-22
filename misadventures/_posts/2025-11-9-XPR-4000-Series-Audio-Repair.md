@@ -11,9 +11,13 @@ Here is a block diagram of the audio path within the XPR 4000 series of mobiles,
 
 <a href="https://aramd.net/images/XPR4000_Series/XPR_audio_BD.png"><img src="/images/XPR4000_Series/XPR_audio_BD.png" alt="XPR internal audio path block diagram"></a>
 
-The culprit is U3500, the TDA1519C final audio amplifier IC. It seems that there’s some issue causing these amplifiers to fail at a non-negligible rate in these radios. Per the datasheet, these ICs have internal thermal protection, so it’s unlikely that the problem is simply poor thermal contact with the heatsink. Perhaps an edge-case turn-on transient causes some kind of violent instability? The radios I’m repairing were used to drive an intercom system, which shouldn’t present much of a load to the amplifier output.
+The culprit is U3500, the TDA1519C final audio amplifier IC. It seems that there’s some issue causing these amplifiers to fail at a non-negligible rate in these radios. Per the datasheet, these ICs have internal thermal protection, so it’s unlikely that the problem is simply poor thermal contact with the heatsink. Perhaps an edge-case turn-on transient causes some kind of violent instability like shoot-through? The radios I’m repairing were used to drive an intercom system, which shouldn’t present much of a load to the amplifier output.
 
-Unfortunately, the TDA1519C is discontinued. Thankfully, there are still a handful of gray-market parts available from the usual suspects.
+Unfortunately, the TDA1519C is discontinued. Thankfully, there are still a handful of grey-market parts available from the usual suspects.
+
+Note that in some cases this failure seems to result in damage to the front speaker built in to the radio's front panel. Replacement parts can be found online.
+
+<a href="https://aramd.net/images/XPR4000_Series/Front_speaker.jpg"><img src="/images/XPR4000_Series/Front_speaker.jpg" alt="XPR internal speaker part number" style="max-height:600px"></a>
 
 ## Disassembly
 
@@ -71,13 +75,18 @@ The suggested implementation in the datasheet matches the circuit used in the XP
 Rather than trying to desolder and remove the IC in one go, I suggest snipping the *remaining* leads with small wire cutters, then desoldering the individual pins. Done carefully, this stresses the PCB less than trying to desolder the entire chip at once.
 
 Sometimes the leads are nice enough to vaporize themselves, so you don’t even have to cut them!
+
 <a href="https://aramd.net/images/XPR4000_Series/OUCH.jpg"><img src="/images/XPR4000_Series/OUCH.jpg" alt="Very violent failure."></a>
 
 After desoldering and wicking the remaining solder, inspect the pads for damage. In two of the three units I repaired, the pads were fine, but in the worst unit, the pin 7 “Vp” pad seemed to have sacrificed itself as a fuse.
 
 <a href="https://aramd.net/images/XPR4000_Series/cleaned_pads.jpg"><img src="/images/XPR4000_Series/cleaned_pads.jpg" alt="Damaged solder pads"></a>
 
-Install the new part. If you’re feeling like being extra thorough, you might also replace the thermal pad between the audio amp IC and the enclosure. The stock pad is 1mm thick, and about 12 x 20mm. Any generic 1mm pad can be cut to size and used in this application.
+Install the new part.
+
+<a href="https://aramd.net/images/XPR4000_Series/New_part.jpg"><img src="/images/XPR4000_Series/New_part.jpg" alt="Installed component."></a>
+
+If you’re feeling like being extra thorough, you might also replace the thermal pad between the audio amp IC and the enclosure. The stock pad is 1mm thick, and about 12 x 20mm. Any generic 1mm pad can be cut to size and used in this application. Thermal paste should probably also be applied to the two ICs on the bottom side of the board which use thermal paste rather than a gasket.
 
 Be sure to clean the PCB and enclosure before reassembly. The nearby thermal pad/adhesive often has gunk embedded in it from the explosion in failed units — check yours carefully. We wouldn’t want a piece of FOD causing more issues.
 
