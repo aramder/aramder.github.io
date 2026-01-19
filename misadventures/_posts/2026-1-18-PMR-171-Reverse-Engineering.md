@@ -4,11 +4,11 @@ category: misadventures
 title: AI-Assisted Reverse Engineering of the PMR-171
 ---
 
-![PMR-171 handheld radio](/images/PMR171/pmr171_radio.png)
+![PMR-171 portable radio](/images/PMR171/pmr171_radio.png)
 
-I picked up a Guohetec PMR-171 wideband handheld a few months ago. It's a neat little radio covering HF through UHF with FM, AM, SSB, and even DMR support. The problem? The programming software is Windows-only, poorly documented, and the protocol is completely proprietary. The kind of device that would normally sit in a drawer until I found motivation to deal with it.<!--more-->
+I picked up a Guohetec PMR-171 wideband portable radio a few months ago. It's a compact manpack-style transceiver—roughly double the size of a Yaesu FT-817, or comparable to a typical 100W rig—covering HF through UHF with FM, AM, SSB, and even DMR support. The problem? The manufacturer's programming software has limited capabilities and is completely undocumented. Coming from other radios with proper CPS (Customer Programming Software), I wanted to understand how this one worked.<!--more-->
 
-Instead, I reverse engineered the programming protocol. Well, *I* didn't do it—an LLM did. I captured UART traffic, fed it to an AI for pattern analysis, reported test results, and iterated. The AI handled hex parsing, protocol documentation, and building lookup tables. The result is a complete understanding of the radio's serial protocol and codeplug format.
+So I reverse engineered the programming protocol. Well, *I* didn't do it—an LLM did. I captured UART traffic, fed it to an AI for pattern analysis, reported test results, and iterated. The AI handled hex parsing, protocol documentation, and building lookup tables. The result is a complete understanding of the radio's serial protocol and codeplug format.
 
 ## The Challenge
 
@@ -43,6 +43,9 @@ The first challenge was figuring out how the radio communicates. No documentatio
 **Discovery process:**
 1. Capture UART traffic during factory software operations
 2. Feed captures to AI for pattern analysis
+
+![Serial monitor capture showing UART traffic](/images/PMR171/serial_monitor.png)
+
 3. Identify packet structure (header, length, command, payload, checksum)
 4. Implement and test individual operations
 5. Build complete read/write driver
