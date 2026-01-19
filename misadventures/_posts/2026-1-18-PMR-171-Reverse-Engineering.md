@@ -106,7 +106,7 @@ Estimated manual time: 2.5 hours of clicking through menus. I would have mapped 
 
 **Test 11 validation result: 25 test channels, 100% accuracy.** Split tones, TX-only, RX-only—all confirmed functional.
 
-![CTCSS validation showing programmed tones on radio display](/images/PMR171/ctcss_validation.png)
+![CTCSS validation - manufacturer software showing programmed tones read back from radio](/images/PMR171/ctcss_validation.png)
 
 ```python
 CTCSS_TO_YAYIN = {
