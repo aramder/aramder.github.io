@@ -313,14 +313,23 @@ table {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: none;
+  border-bottom: none;
+  background: $navBrown;
 }
 
 footer {
-  padding: 20px 0;
+  padding: 15px 0;
   text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 //
