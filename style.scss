@@ -156,37 +156,39 @@ img {
 }
 
 .masthead {
-  padding: 12px 0;
+  padding: 10px 0;
   border-bottom: none;
+  display: flex;
+  align-items: center;
 
   @include mobile {
+    flex-direction: column;
     text-align: center;
   }
 }
 
 .site-avatar {
-  float: left;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   margin-right: 15px;
+  flex-shrink: 0;
 
   @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px;
   }
 
   img {
     border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 .site-info {
-  float: left;
+  flex: 1;
 
   @include mobile {
-    float: none;
-    display: block;
     margin: 0 auto;
   }
 }
@@ -199,12 +201,14 @@ img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 2px 0 0 0;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
+  line-height: 1.3;
 
   @include mobile {
     margin: 3px 0;
@@ -212,21 +216,19 @@ img {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
+  display: flex;
+  align-items: center;
   font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
-    float: none;
     margin-top: 9px;
-    display: block;
+    justify-content: center;
     font-size: 16px;
   }
 
   a {
-    // margin-left: 20px;
-    margin-left: 15px;  // Reduce spacing
+    margin-left: 15px;
     color: rgba(255, 255, 255, 0.9);
     text-align: right;
     font-weight: 300;
@@ -350,9 +352,14 @@ footer {
   }
 }
 
-// Custom GLightbox styling
-.gslide-description {
+// Gallery overlay background (more transparent)
+.glightbox-container .goverlay {
   background: rgba(0, 0, 0, 0.5) !important;
+}
+
+// Custom GLightbox styling - caption bar (darker than overlay)
+.gslide-description {
+  background: rgba(0, 0, 0, 0.65) !important;
 }
 
 .gslide-title {
@@ -365,11 +372,11 @@ footer {
 
 // Improve arrow visibility
 .gnext, .gprev {
-  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
   border-radius: 4px;
   
   &:hover {
-    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
   }
 }
 
