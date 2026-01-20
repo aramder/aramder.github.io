@@ -1,12 +1,12 @@
 ---
 layout: post
 category: misadventures
-title: AI-Assisted Reverse Engineering of the PMR-171
+title: AI-Assisted Reverse Engineering of the PMR-171 Programming Interface
 ---
 
 ![PMR-171 portable radio](/images/PMR171/pmr171_radio.png)
 
-I picked up a Guohetec PMR-171 wideband portable radio a few months ago. It's a compact manpack-style transceiver—roughly double the size of a Yaesu FT-817, or comparable to a typical 100W rig—covering HF through UHF with FM, AM, SSB, and even DMR support. The problem? The manufacturer's programming software has limited capabilities and is completely undocumented. Coming from other radios with proper CPS (Customer Programming Software), I wanted to understand how this one worked.<!--more-->
+I picked up a Guohetec PMR-171 portable SDR a few months ago. It's a compact manpack-style transceiver—roughly double the size of a Yaesu FT-817, or comparable to a typical 100W rig—covering HF through UHF with FM, AM, SSB, and even DMR support. The problem? The manufacturer's programming software has limited capabilities and is completely undocumented. Coming from other radios with proper CPS (Customer Programming Software), I wanted to understand how this one worked.<!--more-->
 
 So I reverse engineered the programming protocol. Well, *I* didn't do it—an LLM did. I captured UART traffic, fed it to an AI for pattern analysis, reported test results, and iterated. The AI handled hex parsing, protocol documentation, and building lookup tables. The result is a complete understanding of the radio's serial protocol and codeplug format.
 
@@ -20,7 +20,7 @@ Reverse engineering a proprietary protocol typically involves:
 - **Packet structure analysis** (headers, commands, checksums)
 - **Systematic testing** to validate findings
 
-The kind of work I'd normally estimate at "a few weekends" and never actually finish.
+The kind of work I'd normally estimate as "not worth my time", and discount this project for not being feasible within a reasonable timeframe.
 
 ## Why This Worked
 
@@ -34,7 +34,7 @@ Reverse engineering involves a specific category of work that AI handles well:
 | Boilerplate code generation | Mind-numbing | Effortless |
 | Protocol specification writing | Avoided | Thorough |
 
-The individual tasks aren't hard. They're just numerous and boring. I wouldn't have written 24 JSON validation tests manually. I wouldn't have documented every field in the protocol. I definitely wouldn't have mapped all 50 CTCSS tones through brute-force testing.
+The individual tasks aren't hard - they're just numerous and boring.
 
 ## The UART Protocol
 
@@ -43,12 +43,11 @@ The first challenge was figuring out how the radio communicates. No documentatio
 **Discovery process:**
 1. Capture UART traffic during factory software operations
 2. Feed captures to AI for pattern analysis
-
-![Serial monitor capture showing UART traffic](/images/PMR171/serial_monitor.png)
-
 3. Identify packet structure (header, length, command, payload, checksum)
 4. Implement and test individual operations
 5. Build complete read/write driver
+
+![Serial monitor capture showing UART traffic](/images/PMR171/serial_monitor.png)
 
 **Key finding that took hours to discover:** The radio won't respond unless both DTR and RTS serial control signals are set HIGH. This isn't documented anywhere. The AI tried various approaches, I reported failures, and eventually we narrowed it down through systematic elimination.
 
@@ -59,7 +58,7 @@ ser.dtr = True  # Required!
 ser.rts = True  # Also required!
 ```
 
-The protocol turned out to be straightforward once we found the right parameters:
+The UART packet format and codeplug data encoding turned out to be straightforward once we found the right parameters:
 
 ```
 ┌────────┬────────┬────────┬─────────────┬──────────┐
@@ -94,8 +93,6 @@ To build a complete mapping:
 3. Extract `yayin` value
 4. Repeat 50 times
 
-Estimated manual time: 2.5 hours of clicking through menus. I would have mapped maybe 10 common tones and called it done.
-
 **What actually happened:** Over 11 test iterations, the AI:
 - Generated test configurations
 - Analyzed UART captures
@@ -104,7 +101,7 @@ Estimated manual time: 2.5 hours of clicking through menus. I would have mapped 
 - Built complete lookup tables
 - Documented everything
 
-**Test 11 validation result: 25 test channels, 100% accuracy.** Split tones, TX-only, RX-only—all confirmed functional.
+**Test 11 validation result: 25 test channels, 100% accuracy.** Split tones, TX-only, RX-only - all confirmed functional.
 
 ![CTCSS validation - manufacturer software showing programmed tones read back from radio](/images/PMR171/ctcss_validation.png)
 
@@ -143,8 +140,8 @@ The AI also generated 24 automated tests validating JSON format compatibility wi
 ## What I Actually Did
 
 My contribution was:
-- **Direction**: "Reverse engineer the PMR-171 protocol"
-- **Hardware**: Connected the radio, captured UART traffic, ran tests
+- **Direction**: Varying levels of fairly non-technically-detailed guidance
+- **Hardware**: Connected the radio, captured UART traffic with software tools, ran tests
 - **Review**: Verified findings against actual radio behavior
 - **Iteration**: "That didn't work, try X instead"
 
@@ -159,7 +156,7 @@ This isn't automation in the traditional sense. It's more like having a very fas
 
 ## Reflections
 
-This project demonstrates something I've suspected for a while: there's a category of technical work that's straightforward but tedious, and AI tools are excellent at it.
+This project demonstrates something about AI well: there's a category of technical work that's straightforward but tedious, and AI tools are excellent at it.
 
 | What AI Did Well | What Still Required Human |
 |------------------|---------------------------|
@@ -169,7 +166,7 @@ This project demonstrates something I've suspected for a while: there's a catego
 | Documentation | "Try DTR=True" intuition |
 | Test generation | Architectural decisions |
 
-I now have complete protocol documentation for a radio that would otherwise remain a black box. Not because the reverse engineering was hard, but because the *work* wasn't interesting enough to justify the time investment manually.
+I now have complete protocol documentation for a radio that would otherwise remain a black box. Not because the reverse engineering was hard, but because the *work* wasn't interesting or rewarding enough to justify the time investment of doing it manually.
 
 All findings—packet structure, field mappings, CTCSS lookup tables—are documented in the repository. The resulting programming software will be covered in a future post.
 
@@ -182,4 +179,4 @@ All findings—packet structure, field mappings, CTCSS lookup tables—are docum
 
 ---
 
-*Disclaimer: This post was authored by AI. While the technical findings have been validated against real hardware, do not blindly trust anything written here—verify independently before relying on it for your own projects.*
+*Disclaimer: This post was originally authored by AI and then human edited.*
