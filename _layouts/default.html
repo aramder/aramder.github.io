@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
@@ -56,6 +59,71 @@
       diameter: 56,
       backgroundColor: '#ddd',
       textColor: 'black'
-    })</script> 
+    })</script>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find all images in the main content area that are not already wrapped in lightbox links
+        const mainContent = document.getElementById('main');
+        if (mainContent) {
+          const images = mainContent.querySelectorAll('img:not(.no-lightbox)');
+          
+          images.forEach(function(img, index) {
+            // Skip images that are already wrapped in an anchor tag with glightbox class
+            if (img.parentElement.tagName === 'A' && img.parentElement.classList.contains('glightbox')) {
+              return;
+            }
+            
+            // Skip images that are already wrapped in any anchor tag (like linked images)
+            // unless we want to override - for now, let's wrap them for lightbox
+            const parent = img.parentElement;
+            
+            // Create a wrapper anchor for the lightbox
+            const wrapper = document.createElement('a');
+            wrapper.href = img.src;
+            wrapper.classList.add('glightbox');
+            wrapper.setAttribute('data-gallery', 'page-gallery');
+            
+            // Use alt text as the caption if available
+            if (img.alt) {
+              wrapper.setAttribute('data-glightbox', 'title: ' + img.alt);
+            }
+            
+            // If the image is already wrapped in an anchor, replace the anchor's functionality
+            if (parent.tagName === 'A') {
+              // Keep the original link but add lightbox functionality
+              parent.classList.add('glightbox');
+              parent.setAttribute('data-gallery', 'page-gallery');
+              if (img.alt) {
+                parent.setAttribute('data-glightbox', 'title: ' + img.alt);
+              }
+              // Update href to point to the image for lightbox
+              parent.setAttribute('data-href', img.src);
+              parent.href = img.src;
+            } else {
+              // Wrap the image in the new anchor
+              img.parentNode.insertBefore(wrapper, img);
+              wrapper.appendChild(img);
+            }
+          });
+        }
+        
+        // Initialize GLightbox with gallery thumbnails and navigation
+        const lightbox = GLightbox({
+          selector: '.glightbox',
+          touchNavigation: true,
+          loop: true,
+          autoplayVideos: true,
+          openEffect: 'zoom',
+          closeEffect: 'zoom',
+          cssEfects: {
+            fade: { in: 'fadeIn', out: 'fadeOut' },
+            zoom: { in: 'zoomIn', out: 'zoomOut' }
+          }
+        });
+      });
+    </script>
   </body>
 </html>

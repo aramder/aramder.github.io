@@ -316,6 +316,53 @@ footer {
   text-align: center;
 }
 
+//
+// GLightbox Customizations
+//
+
+// Make images appear clickable
+.glightbox {
+  cursor: zoom-in;
+  display: block;
+  
+  img {
+    transition: opacity 0.2s ease;
+    
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// Custom GLightbox styling
+.gslide-description {
+  background: rgba(0, 0, 0, 0.75) !important;
+}
+
+.gslide-title {
+  color: #fff !important;
+  font-size: 1em !important;
+  font-weight: normal !important;
+  font-family: $helvetica;
+  margin-bottom: 0 !important;
+}
+
+// Improve arrow visibility
+.gnext, .gprev {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 4px;
+  
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+}
+
+// Counter styling (shows "1 / 5" etc.)
+.gslide-outer .gslide-count {
+  color: #fff !important;
+  font-size: 0.9em !important;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
