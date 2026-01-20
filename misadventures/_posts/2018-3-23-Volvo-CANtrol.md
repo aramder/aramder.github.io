@@ -19,11 +19,11 @@ I'm not one to use cruise control, so I decided to use the cruise control button
 
 So that the cruise function is still usable, when cruise control is activated, the speed adjustment buttons will not cause any changes to the Whelen unit's selected operating mode.
 
-![A screenshot from Volvo's wiring diagram showing access to the CAN bus](/images/Volvo CANtrol/powered seat CAN.png)
+![Volvo wiring diagram showing CAN bus access at the powered seat connector](/images/Volvo CANtrol/powered seat CAN.png)
 
 After looking through the Volvo S60/S80 2003 wiring diagram, I found a convenient CAN bus access point under the driver's seat. Volvo's color code for the CAN bus is White = CAN H, Green = CAN L. I tapped into the bus entering the connector for the power seat module with positaps, and began looking for packets corresponding to buttons on the steering wheel.
 
-![A spreadsheet of some CAN mesages](/images/Volvo CANtrol/packet table.png)
+![Decoded CAN bus messages for steering wheel button inputs](/images/Volvo CANtrol/packet table.png)
 
 After messing around for quite a while, I found the ID for CAN packets containing information about the steering wheel's buttons. There are a number of other outputs for combinations of buttons, but this data is more than enough for what I want to do.
 
@@ -35,7 +35,7 @@ Olaf's 2002 S80's CAN packets seem to have the same packet formatting as my 2003
 
 Prototype controller (right half of breadboard) used for decoding CAN packets and testing control functions.
 
-![Electronics assembled on a breadboard](/images/Volvo CANtrol/perfboard.jpg)
+![Controller split across two perfboards with Arduino, CAN module, and decoder](/images/Volvo CANtrol/perfboard.jpg)
 
 Controller spread out between two perf-board assemblies. The left board has the Arduino Pro Mini, a MCP2515 CAN module, and a voltage regulator. The right board as a few transistors and a 74LS138 (binary decoder) for controlling the Whelen unit.
 
@@ -44,12 +44,12 @@ Controller spread out between two perf-board assemblies. The left board has the 
 A ribbon cable connects the Whelen and controller units. Signals such as the MAN, HORN, and SHDN lines will go to the three transistors to simulate contact closures. Seven lines from the rotary mode select switch will go to the 74LS138 to select the unit's operating mode. The rotary switch usually pulls one of the seven lines low (all lines have a pullup to 5v), which goes to a microcontroller. Since the 74LS138 has active low outputs, the first seven outputs can be directly connected to the seven mode select lines.
 
 
-![Testing the Whelen unit and controller on a testbench](/images/Volvo CANtrol/testing.jpg)
+![Bench testing the Whelen unit with the ribbon cable connected to the controller](/images/Volvo CANtrol/testing.jpg)
 
 The ribbon cable installed, testing with the controller.
 
 
-![A closeup of the two controller boards](/images/Volvo CANtrol/testing 1.jpg)
+![Closeup of the Arduino and decoder perfboards during testing](/images/Volvo CANtrol/testing 1.jpg)
 
 A closeup of the two controller boards.
 

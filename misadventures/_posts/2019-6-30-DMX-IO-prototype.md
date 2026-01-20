@@ -3,7 +3,7 @@ layout: post
 category: misadventures
 title: DMX Development Board
 ---
-![The DMX development board - a printed circuit board assembly](/images/DMX IO Prototype/DMX development board.jpg)
+![DMX development board with Atmega328PB, RS-485 transceiver, and PWM outputs](/images/DMX IO Prototype/DMX development board.jpg)
 
 For a number of projects I'd like to work on in the future, I needed a development board of sorts for testing both hardware and software. <!--more-->
 

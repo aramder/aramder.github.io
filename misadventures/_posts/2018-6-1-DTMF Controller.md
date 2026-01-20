@@ -3,7 +3,7 @@ layout: post
 category: misadventures
 title: DTMF Controller
 ---
-![Completed PCB Assembly](/images/DTMF controller/DTMF controller PCBA.jpg)
+![Assembled DTMF controller PCB for remote radio control](/images/DTMF controller/DTMF controller PCBA.jpg)
 
 The La Cañada Flintridge Rose Parade float is equipped with a custom-built intercom and radio system to allow the float's crew to communicate both within the float, and with external crew. Since the intercom box is mounted in the middle of the float where it's not easily accessible, we needed some way to be able to remotely control the radio.<!--more--> The solution I came up with was a small perfboard assembly that used a microcontroller to decode DTMF tones received by the float's radio to change the radio's operating channel or toggle a set of relays.
 
@@ -13,6 +13,6 @@ We chose to go with DTMF control because it requires very little extra hardware 
 
 The DTMF controller itself is rather simple, consisting of an atmega328 microcontroller and a handful of generic components. The atmega328 constantly decodes incoming audio in order to detect DTMF tones. When the correct password and command are received, the Arduino will either toggle a relay or change the radio's channel by momentarily toggling one of four lines that are connected to the TK-8180 as shortcut buttons for selecting radio memories.
 
-![3D mockup of a PCBA](/images/DTMF controller/DTMF controller 3D front.png)
+![3D render of the updated DTMF controller with audio amplifier and D-sub connector](/images/DTMF controller/DTMF controller 3D front.png)
 
 The new revision of the controller now includes an audio amplifier (the Arduino needs a rather large signal to decode the DTMF properly) and a right-angle d-sub connector (J3 on the left of the PCB).

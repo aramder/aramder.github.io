@@ -3,7 +3,7 @@ layout: page
 title:
 permalink: /TwinkleWorks/
 ---
-![TwinkleWorks logo](/images/TwinkleWorks/twinkleworks w background.png)
+![TwinkleWorks logo on dark background](/images/TwinkleWorks/twinkleworks w background.png)
 
 # Disclaimer
 
@@ -17,11 +17,11 @@ TwinkleWorks has several lines of LED strobe fixtures in various sizes and color
 
 Twinkleworks also produces several LED drivers. Currently manufactured drivers include:
 
-![TwinkleWorks ED32](/images/TwinkleWorks/ED32.jpg)
+![TwinkleWorks ED32 32-channel DMX LED driver](/images/TwinkleWorks/ED32.jpg)
 
 ED32 - 32 channel DMX controlled rack mount LED driver
 
-![TwinkleWorks LEDPS](/images/TwinkleWorks/LEDPS.jpg)
+![TwinkleWorks LEDPS 24-channel random sparkle LED driver](/images/TwinkleWorks/LEDPS.jpg)
 
 LEDPS - 24 channel random sparkle stand-alone LED driver
 
@@ -31,7 +31,7 @@ LEDPS - 24 channel random sparkle stand-alone LED driver
 
 During my time at TwinkleWorks, we began development of a RGBW strobe fixture. I developed the new PCBA used in each fixture and worked with a local manufacturer to setup procedures for manufacturing (pending successful testing). When I left, this product was currently entering a rigorous testing phase.
 
-![CAD mockup of RGBW strobe fixture](/images/TwinkleWorks/RGBW side view.png)
+![CAD render of the RGBW strobe fixture design](/images/TwinkleWorks/RGBW side view.png)
 
 This strobe is currently undergoing testing before being released for production. A work in progress datasheet can be found 
 <a href="https://aramder.github.io/images/TwinkleWorks/RGBW Strobe Spec Sheet [NOT FINAL].pdf" target="_blank">here</a>. Please note that this datasheet is not final and is only for reference.
