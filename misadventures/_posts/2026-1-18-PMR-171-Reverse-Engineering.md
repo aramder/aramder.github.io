@@ -27,7 +27,7 @@ The kind of work I'd normally estimate as "not worth my time", and discount this
 Reverse engineering involves a specific category of work that AI handles well:
 
 | Task Type | Human Effort | AI Effort |
-|-----------|--------------|-----------|
+| --------- | ------------ | --------- |
 | Pattern matching in hex dumps | Tedious, error-prone | Fast, consistent |
 | Iterative test-analyze-adjust cycles | Time-consuming | Rapid iteration |
 | Documentation maintenance | Often neglected | Automatic |
@@ -77,7 +77,7 @@ The mapping is:
 - Contains random gaps (indices 25, 45, 47, 51, 53 are unused)
 
 | Position | Frequency | Index |
-|----------|-----------|-------|
+| -------- | --------- | ----- |
 | 1 | 67.0 Hz | 1 |
 | 2 | 69.3 Hz | 2 |
 | ... | ... | ... |
@@ -159,7 +159,7 @@ This isn't automation in the traditional sense. It's more like having a very fas
 This project demonstrates something about AI well: there's a category of technical work that's straightforward but tedious, and AI tools are excellent at it.
 
 | What AI Did Well | What Still Required Human |
-|------------------|---------------------------|
+| ---------------- | ------------------------- |
 | Hex dump analysis | Hardware access |
 | Pattern recognition | Interpreting failures |
 | Brute-force mapping | Domain knowledge |
