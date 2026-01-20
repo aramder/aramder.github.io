@@ -6,7 +6,7 @@ title: AI-Assisted Reverse Engineering of the PMR-171 Programming Interface
 
 ![PMR-171 portable radio](/images/PMR171/pmr171_radio.png)
 
-I picked up a Guohetec PMR-171 portable SDR a few months ago. It's a compact manpack-style transceiver—roughly double the size of a Yaesu FT-817, or comparable to a typical 100W rig—covering HF through UHF with FM, AM, SSB, and even DMR support. The problem? The manufacturer's programming software has limited capabilities and is completely undocumented. Coming from other radios with proper CPS (Customer Programming Software), I wanted to understand how this one worked.<!--more-->
+I picked up a Guohetec PMR-171 portable SDR recently. It's a compact manpack-style transceiver—roughly double the size of a Yaesu FT-817, or comparable to a typical 100W rig—covering HF through UHF with FM, AM, SSB, and even DMR support. The problem? The manufacturer's programming software has limited capabilities and is completely undocumented. Coming from other radios with proper CPS (Customer Programming Software), I wanted to understand how this one worked.<!--more-->
 
 So I reverse engineered the programming protocol. Well, *I* didn't do it—an LLM did. I captured UART traffic, fed it to an AI for pattern analysis, reported test results, and iterated. The AI handled hex parsing, protocol documentation, and building lookup tables. The result is a complete understanding of the radio's serial protocol and codeplug format.
 
