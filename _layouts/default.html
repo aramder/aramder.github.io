@@ -65,6 +65,10 @@
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Check if we're on a post listing page (has .posts container with multiple posts)
+        const postsContainer = document.querySelector('.posts');
+        const isListingPage = postsContainer && postsContainer.querySelectorAll('.post').length > 0;
+        
         // Find all images in the main content area that are not already wrapped in lightbox links
         const mainContent = document.getElementById('main');
         if (mainContent) {
@@ -74,6 +78,31 @@
             // Skip images that are already wrapped in an anchor tag with glightbox class
             if (img.parentElement.tagName === 'A' && img.parentElement.classList.contains('glightbox')) {
               return;
+            }
+            
+            // Check if this image is inside a post entry on a listing page
+            const isInPostEntry = img.closest('.entry') !== null;
+            
+            // On listing pages, make images in post entries link to the post
+            if (isListingPage && isInPostEntry) {
+              const postArticle = img.closest('.post');
+              if (postArticle) {
+                const postLink = postArticle.querySelector('h1 a');
+                if (postLink) {
+                  const parent = img.parentElement;
+                  
+                  // If image isn't already wrapped in a link, wrap it
+                  if (parent.tagName !== 'A') {
+                    const wrapper = document.createElement('a');
+                    wrapper.href = postLink.href;
+                    wrapper.classList.add('post-image-link');
+                    img.parentNode.insertBefore(wrapper, img);
+                    wrapper.appendChild(img);
+                  }
+                  // Skip lightbox processing for this image
+                  return;
+                }
+              }
             }
             
             // Skip images that are already wrapped in any anchor tag (like linked images)
