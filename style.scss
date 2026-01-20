@@ -248,6 +248,28 @@ img {
   max-width: 35%;
 }
 
+// Tables
+table {
+  margin: 15px 0;
+  border-collapse: collapse;
+  width: 100%;
+  
+  th, td {
+    border: 1px solid $lightGray;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: $lightGray;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+}
+
 //
 // .main
 //

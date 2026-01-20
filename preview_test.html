@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Table Preview Test</title>
+    <style>
+        body {
+            background: #fff;
+            font: 18px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 1em 0 15px;
+        }
+        
+        /* Table styles from style.scss */
+        table {
+            margin: 15px 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #eee;
+            font-weight: bold;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        p {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Why This Worked</h2>
+    
+    <p>Reverse engineering involves a specific category of work that AI handles well:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Task Type</th>
+                <th>Human Effort</th>
+                <th>AI Effort</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pattern matching in hex dumps</td>
+                <td>Tedious, error-prone</td>
+                <td>Fast, consistent</td>
+            </tr>
+            <tr>
+                <td>Iterative test-analyze-adjust cycles</td>
+                <td>Time-consuming</td>
+                <td>Rapid iteration</td>
+            </tr>
+            <tr>
+                <td>Documentation maintenance</td>
+                <td>Often neglected</td>
+                <td>Automatic</td>
+            </tr>
+            <tr>
+                <td>Boilerplate code generation</td>
+                <td>Mind-numbing</td>
+                <td>Effortless</td>
+            </tr>
+            <tr>
+                <td>Protocol specification writing</td>
+                <td>Avoided</td>
+                <td>Thorough</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>The CTCSS Mapping Problem</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Frequency</th>
+                <th>Index</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>67.0 Hz</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>69.3 Hz</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>146.2 Hz</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>151.4 Hz</td>
+                <td>26 ← <em>gap at 25</em></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Reflections</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>What AI Did Well</th>
+                <th>What Still Required Human</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hex dump analysis</td>
+                <td>Hardware access</td>
+            </tr>
+            <tr>
+                <td>Pattern recognition</td>
+                <td>Interpreting failures</td>
+            </tr>
+            <tr>
+                <td>Brute-force mapping</td>
+                <td>Domain knowledge</td>
+            </tr>
+            <tr>
+                <td>Documentation</td>
+                <td>"Try DTR=True" intuition</td>
+            </tr>
+            <tr>
+                <td>Test generation</td>
+                <td>Architectural decisions</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
