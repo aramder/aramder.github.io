@@ -20,7 +20,7 @@ $navBrown: rgba(50, 42, 35, 0.95);
 
 // Accent colors
 $orange: #d96a2b;
-$orangeLight: #e8985c;
+$orangeLight: #e8985c; // NOTE: Also hardcoded in _layouts/default.html (line ~58) for back-to-top button
 $orangeLighter: #fdf4ed;
 
 // Font stacks
