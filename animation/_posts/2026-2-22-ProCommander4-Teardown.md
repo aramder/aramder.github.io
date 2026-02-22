@@ -8,7 +8,7 @@ title: Weigl ProCommander4 Hardware Teardown
 
 The Weigl ProCommander4 show controller crossed my path recently, and curiosity got the better of me.
 
-Weigl Control makes show control equipment for professional and prosumer applications. This is a look at the ProCommander4's hardware — what's on the board, how the pieces fit together, and what that tells us about how it works.<!--more-->
+Weigl Control makes show control equipment for professional and prosumer applications. This is a look at the ProCommander4's hardware — what's on the board, how the pieces fit together, and what that tells us about how it works. Impatient readers can [skip straight to the block diagram.](/ProCommander4-Teardown/#system-architecture)<!--more-->
 
 ## Rear Panel
 
@@ -54,39 +54,39 @@ The main board is where all the interesting work happens. The key ICs are labele
 
 ### AT32UC3A1512 — Main MCU
 
-The central processor is an **[Atmel (now Microchip) AT32UC3A1512](https://www.microchip.com/en-us/product/at32uc3a1512)**, a 32-bit AVR32 microcontroller running at up to 66 MHz with 512 KB of flash and 64 KB of SRAM. The AVR32 UC3 family was Atmel's high-performance embedded controller line, and the A1512 variant includes a full-speed USB device/host controller, a 10/100 Ethernet MAC (used here in conjunction with the external W5100 PHY/stack), SPI, I²C, USART, and a hardware DMA controller. This is the chip executing the show file decoding loop — reading cue data, generating output timing, and coordinating all the peripheral ICs.
+The central processor is an **<a href="https://www.microchip.com/en-us/product/at32uc3a1512" target="_blank" rel="noopener">Atmel (now Microchip) AT32UC3A1512</a>**, a 32-bit AVR32 microcontroller running at up to 66 MHz with 512 KB of flash and 64 KB of SRAM. The AVR32 UC3 family was Atmel's high-performance embedded controller line, and the A1512 variant includes a full-speed USB device/host controller, a 10/100 Ethernet MAC (used here in conjunction with the external W5100 PHY/stack), SPI, I²C, USART, and a hardware DMA controller. This is the chip executing the show file decoding loop — reading cue data, generating output timing, and coordinating all the peripheral ICs.
 
 ### W5100 — Ethernet
 
-The **[WIZnet W5100](https://wiznet.io/products/ethernet-chips/w5100)** is a hardwired TCP/IP stack chip — it handles Ethernet entirely in hardware, so no network stack software runs on the MCU.
+The **<a href="https://wiznet.io/products/ethernet-chips/w5100" target="_blank" rel="noopener">WIZnet W5100</a>** is a hardwired TCP/IP stack chip — it handles Ethernet entirely in hardware, so no network stack software runs on the MCU.
 
 ### VS1053B — Audio Codec
 
-The **[VLSI VS1053B](https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf)** is a single-chip audio codec that handles decoding of MP3, OGG Vorbis, AAC, WMA, FLAC, WAV, and MIDI. It takes compressed audio from the MCU over SPI and outputs an analog stereo signal.
+The **<a href="https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf" target="_blank" rel="noopener">VLSI VS1053B</a>** is a single-chip audio codec that handles decoding of MP3, OGG Vorbis, AAC, WMA, FLAC, WAV, and MIDI. It takes compressed audio from the MCU over SPI and outputs an analog stereo signal.
 
 ### TPA3123D2 — Class D Amplifier
 
-The **[TI TPA3123D2](https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf)** is a 25 W per channel class D audio power amplifier. It takes the analog stereo output from the VS1053B and drives speakers directly. Class D was the right choice here — it's efficient enough that no heatsink is required in a sealed enclosure at typical animatronic audio levels. The TPA3123D2 operates from a single supply (10–36 V) and includes short-circuit and thermal protection.
+The **<a href="https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf" target="_blank" rel="noopener">TI TPA3123D2</a>** is a 25 W per channel class D audio power amplifier. It takes the analog stereo output from the VS1053B and drives speakers directly. Class D was the right choice here — it's efficient enough that no heatsink is required in a sealed enclosure at typical animatronic audio levels. The TPA3123D2 operates from a single supply (10–36 V) and includes short-circuit and thermal protection.
 
 ### SN75LBC176 — RS-485 Transceiver
 
-The **[SN75LBC176](https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf)** (equivalent to SN65LBC176) is a differential bus transceiver for RS-485 and RS-422 networks — the electrical interface for DMX output.
+The **<a href="https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf" target="_blank" rel="noopener">SN75LBC176</a>** (equivalent to SN65LBC176) is a differential bus transceiver for RS-485 and RS-422 networks — the electrical interface for DMX output.
 
 ### MC34063A — DC/DC Converter
 
-The **[MC34063A](https://www.ti.com/lit/ds/symlink/mc34063a.pdf)** is a classic, minimal switching regulator controller containing an oscillator, comparator, and switch transistor in a single package. It is used here to generate one of the internal supply rails from the input power — most likely stepping down the incoming DC to a lower logic voltage. The MC34063A dates to the 1970s and remains in production; its simplicity makes it a frequent choice when a secondary rail doesn't need high efficiency or tight regulation.
+The **<a href="https://www.ti.com/lit/ds/symlink/mc34063a.pdf" target="_blank" rel="noopener">MC34063A</a>** is a classic, minimal switching regulator controller containing an oscillator, comparator, and switch transistor in a single package. It is used here to generate one of the internal supply rails from the input power — most likely stepping down the incoming DC to a lower logic voltage. The MC34063A dates to the 1970s and remains in production; its simplicity makes it a frequent choice when a secondary rail doesn't need high efficiency or tight regulation.
 
 ### WH1202A — Character LCD
 
-The **[Winstar WH1202A-TMI-ET#](https://www.first-components.com/en/wh1202a-tmi-et)** is a 1.6″ 12×2 character LCD module with a built-in **ST7066** HD44780-compatible controller — the LCD interface for the unit. The MCU talks directly to the ST7066 on the module.
+The **<a href="https://www.first-components.com/en/wh1202a-tmi-et" target="_blank" rel="noopener">Winstar WH1202A-TMI-ET#</a>** is a 1.6″ 12×2 character LCD module with a built-in **ST7066** HD44780-compatible controller — the LCD interface for the unit. The MCU talks directly to the ST7066 on the module.
 
 ### DS3911 — Analog Output DAC
 
-The **[DS3911](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf)** (Analog Devices / Dallas Semiconductor) is a quad-channel, 10-bit I²C DAC. Its outputs are routed through a set of **LM358** op-amps configured as scaling amplifiers, which bring the DAC's native output range up to 0–10 VDC on the rear connector.
+The **<a href="https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf" target="_blank" rel="noopener">DS3911</a>** (Analog Devices / Dallas Semiconductor) is a quad-channel, 10-bit I²C DAC. Its outputs are routed through a set of **LM358** op-amps configured as scaling amplifiers, which bring the DAC's native output range up to 0–10 VDC on the rear connector.
 
 ### MCP79411 — Real-Time Clock
 
-The **[Microchip MCP79411](https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf)** is a battery-backed I²C real-time clock/calendar (RTCC) with 64 bytes of SRAM and a unique ID ROM. Its presence here ensures the ProCommander4 maintains accurate time even when powered off — relevant for any show scheduling, logging, or time-stamped event triggering the firmware implements. The I²C interface keeps the pin count minimal; the battery backup means the clock continues running through power cycles without requiring NTP or user re-entry of the time. A coin cell battery holder is present on the PCB — empty in this unit, but the footprint is there and ready.
+The **<a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf" target="_blank" rel="noopener">Microchip MCP79411</a>** is a battery-backed I²C real-time clock/calendar (RTCC) with 64 bytes of SRAM and a unique ID ROM. Its presence here ensures the ProCommander4 maintains accurate time even when powered off — relevant for any show scheduling, logging, or time-stamped event triggering the firmware implements. The I²C interface keeps the pin count minimal; the battery backup means the clock continues running through power cycles without requiring NTP or user re-entry of the time. A coin cell battery holder is present on the PCB — empty in this unit, but the footprint is there and ready.
 
 The underside of the board is largely solder and passive components, but one feature is worth noting.
 
@@ -100,7 +100,7 @@ The underside of the board is largely solder and passive components, but one fea
 
 ### TPA3123D2 Thermal Management
 
-The exposed copper pad visible on the bottom of the board — tinned with solder — is the thermal relief for the **[TPA3123D2](https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf)** class D amplifier directly above it on the top side. Class D amplifiers are efficient but still dissipate heat at the drive currents used for speakers — the TPA3123D2's package includes a large exposed metal pad on the underside of the IC itself, which solders directly to the PCB and conducts heat into the board's copper pour, letting the PCB act as the primary heat dissipator. In a sealed enclosure like this one, conducting heat into the chassis ground plane is the practical alternative to an external heatsink.
+The exposed copper pad visible on the bottom of the board — tinned with solder — is the thermal relief for the **<a href="https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf" target="_blank" rel="noopener">TPA3123D2</a>** class D amplifier directly above it on the top side. Class D amplifiers are efficient but still dissipate heat at the drive currents used for speakers — the TPA3123D2's package includes a large exposed metal pad on the underside of the IC itself, which solders directly to the PCB and conducts heat into the board's copper pour, letting the PCB act as the primary heat dissipator. In a sealed enclosure like this one, conducting heat into the chassis ground plane is the practical alternative to an external heatsink.
 
 ## PCB — Network and Playback Region
 
@@ -116,7 +116,7 @@ Zooming into the front-left quadrant of the board brings the network and audio s
      {"x":63.5,"y":43.2,"label":"VS1053B","desc":"VLSI VS1053B — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
      {"x":60.4,"y":26,"label":"LM358s","desc":"TI LM358 — dual op-amps, used here to scale the DS3911 DAC output voltage up to 0–10 VDC for the rear D-sub analog outputs","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
      {"x":56.7,"y":9.4,"label":"3.5mm Line Out","desc":"Stereo line-level output jack — direct analog audio from the VS1053B codec, bypassing the TPA3123D2 power amplifier for connection to an external amplifier or mixer"},
-     {"x":15.4,"y":9.3,"label":"Speaker Terminals","desc":"Screw terminals for direct speaker connections driven by the TPA3123D2 class D amplifier"},
+     {"x":15.4,"y":9.3,"label":"Speaker Terminals","desc":"Spring terminals for direct speaker connections driven by the TPA3123D2 class D amplifier"},
      {"x":43.2,"y":25.4,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":75,"y":46.5,"label":"MCP79411","desc":"Microchip MCP79411 — battery-backed I²C real-time clock/calendar (RTCC)","url":"https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf"},
      {"x":70.8,"y":33.2,"label":"DS3911","desc":"Analog Devices DS3911 — quad-channel 10-bit I²C DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"},
@@ -127,15 +127,19 @@ Zooming into the front-left quadrant of the board brings the network and audio s
 
 ### ST232C — RS-232 Transceiver
 
-The **[STMicroelectronics ST232C](https://www.st.com/en/interfaces-and-transceivers/st232c.html)** is a pin-compatible alternative to the classic Maxim MAX232 — a dual-driver, dual-receiver RS-232 transceiver that generates the ±7.8 V RS-232 signal swings from a single 5 V supply using an internal charge pump and four external capacitors. Finding this alongside the SN75LBC176 RS-485 transceiver means the ProCommander4 has two separate serial port standards: RS-485 for robust multidrop field connections to animatronic figures running over long cable distances, and RS-232 for shorter-range point-to-point use.
+The **<a href="https://www.st.com/en/interfaces-and-transceivers/st232c.html" target="_blank" rel="noopener">STMicroelectronics ST232C</a>** is a pin-compatible alternative to the classic Maxim MAX232 — a dual-driver, dual-receiver RS-232 transceiver that generates the ±7.8 V RS-232 signal swings from a single 5 V supply using an internal charge pump and four external capacitors. Finding this alongside the SN75LBC176 RS-485 transceiver means the ProCommander4 has two separate serial port standards: RS-485 for robust multidrop field connections to animatronic figures running over long cable distances, and RS-232 for shorter-range point-to-point use.
+
+### ST3485EB — Front-Panel WEM-NET / RS-232 Ports
+
+The pair of **<a href="https://www.st.com/resource/en/datasheet/st3485e.pdf" target="_blank" rel="noopener">STMicroelectronics ST3485EB</a>** RS-485 transceivers drive the two front-panel RJ45 ports labeled **RS232-1/NET-IN** and **RS232-2/NET-OUT**. Per the ProCommander4 manual, these ports serve a dual purpose: they support Weigl's proprietary **WEM-NET Pro I/O** protocol for interconnecting Weigl devices in a networked show control system, and they can also be used with external RS-232 devices via an optional adapter sold separately. The RS-485 physical layer gives these ports the noise immunity and cable-length headroom appropriate for show systems where both control gear and figures may be spread across a large installation.
 
 ### LM358 — Analog Output Scaling
 
-The **[LM358](https://www.ti.com/lit/ds/symlink/lm358.pdf)** dual op-amps visible in this region are configured as scaling amplifiers in the analog output path — they sit between the DS3911 DAC and the rear D-sub connector, amplifying the DAC's native output up to the 0–10 VDC range expected by industrial equipment.
+The **<a href="https://www.ti.com/lit/ds/symlink/lm358.pdf" target="_blank" rel="noopener">LM358</a>** dual op-amps visible in this region are configured as scaling amplifiers in the analog output path — they sit between the DS3911 DAC and the rear D-sub connector, amplifying the DAC's native output up to the 0–10 VDC range expected by industrial equipment.
 
 ### Audio Outputs — Line Out and Speaker Terminals
 
-The board exposes two audio output paths. The **3.5mm stereo line-out jack** provides a line-level signal taken directly from the VS1053B codec output, bypassing the power amplifier entirely — useful for connecting to an external amplifier, mixer, or audio distribution system in larger installations. The **speaker screw terminals** are the direct-drive output of the TPA3123D2 class D amplifier, intended for connecting 4Ω or 8Ω speakers directly at the enclosure. Having both outputs populated means the same unit can serve either as a self-contained speaker driver or as an audio source node in a larger show audio system.
+The board exposes two audio output paths. The **3.5mm stereo line-out jack** provides a line-level signal taken directly from the VS1053B codec output, bypassing the power amplifier entirely — useful for connecting to an external amplifier, mixer, or audio distribution system in larger installations. The **speaker spring terminals** are the direct-drive output of the TPA3123D2 class D amplifier, intended for connecting 4Ω or 8Ω speakers directly at the enclosure. Having both outputs populated means the same unit can serve either as a self-contained speaker driver or as an audio source node in a larger show audio system.
 
 ## System Architecture
 
@@ -150,26 +154,25 @@ graph LR
     classDef storage fill:#fff3e0,stroke:#e65100,color:#333,stroke-width:2px
     classDef display fill:#ede7f6,stroke:#4527a0,color:#333,stroke-width:2px
 
-    SD([Micro SD Card]):::storage <-->|SPI| MCU[AT32UC3A1512]:::mcu
-    MCP79411:::ic <-->|I2C| MCU
-    LCD[WH1202A]:::display --- ST7066:::ic <-->|Parallel| MCU
-    ETH([RJ45 Ethernet]):::conn --- W5100:::ic <-->|SPI| MCU
-    RJ45RS([RJ-45 RS-232]):::conn --- ST232C_2[ST232C]:::ic <-->|UART| MCU
+    SD(["Show File Storage<br/>Micro SD Card"]):::storage <-->|SPI| MCU["32-bit AVR32 MCU<br/>AT32UC3A1512"]:::mcu
+    MCP79411["RTC<br/>MCP79411"]:::ic <-->|I2C| MCU
+    LCD["LCD Module<br/>WH1202A"]:::display --- ST7066["LCD Driver<br/>ST7066"]:::ic <-->|Parallel| MCU
+    ETH(["Ethernet<br/>RJ45"]):::conn --- W5100["Ethernet Controller<br/>W5100"]:::ic <-->|SPI| MCU
+    WEMNET(["WEM-NET / RS-232<br/>RJ-45 (x2)"]):::conn <--> ST232C_2["RS-232 Xcvr<br/>ST232C"]:::ic <-->|UART| MCU
+    WEMNET <--> ST3485EB["RS-485 Xcvr<br/>ST3485EB (x2)"]:::ic <-->|UART| MCU
 
-    MCU <-->|SPI| VS1053B:::ic
-    VS1053B -->|Analog| TPA3123D2:::ic
-    VS1053B -->|Analog| LINEOUT([3.5mm Line Out]):::conn
-    TPA3123D2 --> SPKR([Speaker Terminals]):::conn
-    MCU <-->|UART| SN75LBC176:::ic
-    SN75LBC176 --> DMX([XLR-5 DMX I/O]):::conn
-    MCU <-->|UART| ST232C_1[ST232C]:::ic
-    ST232C_1 <--> DB9([DB-9 RS-232]):::conn
-    MCU <-->|SPI| HC595["74HC595 (x2)"]:::ic
-    HC595 --> DOUT([Digital Output Terminals]):::conn
-    MCU <-->|SPI| HC165[74HC165]:::ic
-    HC165 --> DINP([Digital Input Terminals]):::conn
-    MCU <-->|I2C| DS3911:::ic -->|Analog| LM358:::ic
-    LM358 -->|0-10V| AOUT([DB-9 Analog/Servo]):::conn
+    MCU <-->|SPI| VS1053B["Audio Codec<br/>VS1053B"]:::ic
+    VS1053B -->|Analog| TPA3123D2["Class D Amp<br/>TPA3123D2"]:::ic
+    VS1053B -->|Analog| LINEOUT(["Line Out<br/>3.5mm Jack"]):::conn
+    TPA3123D2 --> SPKR(["Speaker Out<br/>Spring Terminals"]):::conn
+    MCU <-->|UART| SN75LBC176["RS-485 Xcvr<br/>SN75LBC176"]:::ic
+    SN75LBC176 --> DMX(["DMX I/O<br/>XLR-5"]):::conn
+    MCU <-->|SPI| HC595["Shift Reg Out<br/>74HC595 (x2)"]:::ic
+    HC595 --> DOUT(["Digital Outputs<br/>Spring Terminals"]):::conn
+    MCU <-->|SPI| HC165["Shift Reg In<br/>74HC165"]:::ic
+    HC165 --> DINP(["Digital Inputs<br/>Spring Terminals"]):::conn
+    MCU <-->|I2C| DS3911["DAC<br/>DS3911"]:::ic -->|Analog| LM358["Op-Amp<br/>LM358"]:::ic
+    LM358 -->|0-10V| AOUT(["Analog/Servo<br/>DB-9"]):::conn
     MCU -->|Servo| AOUT
 ```
 <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;font-size:0.8em;font-family:sans-serif;">
@@ -191,6 +194,6 @@ None of this is a serious criticism — it's a sensible, functional design that 
 
 ## Disclaimer
 
-This analysis is based entirely on visual inspection of photographs — no firmware was extracted, no signals were probed, and no schematic was available. The interconnections shown in the block diagram above are inferred from datasheet-typical usage patterns and the physical proximity of components on the PCB, not from verified traces. Some assumptions are almost certainly wrong.
+This analysis is based entirely on visual inspection of photographs — no firmware was extracted, no signals were probed, and no schematic was made. The interconnections shown in the block diagram above are inferred from datasheet-typical usage patterns and the physical proximity of components on the PCB, not from verified traces. Some assumptions are almost certainly wrong.
 
 This is purely a hobbyist exercise in reverse-engineering curiosity — meant to help others understand how a piece of show control hardware is put together at a high level. It is not a competitive analysis, not an attempt to replicate or undermine Weigl's product, and not a criticism of their engineering. Weigl Control makes solid equipment, and the goal here is appreciation, not deconstruction.
