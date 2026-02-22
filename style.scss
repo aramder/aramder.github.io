@@ -7,6 +7,13 @@
 
 @import "reset";
 @import "variables";
+@import "annotated_image";
+
+// Mermaid.js diagram styling
+.mermaid {
+  text-align: center;
+  margin: 1.5em 0;
+}
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/

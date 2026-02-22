@@ -1,0 +1,99 @@
+// -------------------------------------------------------
+// Annotated image component
+// Clickable hotspot dots with tooltip cards on PCB/photo
+// images. Used via _includes/annotated_image.html
+// -------------------------------------------------------
+
+.ai-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  line-height: 0; // prevent gap under image
+
+  .ai-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+}
+
+// --- dot button -----------------------------------------
+
+.ai-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e8985c; // solid site orange
+  border: 2px solid #fff;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  z-index: 10;
+  box-shadow: 0 0 0 0 rgba(232, 152, 92, 0.8);
+  animation: ai-pulse 2.6s infinite;
+  transition: background 0.15s, transform 0.15s;
+
+  &:hover,
+  &.ai-dot--open {
+    background: #c97030;
+    transform: translate(-50%, -50%) scale(1.3);
+    animation: none;
+    box-shadow: 0 0 0 6px rgba(232, 152, 92, 0.45);
+    z-index: 30;
+  }
+}
+
+@keyframes ai-pulse {
+  0%   { box-shadow: 0 0 0 0    rgba(232, 152, 92, 0.85); }
+  50%  { box-shadow: 0 0 0 14px rgba(232, 152, 92, 0.25); }
+  100% { box-shadow: 0 0 0 18px rgba(232, 152, 92, 0);    }
+}
+
+// --- tooltip card ----------------------------------------
+
+.ai-tip {
+  display: none;
+  position: absolute;
+  min-width: 210px;
+  max-width: 280px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #e8985c;
+  border-radius: 4px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+  line-height: 1.4;
+  pointer-events: none;
+
+  strong {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #333;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 0.82em;
+    color: #555;
+    margin: 0 0 6px;
+  }
+
+  a {
+    font-size: 0.78em;
+    color: #e8985c;
+    pointer-events: auto;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// Show tooltip only when parent dot has --open class
+.ai-dot--open .ai-tip {
+  display: block;
+}

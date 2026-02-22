@@ -1,0 +1,85 @@
+{% comment %}
+  Annotated image include with clickable hotspot dots.
+
+  Usage:
+    {% include annotated_image.html
+       image="/images/Folder/file.jpg"
+       alt="Description of the image"
+       hotspots='[
+         {"x": 42.5, "y": 18.3, "label": "IC Label", "desc": "Short description of this component.", "url": "https://example.com/datasheet.pdf"},
+         {"x": 71.0, "y": 55.1, "label": "Another Part", "desc": "What it does."}
+       ]'
+    %}
+
+  Parameters:
+    image     — path to the image (required)
+    alt       — alt text for the image (required)
+    hotspots  — JSON array of hotspot objects (required)
+                  x, y   : position as % from top-left corner of the image
+                  label  : short name shown in the tooltip header
+                  desc   : one-sentence description
+                  url    : (optional) link to datasheet or reference
+
+  Coordinate tip:
+    Open the image in any editor that shows pixel coordinates.
+    x% = (pixel_x / image_width)  * 100
+    y% = (pixel_y / image_height) * 100
+{% endcomment %}
+
+{% assign ai_id = include.image | slugify %}
+
+<div class="ai-wrap" id="ai-{{ ai_id }}" data-hotspots='{{ include.hotspots }}'>
+  <img src="{{ include.image }}" alt="{{ include.alt }}" class="ai-img" loading="lazy">
+</div>
+
+<script>
+(function () {
+  var wrap = document.getElementById('ai-{{ ai_id }}');
+  if (!wrap) return;
+
+  var hotspots = [];
+  try { hotspots = JSON.parse(wrap.dataset.hotspots || '[]'); } catch(e) {}
+
+  hotspots.forEach(function (hs, i) {
+    // --- dot ---
+    var dot = document.createElement('button');
+    dot.className = 'ai-dot';
+    dot.style.left = hs.x + '%';
+    dot.style.top  = hs.y + '%';
+    dot.setAttribute('aria-label', hs.label);
+    dot.dataset.index = i;
+
+    // --- tooltip ---
+    var tip = document.createElement('div');
+    tip.className = 'ai-tip';
+    tip.id = 'ai-tip-{{ ai_id }}-' + i;
+
+    var header = '<strong>' + hs.label + '</strong>';
+    var body   = '<p>' + hs.desc + '</p>';
+    var link   = hs.url ? '<a href="' + hs.url + '" target="_blank" rel="noopener">Datasheet / Reference ↗</a>' : '';
+    tip.innerHTML = header + body + link;
+
+    // position tooltip: flip left if near right edge, flip up if near bottom edge
+    tip.style.left = (hs.x > 65 ? 'auto' : '100%');
+    tip.style.right = (hs.x > 65 ? '100%' : 'auto');
+    tip.style.top  = (hs.y > 70 ? 'auto' : '100%');
+    tip.style.bottom = (hs.y > 70 ? '100%' : 'auto');
+
+    dot.appendChild(tip);
+    wrap.appendChild(dot);
+
+    dot.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = dot.classList.contains('ai-dot--open');
+      // close all others first
+      wrap.querySelectorAll('.ai-dot--open').forEach(function (d) { d.classList.remove('ai-dot--open'); });
+      if (!isOpen) dot.classList.add('ai-dot--open');
+    });
+  });
+
+  // close on outside click
+  document.addEventListener('click', function () {
+    wrap.querySelectorAll('.ai-dot--open').forEach(function (d) { d.classList.remove('ai-dot--open'); });
+  });
+})();
+</script>

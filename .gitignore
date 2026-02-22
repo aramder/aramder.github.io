@@ -14,3 +14,17 @@ package-lock.json
 .env
 # Ignore custom agent files
 .github/agents/
+
+# Work in progress
+**/Gilderfluke_Sd-50_Analysis*
+**/WIP*
+**/_unused/
+
+# Test and development files
+*_test.html
+preview_test.html
+annotated_image_test.html
+docker-compose.yml
+batch_color_correct.py
+match_color_temp.py
+TwinkleWorks.md
