@@ -30,25 +30,25 @@ The main board is where all the interesting work happens. The key ICs are labele
    hotspots='[
      {"x":18.6,"y":65.7,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
      {"x":16.7,"y":53.3,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
-     {"x":50.7,"y":61.1,"label":"AT32UC3A1512","desc":"Microchip AT32UC3A1512 — 32-bit AVR32 MCU, 512KB flash","url":"https://www.microchip.com/en-us/product/at32uc3a1512"},
-     {"x":83.2,"y":49.6,"label":"MC34063A","desc":"MC34063A — simple switching DC/DC converter","url":"https://www.ti.com/lit/ds/symlink/mc34063a.pdf"},
-     {"x":77.6,"y":38,"label":"SN75LBC176","desc":"SN75LBC176 — RS-485/RS-422 differential bus transceiver","url":"https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf"},
+     {"x":50.7,"y":61.1,"label":"AT32UC3A1512","desc":"Microchip AT32UC3A1512 — 32-bit AVR32 MCU, 512 KB flash","url":"https://www.microchip.com/en-us/product/at32uc3a1512"},
+     {"x":83.2,"y":49.6,"label":"MC34063A","desc":"MC34063A — switching regulator controller","url":"https://www.ti.com/lit/ds/symlink/mc34063a.pdf"},
+     {"x":77.6,"y":38,"label":"SN75LBC176","desc":"TI SN75LBC176 — RS-485/RS-422 differential bus transceiver, used here as the DMX output interface","url":"https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf"},
      {"x":34.3,"y":54.4,"label":"VS1053b","desc":"VLSI VS1053b — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
-     {"x":66,"y":79.1,"label":"WH1202A","desc":"Winstar WH1202A-TMI-ET# — 1.6\" 12×2 character LCD module","url":"https://www.first-components.com/en/wh1202a-tmi-et"},
+     {"x":66,"y":79.1,"label":"WH1202A","desc":"Winstar WH1202A-TMI-ET# — 1.6\" 12×2 character LCD, ST7066 HD44780-compatible controller","url":"https://www.first-components.com/en/wh1202a-tmi-et"},
      {"x":39.6,"y":79.3,"label":"Micro SD Card","desc":"Storage medium for show files — audio and cue data read by the MCU at runtime via SPI"},
      {"x":59.2,"y":67.3,"label":"LM358","desc":"TI LM358 — dual op-amp. Function in this location unknown.","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
      {"x":33.3,"y":38.4,"label":"LM358s","desc":"TI LM358 — dual op-amps, used here to scale the DS3911 DAC output voltage up to 0–10 VDC for the rear D-sub analog outputs","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
      {"x":66,"y":65.1,"label":"74HC595","desc":"8-bit serial-in parallel-out shift register — drives digital outputs on the rear connector","url":"https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf"},
      {"x":66,"y":70.8,"label":"74HC595","desc":"8-bit serial-in parallel-out shift register — drives digital outputs on the rear connector","url":"https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf"},
      {"x":52.8,"y":72.1,"label":"74HC165","desc":"8-bit parallel-in serial-out shift register — reads digital inputs from the rear connector","url":"https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf"},
-     {"x":40.1,"y":59,"label":"MCP79411","desc":"Battery-Backed I2C Real-Time Clock/Calendar","url":"https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf"},
+     {"x":40.1,"y":59,"label":"MCP79411","desc":"Microchip MCP79411 — battery-backed I²C real-time clock/calendar (RTCC)","url":"https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf"},
      {"x":39.6,"y":70.4,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":26,"y":35.8,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
-     {"x":40.3,"y":45.8,"label":"DS3911","desc":"4 Channel 10-bit I2C Controlled DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"},
+     {"x":40.3,"y":45.8,"label":"DS3911","desc":"Analog Devices DS3911 — quad-channel 10-bit I²C DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"},
      {"x":63.1,"y":47.9,"label":"Relays","desc":"Relays can optionally be installed for outputs on some units. This unit is equipped with N-CH mosfets for low-side switching."},
      {"x":46.4,"y":41.9,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
      {"x":62.9,"y":59.3,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
-     {"x":33.8,"y":68,"label":"ST3485EBs","desc":"Set of RS-485 transceivers for the \"RS232-1/NET-IN\" and \"RS232-2/NET-OUT\" RJ45s","url":"https://www.st.com/en/interfaces-and-transceivers/st3485eb.html"}
+     {"x":33.8,"y":68,"label":"ST3485EBs","desc":"Set of RS-485 transceivers for the \"RS232-1/NET-IN\" and \"RS232-2/NET-OUT\" RJ45s","url":"https://www.st.com/resource/en/datasheet/st3485e.pdf"}
    ]'
 %}
 
@@ -114,12 +114,14 @@ Zooming into the front-left quadrant of the board brings the network and audio s
      {"x":30.1,"y":47,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
      {"x":76.5,"y":58.8,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":63.5,"y":43.2,"label":"VS1053b","desc":"VLSI VS1053b — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
-     {"x":60.4,"y":26,"label":"LM358s","desc":"TI LM358 — dual op-amps, used here to scale the DS3911 DAC output voltage up to 0\u201310 VDC for the rear D-sub analog outputs","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
+     {"x":60.4,"y":26,"label":"LM358s","desc":"TI LM358 — dual op-amps, used here to scale the DS3911 DAC output voltage up to 0–10 VDC for the rear D-sub analog outputs","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
      {"x":56.7,"y":9.4,"label":"3.5mm Line Out","desc":"Stereo line-level output jack — direct analog audio from the VS1053b DAC, bypassing the TPA3123D2 power amplifier for connection to an external amplifier or mixer"},
      {"x":15.4,"y":9.3,"label":"Speaker Terminals","desc":"Screw terminals for direct speaker connections driven by the TPA3123D2 class D amplifier"},
      {"x":43.2,"y":25.4,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
-     {"x":75,"y":46.5,"label":"MCP79411","desc":"Battery-Backed I2C Real-Time Clock/Calendar","url":"https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf"},
-     {"x":70.8,"y":33.2,"label":"DS3911","desc":"4 Channel 10-bit I2C Controlled DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"}
+     {"x":75,"y":46.5,"label":"MCP79411","desc":"Microchip MCP79411 — battery-backed I²C real-time clock/calendar (RTCC)","url":"https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf"},
+     {"x":70.8,"y":33.2,"label":"DS3911","desc":"Analog Devices DS3911 — quad-channel 10-bit I²C DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"},
+     {"x":65.7,"y":56.4,"label":"ST3485EBs","desc":"Set of RS-485 transceivers for the \"RS232-1/NET-IN\" and \"RS232-2/NET-OUT\" RJ45s","url":"https://www.st.com/resource/en/datasheet/st3485e.pdf"},
+     {"x":92.5,"y":47,"label":"AT32UC3A1512","desc":"Microchip AT32UC3A1512 — 32-bit AVR32 MCU, 512 KB flash","url":"https://www.microchip.com/en-us/product/at32uc3a1512"}
    ]'
 %}
 
@@ -167,7 +169,7 @@ graph LR
     MCU <-->|SPI| HC165[74HC165]:::ic
     HC165 --> DINP([Digital Inputs]):::generic
     MCU -->|I2C| DS3911:::ic -->|Analog| LM358:::ic
-    LM358 -->|0-10V| AOUT([Analog Outputs]):::conn
+    LM358 -->|0-10V| AOUT([Analog Outputs]):::generic
 ```
 <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;font-size:0.8em;font-family:sans-serif;">
   <span style="background:#e8985c;color:#fff;font-weight:bold;border:1px solid #333;padding:2px 8px;border-radius:3px;">MCU</span>
@@ -180,11 +182,9 @@ graph LR
 
 ## Design Notes
 
-Overall the ProCommander4 is a logical, well-considered piece of hardware. The component choices make sense — each part does a clearly defined job, the interconnections are straightforward, and the result is a low parts count design that appears to work reliably. Nothing here is cutting-edge, but that's fine; this kind of equipment benefits far more from proven parts and predictable behavior than from chasing the latest silicon.
+Overall the ProCommander4 is a logical, well-considered piece of hardware. The component choices make sense — each part does a clearly defined job, the interconnections are straightforward, and the result is a low parts count design that appears to work reliably. Nothing here is cutting-edge, but that's just fine for a product like this.
 
-If I had one manufacturing note, it would be around mechanical robustness. Several of the larger through-hole components — electrolytic capacitors, the input ferrite bead — are unsupported beyond their solder joints and sit freestanding above the board. In most installation environments that's probably fine, but for a piece of equipment at this price point, a small amount of silicone staking on those components would go a long way toward preventing joint fatigue from vibration over time.
-
-The LCD module and the front-panel 5-way joystick switch both sit on small sub-PCB assemblies that protrude from the front of the unit with no additional mechanical support. These are the kinds of connections that don't take much force to damage — the copper can lift from the substrate before you've applied what feels like significant load. Staking both of those assemblies at the base would make them considerably more robust and is the kind of detail that separates a good product from a great one.
+For my use case — animatronic systems on moving parade floats — I'd want to see better mechanical robustness. Several larger through-hole components sit freestanding above the board with no staking, and the LCD and front-panel joystick ride on unsupported sub-PCBs that protrude from the front of the unit. Both are the kind of detail that matters when the controller lives on a vehicle or gets handled regularly in the field. For a controller that lives in a fixed rack, the vibration side of that is a non-issue — but the fragile sub-PCB assemblies are worth being careful with regardless of where it's installed.
 
 None of this is a serious criticism — it's a sensible, functional design that clearly does what it's supposed to do.
 
