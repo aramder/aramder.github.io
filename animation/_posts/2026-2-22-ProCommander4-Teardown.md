@@ -1,14 +1,14 @@
 ---
 layout: post
 category: animation
-title: Weigl ProCommander4 Hardware Teardown
+title: Weigl ProCommander4 Show Controller Teardown
 ---
 
 ![Weigl ProCommander4 animatronic show controller front panel, powered on, displaying firmware version on LCD](/images/Weigl_ProCommander4_Teardown/Weigl_ProCommander4_front_powered.jpg)
 
 The Weigl ProCommander4 show controller crossed my path recently, and curiosity got the better of me.
 
-Weigl Control makes show control equipment for professional and prosumer applications. This is a look at the ProCommander4's hardware — what's on the board, how the pieces fit together, and what that tells us about how it works. Impatient readers can [skip straight to the block diagram.](/ProCommander4-Teardown/#system-architecture)<!--more-->
+<a href="https://www.weiglcontrol.com/" target="_blank" rel="noopener">Weigl Control</a> makes show control equipment for professional and prosumer applications. This is a look at the <a href="https://www.weiglcontrol.com/product/procommander-4/" target="_blank" rel="noopener">ProCommander4</a>'s hardware — what's on the board, how the pieces fit together, and what that tells us about how it works. Impatient readers can [skip straight to the block diagram.](/ProCommander4-Teardown/#system-architecture)<!--more-->
 
 ## Rear Panel
 
@@ -29,7 +29,7 @@ The main board is where all the interesting work happens. The key ICs are labele
    alt="Weigl ProCommander4 main PCB top view showing AT32UC3A1512 AVR32 MCU, WIZnet W5100 Ethernet, VLSI VS1053B audio codec, TPA3123D2 class D amplifier, DS3911 DAC, and supporting ICs"
    hotspots='[
      {"x":18.6,"y":65.7,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
-     {"x":16.7,"y":53.3,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
+     {"x":16.7,"y":53.3,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25 W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
      {"x":50.7,"y":61.1,"label":"AT32UC3A1512","desc":"Microchip AT32UC3A1512 — 32-bit AVR32 MCU, 512 KB flash","url":"https://www.microchip.com/en-us/product/at32uc3a1512"},
      {"x":83.2,"y":49.6,"label":"MC34063A","desc":"MC34063A — switching regulator controller","url":"https://www.ti.com/lit/ds/symlink/mc34063a.pdf"},
      {"x":77.6,"y":38,"label":"SN75LBC176","desc":"TI SN75LBC176 — RS-485/RS-422 differential bus transceiver, used here as the DMX output interface","url":"https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf"},
@@ -45,16 +45,16 @@ The main board is where all the interesting work happens. The key ICs are labele
      {"x":39.6,"y":70.4,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":26,"y":35.8,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":40.3,"y":45.8,"label":"DS3911","desc":"Analog Devices DS3911 — quad-channel 10-bit I²C DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"},
-     {"x":63.1,"y":47.9,"label":"Relays","desc":"Relays can optionally be installed for outputs on some units. This unit is equipped with N-CH mosfets for low-side switching."},
-     {"x":46.4,"y":41.9,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
-     {"x":62.9,"y":59.3,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
+     {"x":63.1,"y":47.9,"label":"Relays","desc":"Relays can optionally be installed for outputs on some units. This unit is equipped with N-ch MOSFETs for low-side switching."},
+     {"x":46.4,"y":41.9,"label":"ZXMS6004DN8","desc":"60 V, 1.3 A, 500 mΩ N-ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
+     {"x":62.9,"y":59.3,"label":"ZXMS6004DN8","desc":"60 V, 1.3 A, 500 mΩ N-ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
      {"x":33.8,"y":68,"label":"ST3485EBs","desc":"Set of RS-485 transceivers for the \"RS232-1/NET-IN\" and \"RS232-2/NET-OUT\" RJ45s","url":"https://www.st.com/resource/en/datasheet/st3485e.pdf"}
    ]'
 %}
 
 ### AT32UC3A1512 — Main MCU
 
-The central processor is an **<a href="https://www.microchip.com/en-us/product/at32uc3a1512" target="_blank" rel="noopener">Atmel (now Microchip) AT32UC3A1512</a>**, a 32-bit AVR32 microcontroller running at up to 66 MHz with 512 KB of flash and 64 KB of SRAM. The AVR32 UC3 family was Atmel's high-performance embedded controller line, and the A1512 variant includes a full-speed USB device/host controller, a 10/100 Ethernet MAC (used here in conjunction with the external W5100 PHY/stack), SPI, I²C, USART, and a hardware DMA controller. This is the chip executing the show file decoding loop — reading cue data, generating output timing, and coordinating all the peripheral ICs.
+The central processor is an **<a href="https://www.microchip.com/en-us/product/at32uc3a1512" target="_blank" rel="noopener">Atmel (now Microchip) AT32UC3A1512</a>**, a 32-bit AVR32 microcontroller running at up to 66 MHz with 512 KB of flash and 128 KB of SRAM. The AVR32 UC3 family was Atmel's high-performance embedded controller line, and the A1512 variant includes a full-speed USB device/host controller, a 10/100 Ethernet MAC (used here in conjunction with the external W5100 PHY/stack), SPI, I²C, USART, and a hardware DMA controller. This is the chip executing the show file decoding loop — reading cue data, generating output timing, and coordinating all the peripheral ICs.
 
 ### W5100 — Ethernet
 
@@ -74,7 +74,7 @@ The **<a href="https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf" target="_blank"
 
 ### MC34063A — DC/DC Converter
 
-The **<a href="https://www.ti.com/lit/ds/symlink/mc34063a.pdf" target="_blank" rel="noopener">MC34063A</a>** is a classic, minimal switching regulator controller containing an oscillator, comparator, and switch transistor in a single package. It is used here to generate one of the internal supply rails from the input power — most likely stepping down the incoming DC to a lower logic voltage. The MC34063A dates to the 1970s and remains in production; its simplicity makes it a frequent choice when a secondary rail doesn't need high efficiency or tight regulation.
+The **<a href="https://www.ti.com/lit/ds/symlink/mc34063a.pdf" target="_blank" rel="noopener">MC34063A</a>** is a classic, minimal switching regulator controller containing an oscillator, comparator, and switch transistor in a single package. It is used here to generate one of the internal supply rails from the input power — most likely stepping down the incoming DC to a lower logic voltage. The MC34063A has remained in continuous production for decades; its simplicity makes it a frequent choice when a secondary rail doesn't need high efficiency or tight regulation.
 
 ### WH1202A — Character LCD
 
@@ -111,7 +111,7 @@ Zooming into the front-left quadrant of the board brings the network and audio s
    alt="Weigl ProCommander4 PCB network and audio playback region showing WIZnet W5100 Ethernet controller, VLSI VS1053B audio codec, STMicroelectronics ST232C RS-232 transceiver, DS3911 DAC, and 3.5mm line out jack"
    hotspots='[
      {"x":37.2,"y":60.1,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
-     {"x":30.1,"y":47,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
+     {"x":30.1,"y":47,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25 W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
      {"x":76.5,"y":58.8,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":63.5,"y":43.2,"label":"VS1053B","desc":"VLSI VS1053B — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
      {"x":60.4,"y":26,"label":"LM358s","desc":"TI LM358 — dual op-amps, used here to scale the DS3911 DAC output voltage up to 0–10 VDC for the rear D-sub analog outputs","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
@@ -131,7 +131,7 @@ The **<a href="https://www.st.com/en/interfaces-and-transceivers/st232c.html" ta
 
 ### ST3485EB — Front-Panel WEM-NET / RS-232 Ports
 
-The pair of **<a href="https://www.st.com/resource/en/datasheet/st3485e.pdf" target="_blank" rel="noopener">STMicroelectronics ST3485EB</a>** RS-485 transceivers drive the two front-panel RJ45 ports labeled **RS232-1/NET-IN** and **RS232-2/NET-OUT**. Per the ProCommander4 manual, these ports serve a dual purpose: they support Weigl's proprietary **WEM-NET Pro I/O** protocol for interconnecting Weigl devices in a networked show control system, and they can also be used with external RS-232 devices via an optional adapter sold separately. The RS-485 physical layer gives these ports the noise immunity and cable-length headroom appropriate for show systems where both control gear and figures may be spread across a large installation.
+The pair of **<a href="https://www.st.com/resource/en/datasheet/st3485e.pdf" target="_blank" rel="noopener">STMicroelectronics ST3485EB</a>** RS-485 transceivers drive the two front-panel RJ45 ports labeled **RS232-1/NET-IN** and **RS232-2/NET-OUT**. Per the ProCommander4 manual, these ports serve a dual purpose: they support Weigl's proprietary **WEM-NET Pro I/O** protocol for interconnecting Weigl devices in a networked show control system, and they can also be used with external RS-232 devices via an optional adapter sold separately. The RJ45 connector carries both the RS-485 signal and power, so connected Weigl devices receive both data and power over a single cable.
 
 ### LM358 — Analog Output Scaling
 
@@ -188,12 +188,14 @@ graph LR
 
 Overall the ProCommander4 is a logical, well-considered piece of hardware. The component choices make sense — each part does a clearly defined job, the interconnections are straightforward, and the result is a low parts count design that appears to work reliably. Nothing here is cutting-edge, but that's just fine for a product like this.
 
-For my use case — animatronic systems on moving parade floats — I'd want to see better mechanical robustness. Several larger through-hole components sit freestanding above the board with no staking, and the LCD and front-panel joystick ride on unsupported sub-PCBs that protrude from the front of the unit. Both are the kind of detail that matters when the controller lives on a vehicle or gets handled regularly in the field. For a controller that lives in a fixed rack, the vibration side of that is a non-issue — but the fragile sub-PCB assemblies are worth being careful with regardless of where it's installed.
+For my use case — animatronic systems on moving parade floats — I'd want to see better mechanical robustness. Several larger through-hole components sit freestanding above the board with no staking, and the LCD and front-panel joystick ride on unsupported sub-PCBs that protrude from the front of the unit. Both are the kind of detail that matters when the controller lives on a vehicle or gets handled regularly in the field. For a controller that lives in a fixed rack, the vibration side of that is a non-issue — but the fragile sub-PCB assemblies are worth being careful with regardless of where it's installed. At $1,850.00, these are the kinds of finishing details worth getting right — and it’s worth noting that Weigl requires a login to see pricing at all, which makes comparison shopping unnecessarily difficult for potential buyers.
 
 None of this is a serious criticism — it's a sensible, functional design that clearly does what it's supposed to do.
 
 ## Disclaimer
 
-This analysis is based entirely on visual inspection of photographs — no firmware was extracted, no signals were probed, and no schematic was made. The interconnections shown in the block diagram above are inferred from datasheet-typical usage patterns and the physical proximity of components on the PCB, not from verified traces. Some assumptions are almost certainly wrong.
+This analysis is based entirely on visual inspection of photographs — no firmware was extracted, no signals were probed, and no attempt was made to produce a schematic or any other detailed reverse engineering artifact. The interconnections shown in the block diagram above are inferred from datasheet-typical usage patterns and the physical proximity of components on the PCB, not from verified traces. Some assumptions are almost certainly wrong.
 
-This is purely a hobbyist exercise in reverse-engineering curiosity — meant to help others understand how a piece of show control hardware is put together at a high level. It is not a competitive analysis, not an attempt to replicate or undermine Weigl's product, and not a criticism of their engineering. Weigl Control makes solid equipment, and the goal here is appreciation, not deconstruction.
+This is purely a hobbyist exercise in reverse-engineering curiosity — meant to help others understand how a piece of show control hardware is put together at a high level. It is not a competitive analysis, not an attempt to replicate or undermine Weigl's product, and not a criticism of their engineering. <a href="https://www.weiglcontrol.com/" target="_blank" rel="noopener">Weigl Control</a> makes solid equipment, and the goal here is appreciation, not deconstruction.
+
+The fact that <a href="https://www.motalab.com/showforge" target="_blank" rel="noopener">Showforge</a> — the companion show programming software — is macOS-only and requires a USB-C hardware dongle key at $1,300.00 each is another matter, which I'll refrain from sharing my thoughts on. 🙃
