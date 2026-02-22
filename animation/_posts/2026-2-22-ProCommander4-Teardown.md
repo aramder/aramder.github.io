@@ -26,14 +26,14 @@ The main board is where all the interesting work happens. The key ICs are labele
 
 {% include annotated_image.html
    image="/images/Weigl_ProCommander4_Teardown/pcb_top.jpg"
-   alt="Weigl ProCommander4 main PCB top view showing AT32UC3A1512 AVR32 MCU, WIZnet W5100 Ethernet, VLSI VS1053b audio codec, TPA3123D2 class D amplifier, DS3911 DAC, and supporting ICs"
+   alt="Weigl ProCommander4 main PCB top view showing AT32UC3A1512 AVR32 MCU, WIZnet W5100 Ethernet, VLSI VS1053B audio codec, TPA3123D2 class D amplifier, DS3911 DAC, and supporting ICs"
    hotspots='[
      {"x":18.6,"y":65.7,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
      {"x":16.7,"y":53.3,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
      {"x":50.7,"y":61.1,"label":"AT32UC3A1512","desc":"Microchip AT32UC3A1512 — 32-bit AVR32 MCU, 512 KB flash","url":"https://www.microchip.com/en-us/product/at32uc3a1512"},
      {"x":83.2,"y":49.6,"label":"MC34063A","desc":"MC34063A — switching regulator controller","url":"https://www.ti.com/lit/ds/symlink/mc34063a.pdf"},
      {"x":77.6,"y":38,"label":"SN75LBC176","desc":"TI SN75LBC176 — RS-485/RS-422 differential bus transceiver, used here as the DMX output interface","url":"https://www.ti.com/lit/ds/symlink/sn65lbc176.pdf"},
-     {"x":34.3,"y":54.4,"label":"VS1053b","desc":"VLSI VS1053b — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
+     {"x":34.3,"y":54.4,"label":"VS1053B","desc":"VLSI VS1053B — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
      {"x":66,"y":79.1,"label":"WH1202A","desc":"Winstar WH1202A-TMI-ET# — 1.6\" 12×2 character LCD, ST7066 HD44780-compatible controller","url":"https://www.first-components.com/en/wh1202a-tmi-et"},
      {"x":39.6,"y":79.3,"label":"Micro SD Card","desc":"Storage medium for show files — audio and cue data read by the MCU at runtime via SPI"},
      {"x":59.2,"y":67.3,"label":"LM358","desc":"TI LM358 — dual op-amp. Function in this location unknown.","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
@@ -60,13 +60,13 @@ The central processor is an **[Atmel (now Microchip) AT32UC3A1512](https://www.m
 
 The **[WIZnet W5100](https://wiznet.io/products/ethernet-chips/w5100)** is a hardwired TCP/IP stack chip — it handles Ethernet entirely in hardware, so no network stack software runs on the MCU.
 
-### VS1053b — Audio Codec
+### VS1053B — Audio Codec
 
-The **[VLSI VS1053b](https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf)** is a single-chip audio codec that handles decoding of MP3, OGG Vorbis, AAC, WMA, FLAC, WAV, and MIDI. It takes compressed audio from the MCU over SPI and outputs an analog stereo signal.
+The **[VLSI VS1053B](https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf)** is a single-chip audio codec that handles decoding of MP3, OGG Vorbis, AAC, WMA, FLAC, WAV, and MIDI. It takes compressed audio from the MCU over SPI and outputs an analog stereo signal.
 
 ### TPA3123D2 — Class D Amplifier
 
-The **[TI TPA3123D2](https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf)** is a 25 W per channel class D audio power amplifier. It takes the analog stereo output from the VS1053b and drives speakers directly. Class D was the right choice here — it's efficient enough that no heatsink is required in a sealed enclosure at typical animatronic audio levels. The TPA3123D2 operates from a single supply (10–36 V) and includes short-circuit and thermal protection.
+The **[TI TPA3123D2](https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf)** is a 25 W per channel class D audio power amplifier. It takes the analog stereo output from the VS1053B and drives speakers directly. Class D was the right choice here — it's efficient enough that no heatsink is required in a sealed enclosure at typical animatronic audio levels. The TPA3123D2 operates from a single supply (10–36 V) and includes short-circuit and thermal protection.
 
 ### SN75LBC176 — RS-485 Transceiver
 
@@ -108,14 +108,14 @@ Zooming into the front-left quadrant of the board brings the network and audio s
 
 {% include annotated_image.html
    image="/images/Weigl_ProCommander4_Teardown/pcb_top_network_playback.jpg"
-   alt="Weigl ProCommander4 PCB network and audio playback region showing WIZnet W5100 Ethernet controller, VLSI VS1053b MP3 codec, STMicroelectronics ST232C RS-232 transceiver, DS3911 DAC, and 3.5mm line out jack"
+   alt="Weigl ProCommander4 PCB network and audio playback region showing WIZnet W5100 Ethernet controller, VLSI VS1053B audio codec, STMicroelectronics ST232C RS-232 transceiver, DS3911 DAC, and 3.5mm line out jack"
    hotspots='[
      {"x":37.2,"y":60.1,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
      {"x":30.1,"y":47,"label":"TPA3123D2","desc":"TI TPA3123D2 — 25W per channel class D audio amplifier","url":"https://www.ti.com/lit/ds/symlink/tpa3123d2.pdf"},
      {"x":76.5,"y":58.8,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
-     {"x":63.5,"y":43.2,"label":"VS1053b","desc":"VLSI VS1053b — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
+     {"x":63.5,"y":43.2,"label":"VS1053B","desc":"VLSI VS1053B — MP3/OGG/AAC/MIDI audio codec with DSP","url":"https://cdn.sparkfun.com/assets/a/1/9/5/0/vs1053.pdf"},
      {"x":60.4,"y":26,"label":"LM358s","desc":"TI LM358 — dual op-amps, used here to scale the DS3911 DAC output voltage up to 0–10 VDC for the rear D-sub analog outputs","url":"https://www.ti.com/lit/ds/symlink/lm358.pdf"},
-     {"x":56.7,"y":9.4,"label":"3.5mm Line Out","desc":"Stereo line-level output jack — direct analog audio from the VS1053b DAC, bypassing the TPA3123D2 power amplifier for connection to an external amplifier or mixer"},
+     {"x":56.7,"y":9.4,"label":"3.5mm Line Out","desc":"Stereo line-level output jack — direct analog audio from the VS1053B codec, bypassing the TPA3123D2 power amplifier for connection to an external amplifier or mixer"},
      {"x":15.4,"y":9.3,"label":"Speaker Terminals","desc":"Screw terminals for direct speaker connections driven by the TPA3123D2 class D amplifier"},
      {"x":43.2,"y":25.4,"label":"ST232C","desc":"STMicroelectronics ST232C — MAX232-compatible RS-232 transceiver with charge pump","url":"https://www.st.com/en/interfaces-and-transceivers/st232c.html"},
      {"x":75,"y":46.5,"label":"MCP79411","desc":"Microchip MCP79411 — battery-backed I²C real-time clock/calendar (RTCC)","url":"https://ww1.microchip.com/downloads/aemDocuments/documents/MPD/ProductDocuments/DataSheets/MCP79410-MCP79411-MCP79412-Battery-Backed-I2C-RTCC-DS20002266.pdf"},
@@ -135,7 +135,7 @@ The **[LM358](https://www.ti.com/lit/ds/symlink/lm358.pdf)** dual op-amps visibl
 
 ### Audio Outputs — Line Out and Speaker Terminals
 
-The board exposes two audio output paths. The **3.5mm stereo line-out jack** provides a line-level signal taken directly from the VS1053b DAC output, bypassing the power amplifier entirely — useful for connecting to an external amplifier, mixer, or audio distribution system in larger installations. The **speaker screw terminals** are the direct-drive output of the TPA3123D2 class D amplifier, intended for connecting 4Ω or 8Ω speakers directly at the enclosure. Having both outputs populated means the same unit can serve either as a self-contained speaker driver or as an audio source node in a larger show audio system.
+The board exposes two audio output paths. The **3.5mm stereo line-out jack** provides a line-level signal taken directly from the VS1053B codec output, bypassing the power amplifier entirely — useful for connecting to an external amplifier, mixer, or audio distribution system in larger installations. The **speaker screw terminals** are the direct-drive output of the TPA3123D2 class D amplifier, intended for connecting 4Ω or 8Ω speakers directly at the enclosure. Having both outputs populated means the same unit can serve either as a self-contained speaker driver or as an audio source node in a larger show audio system.
 
 ## System Architecture
 
@@ -153,23 +153,24 @@ graph LR
     SD([Micro SD Card]):::storage <-->|SPI| MCU[AT32UC3A1512]:::mcu
     MCP79411:::ic <-->|I2C| MCU
     LCD[WH1202A]:::display --- ST7066:::ic <-->|Parallel| MCU
-    ETH([RJ45 Ethernet]):::conn --- W5100:::ic -->|SPI| MCU
+    ETH([RJ45 Ethernet]):::conn --- W5100:::ic <-->|SPI| MCU
     RJ45RS([RJ-45 RS-232]):::conn --- ST232C_2[ST232C]:::ic <-->|UART| MCU
 
-    MCU -->|SPI| VS1053b:::ic
-    VS1053b -->|Analog| TPA3123D2:::ic
-    VS1053b -->|Analog| LINEOUT([3.5mm Line Out]):::conn
+    MCU <-->|SPI| VS1053B:::ic
+    VS1053B -->|Analog| TPA3123D2:::ic
+    VS1053B -->|Analog| LINEOUT([3.5mm Line Out]):::conn
     TPA3123D2 --> SPKR([Speaker Terminals]):::conn
-    MCU -->|UART| SN75LBC176:::ic
-    SN75LBC176 --> DMX([5-Pin DMX I/O]):::conn
+    MCU <-->|UART| SN75LBC176:::ic
+    SN75LBC176 --> DMX([XLR-5 DMX I/O]):::conn
     MCU <-->|UART| ST232C_1[ST232C]:::ic
     ST232C_1 <--> DB9([DB-9 RS-232]):::conn
-    MCU -->|SPI| HC595["74HC595 (x2)"]:::ic
-    HC595 --> DOUT([Digital Outputs]):::generic
+    MCU <-->|SPI| HC595["74HC595 (x2)"]:::ic
+    HC595 --> DOUT([Digital Output Terminals]):::conn
     MCU <-->|SPI| HC165[74HC165]:::ic
-    HC165 --> DINP([Digital Inputs]):::generic
-    MCU -->|I2C| DS3911:::ic -->|Analog| LM358:::ic
-    LM358 -->|0-10V| AOUT([Analog Outputs]):::generic
+    HC165 --> DINP([Digital Input Terminals]):::conn
+    MCU <-->|I2C| DS3911:::ic -->|Analog| LM358:::ic
+    LM358 -->|0-10V| AOUT([DB-9 Analog/Servo]):::conn
+    MCU -->|Servo| AOUT
 ```
 <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;font-size:0.8em;font-family:sans-serif;">
   <span style="background:#e8985c;color:#fff;font-weight:bold;border:1px solid #333;padding:2px 8px;border-radius:3px;">MCU</span>
