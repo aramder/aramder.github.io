@@ -1,0 +1,46 @@
+Color Temperature Matching — Processing Log
+==================================================
+
+Date:       2026-02-21 23:43:30
+Tool:       match_color_temp.py
+Method:     Reinhard color transfer (per-channel mean/std matching)
+
+Command:    match_color_temp.py images/Gilderfluke_RS-232 --ref PXL_20260215_083321224.jpg --suffix _processed --overwrite
+
+Input folder:  C:\Users\Aram\Documents\GitHub\aramder.github.io\images\Gilderfluke_RS-232
+Output folder: C:\Users\Aram\Documents\GitHub\aramder.github.io\images\Gilderfluke_RS-232
+Suffix:        _processed
+
+Reference image: PXL_20260215_083321224.jpg
+  Channel means (R, G, B): 137.21, 144.23, 133.47
+  Channel stds  (R, G, B): 45.73, 41.73, 43.81
+  (Stats computed on pixels with min > 15, max < 240 to exclude clipped regions)
+
+--------------------------------------------------
+Images processed: 4  |  Errors: 0
+--------------------------------------------------
+
+  PXL_20260215_083321224.jpg
+    -> PXL_20260215_083321224_processed.jpg
+    Original means  R=137.21  G=144.23  B=133.47
+    Original stds   R=45.73  G=41.73  B=43.81
+    Matched to ref  R=137.21  G=144.23  B=133.47
+
+  PXL_20260215_083712783.jpg
+    -> PXL_20260215_083712783_processed.jpg
+    Original means  R=137.53  G=117.47  B=91.96
+    Original stds   R=43.34  G=38.25  B=32.22
+    Matched to ref  R=137.21  G=144.23  B=133.47
+
+  PXL_20260215_084556512.jpg
+    -> PXL_20260215_084556512_processed.jpg
+    Original means  R=149.32  G=156.64  B=139.10
+    Original stds   R=50.28  G=49.95  B=44.48
+    Matched to ref  R=137.21  G=144.23  B=133.47
+
+  PXL_20260222_071116532.jpg
+    -> PXL_20260222_071116532_processed.jpg
+    Original means  R=156.27  G=126.17  B=100.98
+    Original stds   R=52.06  G=43.23  B=37.48
+    Matched to ref  R=137.21  G=144.23  B=133.47
+
