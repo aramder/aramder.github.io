@@ -4,7 +4,7 @@ category: animation
 title: Weigl ProCommander4 Hardware Teardown
 ---
 
-![Weigl ProCommander4 animatronic show controller front panel, powered on, displaying firmware version on LCD](/images/Weigl_ProCommander4_Analysis/Weigl_ProCommander4_front_powered.jpg)
+![Weigl ProCommander4 animatronic show controller front panel, powered on, displaying firmware version on LCD](/images/Weigl_ProCommander4_Teardown/Weigl_ProCommander4_front_powered.jpg)
 
 The Weigl ProCommander4 show controller crossed my path recently, and curiosity got the better of me.
 
@@ -15,7 +15,7 @@ Weigl Control makes show control equipment for professional and prosumer applica
 The rear panel is where the ProCommander4 connects to the outside world — power in, control signals out, and the interfaces for show control. While the network interface is located on the front panel, the rear panel provides serial interfaces for show control, digital inputs and outputs, servo outputs, analog outputs, and a loudspeaker line out for audio. These connections enable the ProCommander4 to integrate seamlessly into complex animatronic systems.
 
 {% include annotated_image.html
-   image="/images/Weigl_ProCommander4_Analysis/rear_panel_with_lid_removed.jpg"
+   image="/images/Weigl_ProCommander4_Teardown/rear_panel_with_lid_removed.jpg"
    alt="Weigl ProCommander4 rear panel with lid removed, showing RS-232, RS-485, DMX, servo, analog, digital I/O, and audio connectors"
    hotspots='[]'
 %}
@@ -25,7 +25,7 @@ The rear panel is where the ProCommander4 connects to the outside world — powe
 The main board is where all the interesting work happens. The key ICs are labeled below.
 
 {% include annotated_image.html
-   image="/images/Weigl_ProCommander4_Analysis/pcb_top.jpg"
+   image="/images/Weigl_ProCommander4_Teardown/pcb_top.jpg"
    alt="Weigl ProCommander4 main PCB top view showing AT32UC3A1512 AVR32 MCU, WIZnet W5100 Ethernet, VLSI VS1053b audio codec, TPA3123D2 class D amplifier, DS3911 DAC, and supporting ICs"
    hotspots='[
      {"x":18.6,"y":65.7,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
@@ -47,7 +47,8 @@ The main board is where all the interesting work happens. The key ICs are labele
      {"x":40.3,"y":45.8,"label":"DS3911","desc":"4 Channel 10-bit I2C Controlled DAC","url":"https://www.analog.com/media/en/technical-documentation/data-sheets/DS3911.pdf"},
      {"x":63.1,"y":47.9,"label":"Relays","desc":"Relays can optionally be installed for outputs on some units. This unit is equipped with N-CH mosfets for low-side switching."},
      {"x":46.4,"y":41.9,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
-     {"x":62.9,"y":59.3,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"}
+     {"x":62.9,"y":59.3,"label":"ZXMS6004DN8","desc":"60V 1.3A 500mOhm N-Ch MOSFETs with integrated overcurrent protection","url":"https://www.diodes.com/datasheet/download/ZXMS6004DN8.pdf"},
+     {"x":33.8,"y":68,"label":"ST3485EBs","desc":"Set of RS-485 transceivers for the \"RS232-1/NET-IN\" and \"RS232-2/NET-OUT\" RJ45s","url":"https://www.st.com/en/interfaces-and-transceivers/st3485eb.html"}
    ]'
 %}
 
@@ -90,7 +91,7 @@ The **[Microchip MCP79411](https://ww1.microchip.com/downloads/aemDocuments/docu
 The underside of the board is largely solder and passive components, but one feature is worth noting.
 
 {% include annotated_image.html
-   image="/images/Weigl_ProCommander4_Analysis/pcb_bottom.jpg"
+   image="/images/Weigl_ProCommander4_Teardown/pcb_bottom.jpg"
    alt="Weigl ProCommander4 main PCB bottom view showing exposed copper thermal pad for TPA3123D2 class D amplifier heat dissipation"
    hotspots='[
      {"x":84.3,"y":50.4,"label":"TPA3123D2 thermal pad","desc":"Exposed copper thermal pad on the PCB underside for the TPA3123D2 class D amplifier, providing a heat conduction path to the chassis or a heatsink"}
@@ -106,7 +107,7 @@ The exposed copper pad visible on the bottom of the board — tinned with solder
 Zooming into the front-left quadrant of the board brings the network and audio subsystem into focus.
 
 {% include annotated_image.html
-   image="/images/Weigl_ProCommander4_Analysis/pcb_top_network_playback.jpg"
+   image="/images/Weigl_ProCommander4_Teardown/pcb_top_network_playback.jpg"
    alt="Weigl ProCommander4 PCB network and audio playback region showing WIZnet W5100 Ethernet controller, VLSI VS1053b MP3 codec, STMicroelectronics ST232C RS-232 transceiver, DS3911 DAC, and 3.5mm line out jack"
    hotspots='[
      {"x":37.2,"y":60.1,"label":"W5100","desc":"WIZnet W5100 — hardwired TCP/IP stack Ethernet controller","url":"https://wiznet.io/products/ethernet-chips/w5100"},
