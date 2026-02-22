@@ -5,7 +5,7 @@ title: Gilderfluke 3.5mm RS-232 Adapter
 ---
 ![Completed DB9 to 3.5mm TRS adapter for Gilderfluke RS-232 communication](/images/Gilderfluke_RS-232/completed.jpg)
 
-<a href="https://gilderfluke.com/" target="_blank">Gilderfluke</a> devices use a 3.5mm TRS jack for <a href="https://www.usconverters.com/index.php?main_page=page&id=61" target="_blank">RS-232</a> communication. The typical approach is a DB9 pigtail cable with a 3.5mm plug soldered to the end, but I would rather not deal with that cable at all. This simple passive adapter converts a DB9 connector to a 3.5mm jack, letting me use any off-the-shelf audio cable for the run to the device.<!--more-->
+<a href="https://gilderfluke.com/" target="_blank">Gilderfluke</a> devices use a 3.5mm TRS jack for <a href="https://www.usconverters.com/index.php?main_page=page&id=61" target="_blank">RS-232</a> communication. The combination of a bulky D-Sub connector and a thin pigtail cable is not ideal for carrying around — a minor annoyance, but one I decided to solve. This simple passive adapter converts a DB9 to a 3.5mm jack, so I can use any off-the-shelf audio cable for the run to the device instead.<!--more-->
 
 ## Background
 
