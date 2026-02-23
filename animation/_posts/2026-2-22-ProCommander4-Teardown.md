@@ -143,14 +143,13 @@ The board exposes two audio output paths. The **3.5mm stereo line-out jack** pro
 
 ## System Architecture
 
-Putting it all together, the block diagram below shows how the major components interconnect. The AT32UC3A1512 sits at the center, coordinating every subsystem over SPI, I²C, and UART.
+Putting it all together, the block diagram below shows how the major components *probably* interconnect — inferred from datasheet-typical usage and component placement, not verified traces. The AT32UC3A1512 sits at the center, coordinating every subsystem. In practice, several of these SPI and I²C buses are almost certainly shared, and there's plenty of additional circuitry on the board — passives, protection components, power distribution — that isn't captured here.
 
 ```mermaid
 graph LR
     classDef mcu fill:#e8985c,stroke:#333,color:#fff,font-weight:bold
     classDef ic fill:#f5f0eb,stroke:#999,color:#333
     classDef conn fill:#dcedc8,stroke:#558b2f,color:#333,stroke-width:2px
-    classDef generic fill:#e3f2fd,stroke:#1565c0,color:#333,stroke-width:2px,stroke-dasharray:5 5
     classDef storage fill:#fff3e0,stroke:#e65100,color:#333,stroke-width:2px
     classDef display fill:#ede7f6,stroke:#4527a0,color:#333,stroke-width:2px
 
@@ -180,7 +179,6 @@ graph LR
   <span style="background:#f5f0eb;color:#333;border:1px solid #999;padding:2px 8px;border-radius:3px;">Integrated Circuit</span>
   <span style="background:#dcedc8;color:#333;border:2px solid #558b2f;padding:2px 8px;border-radius:3px;">Connector</span>
   <span style="background:#ede7f6;color:#333;border:2px solid #4527a0;padding:2px 8px;border-radius:3px;">Display</span>
-  <span style="background:#e3f2fd;color:#333;border:2px dashed #1565c0;padding:2px 8px;border-radius:3px;">Generic I/O</span>
   <span style="background:#fff3e0;color:#333;border:2px solid #e65100;padding:2px 8px;border-radius:3px;">Storage</span>
 </div>
 
@@ -188,7 +186,7 @@ graph LR
 
 Overall the ProCommander4 is a logical, well-considered piece of hardware. The component choices make sense — each part does a clearly defined job, the interconnections are straightforward, and the result is a low parts count design that appears to work reliably. Nothing here is cutting-edge, but that's just fine for a product like this.
 
-For my use case — animatronic systems on moving parade floats — I'd want to see better mechanical robustness. Several larger through-hole components sit freestanding above the board with no staking, and the LCD and front-panel joystick ride on unsupported sub-PCBs that protrude from the front of the unit. Both are the kind of detail that matters when the controller lives on a vehicle or gets handled regularly in the field. For a controller that lives in a fixed rack, the vibration side of that is a non-issue — but the fragile sub-PCB assemblies are worth being careful with regardless of where it's installed. At $1,850.00, these are the kinds of finishing details worth getting right — and it’s worth noting that Weigl requires a login to see pricing at all, which makes comparison shopping unnecessarily difficult for potential buyers.
+For my use case — animatronic systems on moving parade floats — I'd want to see better mechanical robustness. Several larger through-hole components sit freestanding above the board with no staking, and the LCD and front-panel joystick ride on unsupported sub-PCBs that protrude from the front of the unit. Both are the kind of detail that matters when the controller lives on a vehicle or gets handled regularly in the field. For a controller that lives in a fixed rack, the vibration side of that is a non-issue — but the fragile sub-PCB assemblies are worth being careful with regardless of where it's installed. At $1,850.00, these are the kinds of finishing details worth getting right — and it’s worth noting that Weigl requires a login to see pricing at all, which makes comparison shopping unnecessarily difficult for potential buyers (see: [Rule #194](/Rules-of-Acquisition/)).
 
 None of this is a serious criticism — it's a sensible, functional design that clearly does what it's supposed to do.
 
