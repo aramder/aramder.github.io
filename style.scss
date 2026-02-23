@@ -229,6 +229,8 @@ nav {
   align-items: center;
   font-family: $helveticaNeue;
   font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @include mobile {
     margin-top: 9px;
@@ -240,7 +242,7 @@ nav {
     margin-left: 15px;
     color: rgba(255, 255, 255, 0.9);
     text-align: right;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     transition: color 0.2s ease;
 
