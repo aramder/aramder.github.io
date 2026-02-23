@@ -7,7 +7,7 @@ permalink: /Rules-of-Acquisition/
 
 The Rules of Acquisition are the sacred precepts of Ferengi commerce — a codified business bible first introduced by the first Grand Nagus, Gint. Quoted constantly throughout *Star Trek: Deep Space Nine* and beyond, they serve as both satirical commentary on capitalism and genuine in-universe law.
 
-Some of these reflect a moral framework humans haven't quite adopted yet — the gap between satire and observation is narrower than it ought to be. The ones marked ★ are rules I've actually seen play out in the real world, whether in business dealings, career moments, or just navigating life. Some required more firsthand experience to confirm than others.
+Some of these reflect a moral framework humans haven't quite adopted yet. The ones marked ★ are rules I've seen play out, whether in business dealings, career moments, or the occasional expensive lesson.
 
 ## The Rules
 
@@ -74,7 +74,7 @@ It is essentially a sacred reframing of supply and demand: not mere economics, b
 
 The concept was most memorably explained in DS9: ["Treachery, Faith and the Great River"](https://memory-alpha.fandom.com/wiki/Treachery,_Faith_and_the_Great_River_(episode)), where Nog uses it to justify an elaborate chain of trades that ultimately produces exactly the item Chief O'Brien needed — demonstrating that if you trust the current, it provides.
 
-While the Great Material Continuum is a humorous and fictional concept, it also offers a lighthearted lens through which to view real-world business transactions, career navigation, and the flow of material goods in our lives.
+The Great Material Continuum is fictional, but it maps well onto how goods, favors, and opportunities actually move between people.
 
 ## Notes
 
