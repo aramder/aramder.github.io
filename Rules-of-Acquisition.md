@@ -7,7 +7,7 @@ permalink: /Rules-of-Acquisition/
 
 The Rules of Acquisition are the sacred precepts of Ferengi commerce — a codified business bible first introduced by the first Grand Nagus, Gint. Quoted constantly throughout *Star Trek: Deep Space Nine* and beyond, they serve as both satirical commentary on capitalism and genuine in-universe law.
 
-Most of these are silly, and some are deliberately awful — but a surprising number hold up. The ones marked ★ are rules I've actually seen play out in the real world, whether in business dealings, career moments, or just navigating life. Some are obvious in hindsight. Others were less obvious until they weren't.
+Some of these reflect a moral framework humans haven't quite adopted yet — but it turns out we're not so different from the Ferengi as we'd like to think. The ones marked ★ are rules I've actually seen play out in the real world, whether in business dealings, career moments, or just navigating life. Some required more firsthand experience to confirm than others.
 
 ## The Rules
 
