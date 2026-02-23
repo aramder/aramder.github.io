@@ -52,15 +52,15 @@ Some of these reflect a moral framework humans haven't quite adopted yet — the
 | 190 ★ | Hear all, trust nothing. | DS9: ["Call to Arms"](https://memory-alpha.fandom.com/wiki/Call_to_Arms_(episode)) |
 | 194 | It's always good business to know about new customers before they walk in your door. [10] | DS9: ["Whispers"](https://memory-alpha.fandom.com/wiki/Whispers_(episode)) |
 | 203 | New customers are like razor-toothed gree-worms. They can be succulent, but sometimes they bite back. | DS9: ["Little Green Men"](https://memory-alpha.fandom.com/wiki/Little_Green_Men_(episode)) |
-| 208 | Sometimes the only thing more dangerous than a question is an answer. | DS9: ["Ferengi Love Songs"](https://memory-alpha.fandom.com/wiki/Ferengi_Love_Songs_(episode)) |
+| 208 ★ | Sometimes the only thing more dangerous than a question is an answer. | DS9: ["Ferengi Love Songs"](https://memory-alpha.fandom.com/wiki/Ferengi_Love_Songs_(episode)) |
 | 211 | Employees are the rungs on the ladder of success. Don't hesitate to step on them. | DS9: ["Bar Association"](https://memory-alpha.fandom.com/wiki/Bar_Association_(episode)) |
 | 214 | Never begin a business negotiation on an empty stomach. | DS9: ["The Maquis, Part I"](https://memory-alpha.fandom.com/wiki/The_Maquis,_Part_I_(episode)) |
-| 217 | You can't free a fish from water. | DS9: ["Past Tense, Part I"](https://memory-alpha.fandom.com/wiki/Past_Tense,_Part_I_(episode)) |
+| 217 ★ | You can't free a fish from water. | DS9: ["Past Tense, Part I"](https://memory-alpha.fandom.com/wiki/Past_Tense,_Part_I_(episode)) |
 | 223 | Unknown, but presumably concerned the relationship between "keeping busy" and "being successful". | DS9: ["Profit and Loss"](https://memory-alpha.fandom.com/wiki/Profit_and_Loss_(episode)) |
 | 229 | Latinum lasts longer than lust. | DS9: ["Ferengi Love Songs"](https://memory-alpha.fandom.com/wiki/Ferengi_Love_Songs_(episode)) |
 | 239 | Never be afraid to mislabel a product. [11] | DS9: ["Body Parts"](https://memory-alpha.fandom.com/wiki/Body_Parts_(episode)) |
 | 263 | Never allow doubt to tarnish your lust for latinum. | DS9: ["Bar Association"](https://memory-alpha.fandom.com/wiki/Bar_Association_(episode)) |
-| 285 | No good deed ever goes unpunished. | DS9: ["The Collaborator"](https://memory-alpha.fandom.com/wiki/The_Collaborator_(episode)), ["The Sound of Her Voice"](https://memory-alpha.fandom.com/wiki/The_Sound_of_Her_Voice_(episode)) |
+| 285 ★ | No good deed ever goes unpunished. | DS9: ["The Collaborator"](https://memory-alpha.fandom.com/wiki/The_Collaborator_(episode)), ["The Sound of Her Voice"](https://memory-alpha.fandom.com/wiki/The_Sound_of_Her_Voice_(episode)) |
 | Unknown | A man is only worth the sum of his possessions. [12] | ENT: ["Acquisition"](https://memory-alpha.fandom.com/wiki/Acquisition_(episode)) |
 
 ![The Rules of Acquisition](/images/misc/rules_of_acquisition.png){: style="width: 75%; display: block; margin: 0 auto;"}
