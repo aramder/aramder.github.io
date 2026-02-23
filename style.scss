@@ -160,6 +160,8 @@ img {
 .wrapper-masthead {
   margin-bottom: 50px;
   background: $navBrown;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .masthead {
