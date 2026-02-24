@@ -16,8 +16,7 @@ package-lock.json
 .github/agents/
 
 # Work in progress
-**/Gilderfluke_Sd-50_Analysis*
-**/WIP*
+*WIP*
 **/_unused/
 
 # Test and development files
