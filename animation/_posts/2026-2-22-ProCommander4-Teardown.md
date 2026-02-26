@@ -192,8 +192,8 @@ None of this is a serious criticism — it's a sensible, functional design that 
 
 ## Disclaimer
 
-This analysis is based entirely on visual inspection of photographs — no firmware was extracted, no signals were probed, and no attempt was made to produce a schematic or any other detailed reverse engineering artifact. The interconnections shown in the block diagram above are inferred from datasheet-typical usage patterns and the physical proximity of components on the PCB, not from verified traces. Some assumptions are almost certainly wrong.
+This analysis is based entirely on visual inspection, component identification, and datasheet research. The block diagrams and interconnections are inferred from datasheet-typical usage patterns and the physical placement of components on the PCB, not from verified traces. Some assumptions are almost certainly wrong.
 
-This is purely a hobbyist exercise in engineering curiosity — meant to help others understand how a piece of show control hardware is put together at a high level. It is not a competitive analysis, not an attempt to replicate or undermine Weigl's product, and not a criticism of their engineering. <a href="https://www.weiglcontrol.com/" target="_blank" rel="noopener">Weigl Control</a> makes solid equipment, and the goal here is appreciation, not deconstruction.
+This is a hobbyist exercise in engineering curiosity. The ProCommander4 is a thoughtfully designed piece of show control hardware, and the goal here is to understand and appreciate how it's put together. It is not a competitive analysis, not an attempt to replicate or undermine Weigl's product, and not a criticism of their engineering. <a href="https://www.weiglcontrol.com/" target="_blank" rel="noopener">Weigl Control</a> makes solid equipment, and this post exists out of respect for that.
 
 The fact that <a href="https://www.motalab.com/showforge" target="_blank" rel="noopener">Showforge</a> — the companion show programming software — is macOS-only and requires a USB-C hardware dongle key at $1,300.00 each is another matter, which I'll refrain from sharing my thoughts on. 🙃
