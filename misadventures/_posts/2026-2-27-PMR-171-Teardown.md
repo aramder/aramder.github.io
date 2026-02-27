@@ -4,7 +4,7 @@ category: misadventures
 title: PMR-171 Teardown
 ---
 
-![PMR-171 radio](/images/PMR171/internal_photos_WIP/PMR-171_running_delidded.jpg)
+![PMR-171 radio](/images/PMR171/internal_photos/PMR-171_running_delidded.jpg)
 
 The PMR-171 is a portable all-band SDR transceiver that I recently got my hands on. Naturally I'm curious to know how this HF/VHF/UHF portable SDR works. This post covers the major ICs, signal chains, and how everything connects at a high level.<!--more-->
 
@@ -21,7 +21,7 @@ Some position it in the same space as the Icom IC-705, Xiegu X6100, and Yaesu FT
 The upper board carries the radio's main processing and RF control circuitry. The key ICs are labeled below. The board is essentially single-sided. The bottom has only three flat ribbon connectors: one small connector for LAN, one small connector for some kind of control, and one large connector likely for the filter/switching control bus.
 
 {% include annotated_image.html
-   image="/images/PMR171/internal_photos_WIP/upper_pcb_top_assembly.jpg"
+   image="/images/PMR171/internal_photos/upper_pcb_top_assembly.jpg"
    alt="PMR-171 upper PCB top view showing major ICs and RF components"
    hotspots='[
      {"x":54.6,"y":26.7,"label":"STM32H743IIT6","desc":"High-performance Arm Cortex-M7 MCU, 2 MB flash, 1 MB RAM, 480 MHz, Art Accelerator, L1 cache","url":"https://www.st.com/en/microcontrollers-microprocessors/stm32h743ii.html"},
@@ -75,7 +75,7 @@ The upper board carries the radio's main processing and RF control circuitry. Th
 ### A Selection of Close-Ups
 
 {% include gallery.html group="top-pcb-microscope"
-   images="/images/PMR171/internal_photos_WIP/microscope/img26022420-5.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-98.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-96.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-16.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-38.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-14.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-20.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-27.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-31.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-53.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-36.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022419-49.jpg"
+   images="/images/PMR171/internal_photos/microscope/img26022420-5.jpg, /images/PMR171/internal_photos/microscope/img26022420-98.jpg, /images/PMR171/internal_photos/microscope/img26022420-96.jpg, /images/PMR171/internal_photos/microscope/img26022420-16.jpg, /images/PMR171/internal_photos/microscope/img26022419-38.jpg, /images/PMR171/internal_photos/microscope/img26022419-14.jpg, /images/PMR171/internal_photos/microscope/img26022419-20.jpg, /images/PMR171/internal_photos/microscope/img26022419-27.jpg, /images/PMR171/internal_photos/microscope/img26022419-31.jpg, /images/PMR171/internal_photos/microscope/img26022419-53.jpg, /images/PMR171/internal_photos/microscope/img26022419-36.jpg, /images/PMR171/internal_photos/microscope/img26022419-49.jpg"
    alts="STM32H743IIT6 MCU at the heart of the radio, Unidentified RX signal chain components, WM8731L Audio CODEC, MSi001 mixer, Some messy rework on the DMR module PCB, LO, BK4819 FM transceiver, Unidentified component (presumably 49.9MHz filter), LO and IF inputs to LT5560 mixer, RTC battery, TX switch for routing the various TX sources to the TX filter bank, RDA5807M Single-chip broadcast FM radio tuner"
 %}
 
@@ -86,7 +86,7 @@ The bottom assembly carries the RF power amplifier boards and a few additional m
 The HF amplifier circuitry is integrated directly onto the main bottom PCB, which takes up most of the assembly footprint. The VHF/UHF amplifier is a separate daughterboard mounted on top — it doesn't appear to be a generic off-the-shelf module; the construction is consistent with Guohotec's own hardware, though I didn't dig further into its provenance.
 
 {% include annotated_image.html
-   image="/images/PMR171/internal_photos_WIP/bottom_pcb_top_assembly.jpg"
+   image="/images/PMR171/internal_photos/bottom_pcb_top_assembly.jpg"
    alt="PMR-171 bottom assembly top view"
    hotspots='[
      {"x":33.7,"y":45.8,"label":"MC25MB-04-STD","desc":"Quectel GNSS module"},
@@ -111,7 +111,7 @@ The HF amplifier circuitry is integrated directly onto the main bottom PCB, whic
 ### A Selection of Close-Ups
 
 {% include gallery.html group="bottom-assembly-microscope"
-   images="/images/PMR171/internal_photos_WIP/microscope/img26022420-103.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-104.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-106.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-107.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-108.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-109.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-119.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-120.jpg, /images/PMR171/internal_photos_WIP/microscope/img26022420-126.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_035627330.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_033254029.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_032618323.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_032624933.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_033051554.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_033127880.jpg, /images/PMR171/internal_photos_WIP/PXL_20260225_033240053.jpg"
+   images="/images/PMR171/internal_photos/microscope/img26022420-103.jpg, /images/PMR171/internal_photos/microscope/img26022420-104.jpg, /images/PMR171/internal_photos/microscope/img26022420-106.jpg, /images/PMR171/internal_photos/microscope/img26022420-107.jpg, /images/PMR171/internal_photos/microscope/img26022420-108.jpg, /images/PMR171/internal_photos/microscope/img26022420-109.jpg, /images/PMR171/internal_photos/microscope/img26022420-119.jpg, /images/PMR171/internal_photos/microscope/img26022420-120.jpg, /images/PMR171/internal_photos/microscope/img26022420-126.jpg, /images/PMR171/internal_photos/PXL_20260225_035627330.jpg, /images/PMR171/internal_photos/PXL_20260225_033254029.jpg, /images/PMR171/internal_photos/PXL_20260225_032618323.jpg, /images/PMR171/internal_photos/PXL_20260225_032624933.jpg, /images/PMR171/internal_photos/PXL_20260225_033051554.jpg, /images/PMR171/internal_photos/PXL_20260225_033127880.jpg, /images/PMR171/internal_photos/PXL_20260225_033240053.jpg"
    alts="MPU-6050 compass module, The GPS module, HF amp 1st power stage, HF amp 2nd power stage, HF amp 2nd power stage, The RX signal path combiner and splitter, VHF/UHF amp 1st power stage, VHF/UHF amp 2nd power stage, SP8T switch on upper RF assembly board directs the HF filter output to either the 'RX' which connects to the 'HF_ANT' port of the RX combiner/splitter., There's plenty of staking on the RF assembly which consists of countless toroids and relays, The GPS module header is staked but the module is not staked into the header itself..., VHF/UHF amp, HF amp, Bottom assembly with RF boards (rear facing view), The toroid on the left is not staked and is free to move and abrade the enamel wire coating., Bottom assembly with RF boards (front facing view)"
 %}
 
@@ -125,7 +125,7 @@ Nothing unusual on the connector panel. From what I could observe, there's no de
 
 ## Battery
 
-![PMR-171 battery pack](/images/PMR171/internal_photos_WIP/battery.jpg)
+![PMR-171 battery pack](/images/PMR171/internal_photos/battery.jpg)
 
 The 5 Ah battery pack attaches to the back of the radio. The cells appear to be potted. A fully potted pack with no venting and incompressible packaging is probably not ideal. I didn't open the pack to find out, so for now this is an open question.
 
@@ -414,7 +414,7 @@ Overall, the PMR-171 is reasonably well built. The design is ambitious, the comp
 
 Staking is inconsistent across the RF assembly. Some toroids and relay cans are properly secured; others aren't. One toroid is completely free to move, leaving the enamel wire to provide all mechanical support while abrading against the ferrite core. That's a reliability concern for a portable radio.
 
-{% include video.html src="/images/PMR171/internal_photos_WIP/loose_toroid.mp4" caption="Unstaked toroid on the lower RF assembly, free to move and abrade the enamel wire coating" controls=true width="50%" %}
+{% include video.html src="/images/PMR171/internal_photos/loose_toroid.mp4" caption="Unstaked toroid on the lower RF assembly, free to move and abrade the enamel wire coating" controls=true width="50%" %}
 
 ### Soldering Quality
 
@@ -426,7 +426,7 @@ I like the way that the electronics have their own sub-chassis which is held ins
 
 There's also the matter of the cooling fans and their mounting hardware.
 
-![Just joking of course....](/images/PMR171/internal_photos_WIP/verge_of_greatness.jpg)
+![Just joking of course....](/images/PMR171/internal_photos/verge_of_greatness.jpg)
 
 ### Value
 
