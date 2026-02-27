@@ -1,0 +1,14 @@
+services:
+  jekyll:
+    image: ruby:3.3
+    working_dir: /srv/jekyll
+    volumes:
+      - .:/srv/jekyll
+      - jekyll-bundle-cache:/usr/local/bundle
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    command: bash -c "gem install bundler --quiet && bundle install --quiet && bundle exec jekyll serve --host 0.0.0.0 --livereload --livereload-port 35729 --force_polling"
+
+volumes:
+  jekyll-bundle-cache:

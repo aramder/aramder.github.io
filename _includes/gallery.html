@@ -1,0 +1,48 @@
+{% comment %}
+  Tiled image gallery with GLightbox lightbox support.
+
+  Usage:
+    {% include gallery.html
+       images="/images/Folder/1.jpg, /images/Folder/2.jpg, /images/Folder/3.jpg"
+       alts="Caption one, , Caption three"
+    %}
+
+  Parameters:
+    images  — comma-separated list of image paths (required)
+    alts    — comma-separated list of captions (optional). Each entry is shown below its
+              thumbnail in the grid AND as the title in the lightbox. Leave an entry empty
+              to show no caption for that image (e.g. "First, , Third").
+    cols    — fixed column count: 2, 3, or 4 (optional; default is responsive auto-fill)
+    group   — GLightbox gallery group name (optional; default "post-gallery"). Use distinct
+              names to keep multiple galleries on the same page navigating independently.
+
+  Notes:
+    - Each thumbnail links directly to the full-size image via GLightbox.
+    - Add class="no-lightbox" to any <img> elsewhere on the page to exclude
+      it from the auto-wrap logic in default.html.
+{% endcomment %}
+
+{% assign img_list = include.images | split: ", " %}
+{% assign alt_list = include.alts  | split: ", " %}
+
+<div class="gallery{% if include.cols %} gallery--cols-{{ include.cols }}{% endif %}">
+  {% for img in img_list %}
+    {% assign idx      = forloop.index0 %}
+    {% assign alt_text = alt_list[idx] | strip %}
+    {% assign img_src  = img | strip %}
+    <a href="{{ img_src }}"
+       class="gallery-item glightbox{% if alt_text != '' %} gallery-item--captioned{% endif %}"
+       data-gallery="{% if include.group %}{{ include.group }}{% else %}post-gallery{% endif %}"
+       {% if alt_text != "" %}data-glightbox="title: {{ alt_text }}"{% endif %}>
+      <span class="gallery-item__thumb">
+        <img src="{{ img_src }}"
+             alt="{{ alt_text }}"
+             class="no-lightbox"
+             loading="lazy">
+      </span>
+      {% if alt_text != "" %}
+        <span class="gallery-item__caption">{{ alt_text }}</span>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>

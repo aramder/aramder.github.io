@@ -160,7 +160,10 @@
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
       mermaid.initialize({
         startOnLoad: false,
-        theme: 'neutral'
+        theme: 'neutral',
+        themeVariables: {
+          background: 'transparent'
+        }
       });
       // Convert ```mermaid code blocks (rendered by Kramdown as <code class="language-mermaid">) into Mermaid containers
       document.querySelectorAll('code.language-mermaid').forEach(el => {

@@ -1,0 +1,44 @@
+<figure class="video-player{% if include.caption %} has-caption{% endif %}"{% if include.width %} style="max-width:{{ include.width }}"{% endif %}>
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    {% if include.controls %}controls{% endif %}
+    preload="auto"
+  >
+    <source src="{{ include.src }}" type="{% if include.src contains '.webm' %}video/webm{% else %}video/mp4{% endif %}">
+    Your browser does not support this video format.
+  </video>
+  {% if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
+<script>
+(function() {
+  var figure = document.currentScript.previousElementSibling;
+  var video = figure.querySelector('video');
+
+  function tryPlay() {
+    video.muted = true;
+    var p = video.play();
+    if (p && p.catch) p.catch(function() {});
+  }
+
+  tryPlay();
+  video.addEventListener('loadeddata', tryPlay);
+  video.addEventListener('canplay', tryPlay);
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          tryPlay();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.25 });
+    observer.observe(video);
+  }
+}());
+</script>

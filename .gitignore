@@ -23,7 +23,3 @@ package-lock.json
 *_test.html
 preview_test.html
 annotated_image_test.html
-docker-compose.yml
-batch_color_correct.py
-match_color_temp.py
-TwinkleWorks.md

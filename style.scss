@@ -8,11 +8,33 @@
 @import "reset";
 @import "variables";
 @import "annotated_image";
+@import "gallery";
 
 // Mermaid.js diagram styling
 .mermaid {
-  text-align: center;
   margin: 1.5em 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  svg {
+    min-width: 700px;
+    max-width: none;
+    display: block;
+    margin: 0 auto;
+    background: transparent !important;
+  }
+
+  // Force Mermaid's internal background rect and node label containers to match page bg
+  svg rect[class=""],
+  svg > rect:first-child,
+  svg > g > rect:first-child {
+    fill: transparent !important;
+  }
+
+  .nodeLabel,
+  foreignObject > div {
+    background-color: transparent !important;
+  }
 }
 // Syntax highlighting @import is at the bottom of this file
 
@@ -115,6 +137,31 @@ strong, b {
 
 img {
   max-width: 100%;
+}
+
+// Inline looping video — used as animated image replacement
+.video-player {
+  margin: 15px auto;
+  position: relative;
+
+  video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  &.has-caption figcaption {
+    font-size: 14px;
+    color: $gray;
+    font-style: italic;
+    text-align: center;
+    margin-top: 6px;
+  }
 }
 
 // Fixes images in popup boxes from Google Translate

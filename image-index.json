@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /image-index.json
+---
+{% assign valid = "" | split: "" %}{% for file in site.static_files %}{% assign ext = file.extname | downcase %}{% if file.path contains '/images/' %}{% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".gif" or ext == ".webp" or ext == ".mp4" %}{% assign valid = valid | push: file.path %}{% endif %}{% endif %}{% endfor %}{{ valid | jsonify }}
