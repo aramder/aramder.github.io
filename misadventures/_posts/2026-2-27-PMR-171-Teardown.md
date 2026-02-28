@@ -18,7 +18,9 @@ Some position it in the same space as the Icom IC-705, Xiegu X6100, and Yaesu FT
 
 ## Upper PCB
 
-The upper board carries the radio's main processing and RF control circuitry. The key ICs are labeled below. The board is essentially single-sided. The bottom has only three flat ribbon connectors: one small connector for LAN, one small connector for some kind of control, and one large connector likely for the filter/switching control bus.
+The upper board carries the radio's main processing and RF control circuitry. The key ICs are labeled below. The photo below shows the board as-received — no RF shields have been removed because there aren't any. The ground stitching traces visible around each functional section are clearly designed to seat RF shield cans, but the shields themselves were never installed. Without them, the traces are purely cosmetic and provide no actual shielding.
+
+The board is essentially single-sided. The bottom has only three flat ribbon connectors: one small connector for LAN, one small connector for some kind of control, and one large connector likely for the filter/switching control bus.
 
 {% include annotated_image.html
    image="/images/PMR171/internal_photos/upper_pcb_top_assembly.jpg"
@@ -430,9 +432,9 @@ There's also the matter of the cooling fans and their mounting hardware.
 
 ### Value
 
-The assembly quality in a few areas doesn't match the price point. The base radio is not unreasonably priced given the niche it occupies, but the assembly inconsistencies described above shouldn't be showing up at this price point.
+The assembly quality in a few areas doesn't match the price point. The base radio is not unreasonably priced given the niche it occupies, but the assembly inconsistencies described above shouldn't be showing up at this price point. The upper PCB was designed for RF shields but the shields were omitted entirely. With the board layout already there, skipping the shields saves a few bucks in stamped metal and pick-and-place time.
 
-The optional modules are harder to justify. The DMR module doesn't appear to be fully functional, and the GPS module doesn't seem worth it either. The integration on both feels incomplete relative to what the add-on price implies.
+The optional modules are hard justify. The DMR module doesn't appear to be fully functional, and the GPS module doesn't seem worth it either. The integration on both feels incomplete relative to what the add-on price implies.
 
 ## Disclaimer
 
