@@ -335,11 +335,11 @@ graph TD
 
 ## Receiver Signal Path
 
-The RX section routes the incoming signal from a U.FL connector through a protection diode into a splitter (an "F"-marked component, function not fully resolved). The signal is split into two parallel paths: one passing directly through, and one through a "TAt"-labeled device that appears to be an LNA. The paths recombine at a combiner before reaching the filter bank.
+The RX section routes the incoming signal from a U.FL connector through a protection diode into a splitter (an "F"-marked component, function not fully resolved). The signal is split into two parallel paths: one passing directly through, and one through a "TAt"-labeled device that appears to be an LNA. The paths recombine at a combiner before reaching the filter bank. It looks like the bias power is switched to enable/disable the LNA.
 
 An FM3418 selects between three HF filters and a second FM3418 for VHF/UHF. The three HF filter outputs recombine in a third FM3418 which feeds MSi001 pin 39 (HF input). The VHF/UHF FM3418 feeds four filters to the MSi001's separate per-band LNA inputs at pins 10, 3, 6, and pins 24/25 (L-Band, confirmed from a community schematic).
 
-The MSi001 also requires a reference clock; it is typically paired with the MSi2500 and both run at 24 MHz. CLK1 on the MS5351M is set to 22 MHz (close but not the canonical value), which may reflect some other system constraint making 22 MHz easier to generate than 24 MHz. The tuner's I/Q baseband output feeds back to the ADDAC/DSP section.
+The MSi001 also requires a reference clock; it is typically paired with the MSi2500 and both run at 24 MHz. CLK1 on the MS5351M is labelled as 22 MHz, which is close. I have not determined exactly what clock source is used. The tuner's I/Q baseband output feeds back to the ADDAC/DSP section.
 
 There's also a group of SN74CBT3251s and SN74LV4066As just southwest of the WM8731L CODEC that presumably handles routing of different signals to/from the WM8731L's ADCs and DACs. I've left this detail out of the diagram below.
 
