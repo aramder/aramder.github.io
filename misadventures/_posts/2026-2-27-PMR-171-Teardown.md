@@ -228,7 +228,7 @@ graph TD
     GS8554["Input Conditioning<br/>GS8554"]:::amp
     MUX["Switch Mixer<br/>CBTLV3253<br/>49.95 MHz clock"]:::mixer
     BAL1(["Balun"]):::pass
-    FILTER1["IF Filter<br/>49910GQ9<br/>49.9 MHz"]:::rf
+    FILTER1["IF Filter<br/>49910GQ9"]:::rf
     BAL2(["Balun"]):::pass
     LT5560["Upconvert Mixer<br/>LT5560<br/>Fout = FLO − 49.95 MHz"]:::mixer
     BAL3(["Balun"]):::pass
