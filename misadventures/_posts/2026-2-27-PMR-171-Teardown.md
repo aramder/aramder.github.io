@@ -412,7 +412,7 @@ Overall, the PMR-171 is reasonably well built. The design is ambitious, the comp
 
 ### Staking
 
-Staking is inconsistent across the RF assembly. Some toroids and relay cans are properly secured; others aren't. One toroid is completely free to move, leaving the enamel wire to provide all mechanical support while abrading against the ferrite core. That's a reliability concern for a portable radio.
+Staking is inconsistent across the RF assembly. Some toroids and relays are properly secured; others aren't. One toroid on the VHF/UHF amplifier board is completely free to move, leaving the enamel wire to provide all mechanical support while abrading against the ferrite core. That's a reliability concern for a portable radio.
 
 {% include video.html src="/images/PMR171/internal_photos/loose_toroid.mp4" caption="Unstaked toroid on the lower RF assembly, free to move and abrade the enamel wire coating" controls=true width="50%" %}
 
@@ -422,7 +422,7 @@ Most of the boards look clean. The upper main board and the HF amplifier board a
 
 ### Mechanical Design and Construction
 
-I like the way that the electronics have their own sub-chassis which is held inside the outer case. I could complain about not having rubber bumpers for putting this on a desk, but that would be quite pedantic.
+I like the way that the electronics have their own sub-chassis which is held inside the outer case. I could complain about not having rubber bumpers on the outer case for putting this on a desk, but that would be quite pedantic.
 
 There's also the matter of the cooling fans and their mounting hardware.
 
