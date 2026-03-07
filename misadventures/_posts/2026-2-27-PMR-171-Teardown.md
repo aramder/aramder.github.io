@@ -83,7 +83,7 @@ The board is essentially single-sided. The bottom has only three flat ribbon con
 
 ## Bottom Assembly
 
-The bottom assembly carries the RF power amplifier boards and a few additional modules. Two separate PA chains are visible: an HF path (RD06HHF1, 30 MHz / 6 W) fed from the HF_TX U.FL on the main PCB, and a VHF/UHF path (two RD15HVF1, 15 W each) fed from UV_TX. Each chain has an HMC482ST89 gain block ahead of the final transistors. Several additional RF power transistors appear in the VHF/UHF section marked "BK 235" and "UFF 3E" (part numbers not fully resolved). The GNSS module and IMU are not typical for a portable transceiver and suggest positioning/motion logging capability.
+The bottom assembly carries the RF power amplifier boards and a few additional modules. Two separate PA chains are visible: an HF path (RD06HHF1, 30 MHz / 6 W) fed from the HF_TX U.FL on the main PCB, and a VHF/UHF path (two RD15HVF1, 15 W each) fed from UV_TX. Each chain has an HMC482ST89 gain block ahead of the final transistors. Several additional RF power transistors appear in the VHF/UHF section marked "BK 235" and "UFF 3E" (part numbers not fully resolved). The GNSS module and IMU (here as a compass) are not typical for a portable transceiver; the intended use seems to be APRS related, however, the functionality is really lacking in practice.
 
 The HF amplifier circuitry is integrated directly onto the main bottom PCB, which takes up most of the assembly footprint. The VHF/UHF amplifier is a separate daughterboard mounted on top — it doesn't appear to be a generic off-the-shelf module; the construction is consistent with Guohotec's own hardware, though I didn't dig further into its provenance.
 
