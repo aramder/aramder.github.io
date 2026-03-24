@@ -6,7 +6,7 @@ permalink: /about/
 
 ### Hello! I'm Aram Dergevorkian
 
-![Me at my electronics bench wearing a ridiculous lab coat and Mickey Mouse sorcerer hat outfit holding a soldering iron and smiling like an idiot](/images/profile_cringe.jpg)
+![Selfie with some giraffe mechanisms](/images/profile_giraffe.jpg)
 
 I'm an Electrical Engineer at the <a href="https://aws.amazon.com/blogs/quantum-computing/announcing-the-opening-of-the-aws-center-for-quantum-computing/" target="_blank">Amazon Web Services Center for Quantum Computing</a> in Pasadena California. I've been working there as a mixed signal designer since December 2024.
 
