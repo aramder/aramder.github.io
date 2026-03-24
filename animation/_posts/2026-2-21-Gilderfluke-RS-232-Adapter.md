@@ -39,8 +39,8 @@ The adapter consists of a female DB9 solder-cup connector and a panel-mount 3.5m
 
 I soldered the three conductors to the appropriate DB9 pins and 3.5mm jack terminals, keeping the leads short to fit inside the backshell. The backshell is used as-is — the only modification needed is widening the cable entry hole to accept the 3.5mm jack body.
 
-![Wired DB9 and 3.5mm jack housings before final assembly](/images/Gilderfluke_RS-232/wired_housings.jpg)
-
 ![Stacked view of the wiring between the two connectors](/images/Gilderfluke_RS-232/wiring_stacked.jpg)
+
+![Wired DB9 and 3.5mm jack housings before final assembly](/images/Gilderfluke_RS-232/wired_housings.jpg)
 
 The 3.5mm jack fits through the widened cable entry of the backshell and is secured in place with hot glue. The whole assembly closes up into a compact block.
