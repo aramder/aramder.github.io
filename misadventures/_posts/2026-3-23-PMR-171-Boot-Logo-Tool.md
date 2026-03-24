@@ -8,8 +8,6 @@ title: Custom Boot Logos on the PMR-171
 
 The PMR-171 (and all its Guohetec siblings) display a small 100x100 pixel logo on a simple background when they boot. I wanted to replace it with a full-screen image. The result is an open-source Python tool that takes any image and produces a ready-to-flash firmware file. No debug probe required.<!--more-->
 
-*Disclosure: both the reverse engineering and this writeup were done with heavy AI assistance. I directed the investigation, provided the hardware and JTAG dumps, and verified results on the physical radio. The LLM handled disassembly analysis, script writing, pattern matching through the binary, and drafting this post. There may be mistakes, misunderstandings, or inaccuracies in the technical details.*
-
 ## Finding the Boot Logo
 
 The radio runs on an STM32H743IIT6 (Cortex-M7, 2 MB flash). Starting from a full flash dump pulled over JTAG with a J-Link, a string search located `SEGGER emWin V5.44.70` in the binary. That identifies the GUI library as STemWin (ST's distribution of SEGGER emWin). emWin stores bitmaps with a 20-byte `GUI_BITMAP` header, so a scan for valid bitmap descriptors (reasonable width/height, valid stride, data pointer within flash range) identified 37 bitmaps in the firmware: icons, status indicators, and three boot logos, one per model variant.
@@ -93,3 +91,5 @@ The tool supports all eight models. A `--universal` flag injects a small Thumb-2
 The patch offsets are hard-coded for firmware v3.7.2 (build `Dec 22 2025 09:25:53`). A different firmware version will have different code layout, and applying these patches to it will produce a corrupted image. In most cases the radio can be recovered by USB-flashing a known-good `FW-NEW.bin`, but there is no guarantee that a corrupted firmware won't damage the bootloader or leave the radio in a state that requires JTAG recovery. Do not use this tool on a firmware version other than v3.7.2 unless you have a JTAG debug probe and are prepared to use it.
 
 The tool is available at [github.com/aramder/pmr171-logo-tool](https://github.com/aramder/pmr171-logo-tool).
+
+*Disclosure: both the reverse engineering and this writeup were done with heavy AI assistance. I directed the investigation, provided the hardware and JTAG dumps, and verified results on the physical radio. The LLM handled disassembly analysis, script writing, pattern matching through the binary, and drafting this post. There may be mistakes, misunderstandings, or inaccuracies in the technical details.*
