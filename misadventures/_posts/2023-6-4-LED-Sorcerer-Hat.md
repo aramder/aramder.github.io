@@ -23,6 +23,6 @@ In addition to the stars and moon, I put three long pieces of LED tape on back s
 
 ![LEDs installed inside the hat cone with wiring routed through the fabric](/images/LED Sorcerer Hat/LEDs installed.jpg)
 
-Here I am looking far too excited after showing Mickey and Minnie my hat!
+Looking far too excited after showing Mickey and Minnie the hat!
 
 ![Wearing the completed LED hat while meeting Mickey and Minnie](/images/LED Sorcerer Hat/if you know you know.jpg)

@@ -29,6 +29,6 @@ Since the float was being worked on during regular working hours, I had to do mo
 
 I'm really glad I had the opportunity to work with AES on this project. I think the results looked great... as did the Tournament of Roses. I'm quite proud that this float won the Tournament's Animation Award for most outstanding use of animation in the parade!
 
-![Selfie with the animatronic giraffes from the safari truck](/images/San Diego Zoo 2023/me and the boys.jpg)
+![Posing with the animatronic giraffes from the safari truck](/images/San Diego Zoo 2023/me and the boys.jpg)
 
 **Update** - *January 2024* - Added link to <a href="https://aramd.net/G2SE/">G2SE writeup</a>.

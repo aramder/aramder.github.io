@@ -3,7 +3,7 @@ layout: post
 category: misadventures
 title: VGA to Oscilloscope (XYZ) Converter
 ---
-![My profile photo displayed on an oscilloscope via the VGA converter](/images/vga to oscope/profile full.jpg)
+![Profile photo displayed on an oscilloscope via the VGA converter](/images/vga to oscope/profile full.jpg)
 
 A few years ago, I built some hardware to allow an oscilloscope to be used as a VGA display. I often use the photo above as my profile/avatar online and get asked why there are crosshairs on me... here's how it works!<!--more-->
 
