@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 category: misadventures
 title: Custom Boot Logos on the PMR-171
@@ -86,7 +86,7 @@ Accepts PNG, JPEG, BMP, etc. Resizes to 320x240 (letterbox, crop-to-fill, or str
 
 Guohetec sells at least eight models on this platform: Q900, HS2, QR20, TBR-119, PMR-119, SJR-188, PMR-171, and MX-1000. All run the same firmware binary. The model is selected by an EEPROM index byte. Differences are limited to Bluetooth name, band-switching tables, IMU orientation, and on-screen branding. Flash layout, LCD, emWin, and boot logo mechanism are identical across all of them.
 
-Currently the tool only patches the PMR-171's boot logo (case 6 in the splash screen switch statement). The other seven models have not been fully analyzed yet. Multi-model support is on the to-do list.
+The tool supports all eight models. A `--universal` flag injects a small Thumb-2 stub that replaces the model-index switch entirely, drawing the custom image at (0, 0) regardless of which EEPROM index the radio reads. One patched `FW-NEW.bin` works on any Guohetec radio on this platform.
 
 ## Version Compatibility
 
