@@ -80,7 +80,7 @@ Accepts PNG, JPEG, BMP, etc. Resizes to 320x240 (letterbox, crop-to-fill, or str
 
 ![PMR-171 displaying a custom boot screen with name and callsign](/images/PMR171/boot_logo_tool/pmr171_my_boot.jpg)
 
-## Eight Radios, One Firmware
+## One Firmware to Rule Them All
 
 Guohetec sells at least eight models on this platform: Q900, HS2, QR20, TBR-119, PMR-119, SJR-188, PMR-171, and MX-1000. All run the same firmware binary. The model is selected by an EEPROM index byte. Differences are limited to Bluetooth name, band-switching tables, IMU orientation, and on-screen branding. Flash layout, LCD, emWin, and boot logo mechanism are identical across all of them.
 
