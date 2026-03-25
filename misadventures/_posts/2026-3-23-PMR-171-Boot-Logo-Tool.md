@@ -10,7 +10,7 @@ The PMR-171 (and all its Guohetec siblings) display a small 100x100 pixel logo o
 
 ## Finding the Boot Logo
 
-The radio runs on an STM32H743IIT6 (Cortex-M7, 2 MB flash). Starting from a full flash dump pulled over JTAG with a J-Link, a string search located `SEGGER emWin V5.44.70` in the binary. That identifies the GUI library as STemWin (ST's distribution of SEGGER emWin). emWin stores bitmaps with a 20-byte `GUI_BITMAP` header, so a scan for valid bitmap descriptors (reasonable width/height, valid stride, data pointer within flash range) identified 37 bitmaps in the firmware: icons, status indicators, and three boot logos, one per model variant.
+The radio runs on an STM32H743IIT6 (Cortex-M7, 2 MB flash). Starting from a full flash dump pulled over JTAG with a J-Link, a string search located `SEGGER emWin V5.44.70` in the binary. That identifies the GUI library as STemWin (ST's distribution of SEGGER emWin). emWin stores bitmaps with a 20-byte `GUI_BITMAP` header, so a scan for valid bitmap descriptors (reasonable width/height, valid stride, data pointer within flash range) identified 37 bitmaps in the firmware: icons, status indicators, and three boot logos, one per model variant. (emWin labels its pixel format "RGB565," but the actual bit layout is blue-high/red-low — what most references call BGR565.)
 
 <div style="max-width: 50%; margin: 0 auto;">
 {% include gallery.html
@@ -20,7 +20,7 @@ The radio runs on an STM32H743IIT6 (Cortex-M7, 2 MB flash). Starting from a full
    group="stock-logos" %}
 </div>
 
-The PMR-171's logo is stored at `0x08108CC8` as 100x100 pixels in RGB565 (16-bit, little-endian, 2 bytes per pixel). All three model-variant logos live in flash sector 8.
+The PMR-171's logo is stored at `0x08108CC8` as 100x100 pixels in BGR565 (16-bit, little-endian, 2 bytes per pixel). All three model-variant logos live in flash sector 8.
 
 <!-- TODO: Photo of the stock boot screen on the actual radio (before patching).
      Destination: /images/PMR171/boot_logo_tool/photo_stock_boot.jpg
@@ -44,7 +44,7 @@ About 13 bytes of actual code/data changes, plus the image pixel data.
 
 ## Pixel Format
 
-The LCD is an ST7789V on SPI2 at 6.25 MHz, configured for 320x240 landscape (MADCTL `0x60`, pixel format `0x3A = 0x05`). emWin uses `LCD_Color2Index_RGB565` / `LCD_Index2Color_RGB565` for color conversion. Bitmaps are stored as 16-bit RGB565 pixels (5R/6G/5B), little-endian.
+The LCD is an ST7789V on SPI2 at 6.25 MHz, configured for 320x240 landscape (MADCTL `0x60`, pixel format `0x3A = 0x05`). emWin uses `LCD_Color2Index_RGB565` / `LCD_Index2Color_RGB565` for color conversion, but the physical bit layout is BGR565: blue in bits 15–11, green in 10–5, red in 4–0. Bitmaps are stored as 16-bit BGR565 pixels (5B/6G/5R), little-endian.
 
 A full-screen 320x240 image: 153,600 bytes of pixel data + 20-byte emWin header = 153,620 bytes (~150 KB). The STM32H7's Bank 2 sectors are 128 KB each. Sectors 10 through 13 are erased in stock firmware, so there's room for a full-screen image with space to spare.
 
