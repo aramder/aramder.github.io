@@ -31,7 +31,7 @@ The PMR-171's logo is stored at `0x08108CC8` as 100x100 pixels in BGR565 (16-bit
 
 The boot splash function at `0x080904D4` reads a model index byte from EEPROM and switches on it to select the logo address, draw coordinates, text overlay string, and background color. For the PMR-171 (case 6): bitmap at `0x08108CC8`, drawn at (110, 50), with "PMR-171" rendered below.
 
-The bitmap address isn't encoded directly in an instruction. It's loaded from a *literal pool* via `ldr r0, [pc, #offset]` (ARM Thumb-2 can't fit a 32-bit address into a 16-bit instruction, so the address is stored in a nearby data table and loaded indirectly). Changing 4 bytes in the literal pool redirects the function to a different bitmap.
+The bitmap address isn't encoded directly in an instruction. It's loaded from a *literal pool* via `ldr r0, [pc, #offset]` (ARM Thumb-2 can't fit a 32-bit address into a single instruction, so the address is stored in a nearby data table and loaded indirectly). Changing 4 bytes in the literal pool redirects the function to a different bitmap.
 
 The patching strategy:
 
@@ -44,7 +44,7 @@ About 13 bytes of actual code/data changes, plus the image pixel data.
 
 ## Pixel Format
 
-The LCD is an ST7789V on SPI2 at 6.25 MHz, configured for 320x240 landscape (MADCTL `0x60`, pixel format `0x3A = 0x05`). emWin uses `LCD_Color2Index_RGB565` / `LCD_Index2Color_RGB565` for color conversion, but the physical bit layout is BGR565: blue in bits 15–11, green in 10–5, red in 4–0. Bitmaps are stored as 16-bit BGR565 pixels (5B/6G/5R), little-endian.
+The LCD is an ST7789V on SPI2 at 6.25 MHz, configured for 320x240 landscape (MADCTL `0x60`, COLMOD register `0x3A` set to `0x05`). emWin uses `LCD_Color2Index_RGB565` / `LCD_Index2Color_RGB565` for color conversion, but the physical bit layout is BGR565: blue in bits 15–11, green in 10–5, red in 4–0. Bitmaps are stored as 16-bit BGR565 pixels (5B/6G/5R), little-endian.
 
 A full-screen 320x240 image: 153,600 bytes of pixel data + 20-byte emWin header = 153,620 bytes (~150 KB). The STM32H7's Bank 2 sectors are 128 KB each. Sectors 10 through 13 are erased in stock firmware, so there's room for a full-screen image with space to spare.
 
@@ -88,7 +88,7 @@ The tool supports all eight models. A `--universal` flag injects a small Thumb-2
 
 ## Version Compatibility
 
-The patch offsets are hard-coded for firmware v3.7.2 (build `Dec 22 2025 09:25:53`). A different firmware version will have different code layout, and applying these patches to it will produce a corrupted image. In most cases the radio can be recovered by USB-flashing a known-good `FW-NEW.bin`, but there is no guarantee that a corrupted firmware won't damage the bootloader or leave the radio in a state that requires JTAG recovery. Do not use this tool on a firmware version other than v3.7.2 unless you have a JTAG debug probe and are prepared to use it.
+The patch offsets are hard-coded for firmware v3.7.2 (build `Dec 22 2025 09:25:53`). A different firmware version will have different code layout, and applying these patches to it will produce a corrupted firmware. In most cases the radio can be recovered by USB-flashing a known-good `FW-NEW.bin`, but there is no guarantee that a corrupted firmware won't damage the bootloader or leave the radio in a state that requires JTAG recovery. Do not use this tool on a firmware version other than v3.7.2 unless you have a JTAG debug probe and are prepared to use it.
 
 The tool is available at [github.com/aramder/pmr171-logo-tool](https://github.com/aramder/pmr171-logo-tool).
 
