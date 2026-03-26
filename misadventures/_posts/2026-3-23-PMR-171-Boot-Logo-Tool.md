@@ -10,7 +10,7 @@ The PMR-171 (and all its Guohetec siblings) display a small 100x100 pixel logo o
 
 ## Finding the Boot Logo
 
-The radio runs on an STM32H743IIT6 (Cortex-M7, 2 MB flash). Starting from a full flash dump pulled over JTAG with a J-Link, a string search located `SEGGER emWin V5.44.70` in the binary. That identifies the GUI library as STemWin (ST's distribution of SEGGER emWin). emWin stores bitmaps with a 20-byte `GUI_BITMAP` header, so a scan for valid bitmap descriptors (reasonable width/height, valid stride, data pointer within flash range) identified 37 bitmaps in the firmware: icons, status indicators, and three boot logos, one per model variant. (emWin labels its pixel format "RGB565," but the actual bit layout is blue-high/red-low — what most references call BGR565.)
+The radio runs on an STM32H743IIT6 (Cortex-M7, 2 MB flash). Starting from a full flash dump pulled over SWD with a J-Link, a string search located `SEGGER emWin V5.44.70` in the binary. That identifies the GUI library as STemWin (ST's distribution of SEGGER emWin). emWin stores bitmaps with a 20-byte `GUI_BITMAP` header, so a scan for valid bitmap descriptors (reasonable width/height, valid stride, data pointer within flash range) identified 37 bitmaps in the firmware: icons, status indicators, and three boot logos, one per model variant. (emWin labels its pixel format "RGB565," but the actual bit layout is blue-high/red-low — what most references call BGR565.)
 
 <div style="max-width: 50%; margin: 0 auto;">
 {% include gallery.html
@@ -50,7 +50,7 @@ A full-screen 320x240 image: 153,600 bytes of pixel data + 20-byte emWin header 
 
 ## From Debug Probe to USB Stick
 
-The initial workflow required JTAG: dump firmware, patch, flash back. The PMR-171 has a simpler path. Its bootloader (UHSDR-derived) checks for `FW-NEW.bin` on a FAT32 USB stick at power-on. If found, it erases Bank 2 and programs the file starting at `0x08020000`.
+The initial workflow required SWD: dump firmware, patch, flash back. The PMR-171 has a simpler path. Its bootloader (UHSDR-derived) checks for `FW-NEW.bin` on a FAT32 USB stick at power-on. If found, it erases Bank 2 and programs the file starting at `0x08020000`.
 
 The OEM distributes firmware updates in exactly this format: Bank 2 contents only, trailing `0xFF` trimmed, no header or checksum. The tool uses the same file as its input:
 
@@ -88,8 +88,8 @@ The tool supports all eight models. A `--universal` flag injects a small Thumb-2
 
 ## Version Compatibility
 
-The patch offsets are hard-coded for firmware v3.7.2 (build `Dec 22 2025 09:25:53`). A different firmware version will have different code layout, and applying these patches to it will produce a corrupted firmware. In most cases the radio can be recovered by USB-flashing a known-good `FW-NEW.bin`, but there is no guarantee that a corrupted firmware won't damage the bootloader or leave the radio in a state that requires JTAG recovery. Do not use this tool on a firmware version other than v3.7.2 unless you have a JTAG debug probe and are prepared to use it.
+The patch offsets are hard-coded for firmware v3.7.2 (build `Dec 22 2025 09:25:53`). A different firmware version will have different code layout, and applying these patches to it will produce a corrupted firmware. In most cases the radio can be recovered by USB-flashing a known-good `FW-NEW.bin`, but there is no guarantee that a corrupted firmware won't damage the bootloader or leave the radio in a state that requires SWD recovery. Do not use this tool on a firmware version other than v3.7.2 unless you have a JTAG debug probe and are prepared to use it.
 
 The tool is available at [github.com/aramder/pmr171-logo-tool](https://github.com/aramder/pmr171-logo-tool).
 
-*Disclosure: both the reverse engineering and this writeup were done with heavy AI assistance. I directed the investigation, provided the hardware and JTAG dumps, and verified results on the physical radio. The LLM handled disassembly analysis, script writing, pattern matching through the binary, and drafting this post. There may be mistakes, misunderstandings, or inaccuracies in the technical details.*
+*Disclosure: both the reverse engineering and this writeup were done with heavy AI assistance. I directed the investigation, provided the hardware and SWD dumps, and verified results on the physical radio. The LLM handled disassembly analysis, script writing, pattern matching through the binary, and drafting this post. There may be mistakes, misunderstandings, or inaccuracies in the technical details.*
