@@ -67,3 +67,75 @@ It's quite a blast to zoom around the LALS track. I hope to continue to make upd
 Here's almost 10 minutes of unedited footage of a loop around the LALS track if you're craving a soundtrack for rereading this post.
 
 {% include youtubePlayer.html id="-Lr9_5z4Kt0" %}
+
+---
+
+## Appendix: Parts List
+
+> Added June 10, 2026. I've received a number of requests for more information on the design, so here's a breakdown of the major components used in this build.
+
+A few recommendations for anyone looking to build a rail bicycle like this:
+
+- Use a Shimano geared hub with an internal brake. The full sized brake disc is NOT worth it. Even with both axles braking, the train doesn't have enough braking force to warrant the pain of making the disc work.
+- Steel is definitely overkill for the suspension and bearing blocks. Aluminum should do just fine and be easier to fabricate.
+
+### Downloads
+
+DXF files for the waterjet-cut suspension and bracket components:
+
+- [Suspension slide plate](https://aramd.net/images/McMaster-Car/Suspension%20slide%20plate.dxf)
+- [Spring Plate](https://aramd.net/images/McMaster-Car/Spring%20Plate.dxf)
+- [Coupler bracket](https://aramd.net/images/McMaster-Car/Coupler%20bracket.dxf)
+- [Safety Chain Plate](https://aramd.net/images/McMaster-Car/Safety%20Chain%20Plate.dxf)
+
+### Frame Extrusion
+
+**1.5" ultralight extrusion** from Automation Direct ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/t-slotted_rails/1515cul)):
+
+- 3qty 32" for chassis and motor mount
+- 3qty 7" for chassis
+
+**1" ultralight extrusion** from Automation Direct ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/t-slotted_rails/1010c)):
+
+- 2qty 9" for grips/handles
+- 2qty 6" for grip/handle extensions
+- 2qty 6.5" for seat mount
+
+### Misc Hardware
+
+- 1.5" slot nuts ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/nuts_for_t-slotted_rails/161123))
+- 1" slot nuts ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/nuts_for_t-slotted_rails/151037))
+- Flanged screws ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/fasteners_for_t-slotted_rails/151041)), used for everything except the gusseted 90deg bracket
+- Button head screws ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/fasteners_for_t-slotted_rails/151040)), for gusseted 90deg bracket
+- 4qty gusseted 90deg bracket for handles ([link](https://www.automationdirect.com/adc/shopping/catalog/structural_frames_-z-_rails/brackets_for_t-slotted_rails/151063))
+
+### Suspension and Powertrain
+
+- Springs ([McMaster 9657K354](https://www.mcmaster.com/9657K354/))
+- Shaft ([McMaster 1497K101](https://www.mcmaster.com/1497K101/)). I ended up getting this 2ft shaft and cutting it into two 12" pieces.
+- Shimano gear hub from [AliExpress](https://www.aliexpress.us/item/3256804859882701.html?spm=a2g0o.order_list.order_list_main.24.30521802wuDpop&gatewayAdapt=glo2usa)
+- 160mm Shimano brake disc from [AliExpress](https://www.aliexpress.us/item/3256805479913835.html?spm=a2g0o.order_list.order_list_main.14.30521802wuDpop&gatewayAdapt=glo2usa)
+- Shimano hydraulic brake kit from [AliExpress](https://www.aliexpress.us/item/3256805225676100.html?spm=a2g0o.order_list.order_list_main.41.30521802wuDpop&gatewayAdapt=glo2usa)
+- Bafang shift sensor from [AliExpress](https://www.aliexpress.us/item/2255800663516901.html?spm=a2g0o.order_list.order_list_main.46.30521802wuDpop&gatewayAdapt=glo2usa)
+- Bafang ebike Conversion Kit BBS02B 48V 750W. Unfortunately the listing I bought this from ended, but you can find it elsewhere on AliExpress.
+- For the battery, I purchased a kit and assembled the battery pack myself. Presumably you can find the ebike motor and a ready-made battery from somewhere online.
+- 140mm crank arms from [Amazon](https://www.amazon.com/gp/product/B0CM8Q14CM/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1). The standard length crank arms that come in the ebike kit are too long for a recumbent seating position.
+- Motor mount tube: 1.5" OD x 0.083" wall x 1.334" ID aluminum round tube 6061-T6 from [Online Metals](https://www.onlinemetals.com/en/buy/aluminum/1-5-od-x-0-083-wall-x-1-334-id-aluminum-round-tube-6061-t6-drawn/pid/4361). I do not have the CAD for the bracket used for this tube.
+- 12 tooth sprocket for #40 roller chain, 1" bore (40B12) from [The Big Bearing Store](https://www.thebigbearingstore.com/12-tooth-sprocket-for-40-roller-chain/)
+- 24 tooth A plate sprocket for #40 roller chain (40A24) from [The Big Bearing Store](https://www.thebigbearingstore.com/24-tooth-a-plate-sprocket-for-40-roller-chain/)
+- 17 tooth sprocket for #40 roller chain, 1" bore (40B17) from [The Big Bearing Store](https://www.thebigbearingstore.com/17-tooth-sprocket-for-40-roller-chain/)
+- #40 roller chain, 10ft sections (40-1R) from [The Big Bearing Store](https://www.thebigbearingstore.com/40-roller-chain/)
+- Bearings: fairly standard 1" sealed bearings. I bought these in person and don't recall the exact model.
+- Several 1" shaft collars. I can't find the exact listing.
+
+### Other
+
+- Chair Wise 8WD734PLS-660 Low Back Boat Seat, Grey/Navy. Unfortunately the listing I bought this from ended, but you can find it online easily.
+- 4 channel 12V relay board from [AliExpress](https://www.aliexpress.us/item/3256805663897937.html?spm=a2g0o.order_list.order_list_main.87.30521802wuDpop&gatewayAdapt=glo2usa)
+- Timer module for flashing the FRED from [AliExpress](https://www.aliexpress.us/item/2251832828515637.html?spm=a2g0o.order_list.order_list_main.82.30521802wuDpop&gatewayAdapt=glo2usa)
+- 48V to 12V 10A DC/DC converter from [AliExpress](https://www.aliexpress.us/item/3256805289139647.html?spm=a2g0o.order_list.order_list_main.150.30521802wuDpop&gatewayAdapt=glo2usa)
+- 12V 6 circuit fuse block with ground from [Amazon](https://www.aliexpress.us/item/3256805289139647.html?spm=a2g0o.order_list.order_list_main.150.30521802wuDpop&gatewayAdapt=glo2usa)
+- Headlight from [Amazon](https://www.amazon.com/gp/product/B01HTXANFC/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (4 pack)
+- Scooter taillight for FRED from [AliExpress](https://www.aliexpress.us/item/3256805675629576.html?spm=a2g0o.order_list.order_list_main.154.30521802wuDpop&gatewayAdapt=glo2usa)
+- Enclosure for electronics from [Amazon](https://www.amazon.com/gp/product/B0BP7D59JK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), 8.7"x6.7"x4.3" option
+- Shimano single speed chain. I purchased this in person from a bike shop.
