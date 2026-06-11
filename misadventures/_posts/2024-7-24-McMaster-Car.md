@@ -125,6 +125,7 @@ DXF files for the waterjet-cut suspension and bracket components:
 - 24 tooth A plate sprocket for #40 roller chain (40A24) from [The Big Bearing Store](https://www.thebigbearingstore.com/24-tooth-a-plate-sprocket-for-40-roller-chain/)
 - 17 tooth sprocket for #40 roller chain, 1" bore (40B17) from [The Big Bearing Store](https://www.thebigbearingstore.com/17-tooth-sprocket-for-40-roller-chain/)
 - #40 roller chain, 10ft sections (40-1R) from [The Big Bearing Store](https://www.thebigbearingstore.com/40-roller-chain/)
+- Shimano single speed chain. I purchased this in person from a bike shop.
 - Bearings: fairly standard 1" sealed bearings. I bought these in person and don't recall the exact model.
 - Several 1" shaft collars. I can't find the exact listing.
 
@@ -138,4 +139,3 @@ DXF files for the waterjet-cut suspension and bracket components:
 - Headlight from [Amazon](https://www.amazon.com/gp/product/B01HTXANFC/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (4 pack)
 - Scooter taillight for FRED from [AliExpress](https://www.aliexpress.us/item/3256805675629576.html?spm=a2g0o.order_list.order_list_main.154.30521802wuDpop&gatewayAdapt=glo2usa)
 - Enclosure for electronics from [Amazon](https://www.amazon.com/gp/product/B0BP7D59JK/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), 8.7"x6.7"x4.3" option
-- Shimano single speed chain. I purchased this in person from a bike shop.
