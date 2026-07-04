@@ -3,21 +3,13 @@ layout: post
 category: animation
 title: "Ring and Play: Automated Themed Phones"
 ---
-<div style="max-width: 70%; margin: 0 auto;">
-
-![one_enclosure_one_phone](/images/Auto-Ringing_Phones/one_enclosure_one_phone.jpg)
-
-</div>
+<img class="shrunk" src="/images/Auto-Ringing_Phones/one_enclosure_one_phone.jpg" alt="One enclosure with a test phone">
 
 I recently worked on a telephone installation for a themed venue that wanted a set of telephones for guests to interact with. The two phones sit inside and outside the venue, and ring occasionally to invite guests to pick up the handset. When someone answers, an in-character recording plays that matches the location and event.<!--more-->
 
 To accomplish this, I used a telephone line simulator that handles phone power and generates ringdown voltage for the field handset, a basic timer module, a custom perfboard assembly with an audio transformer for injecting audio into the phone line, and a Gilderfluke Sd-25 MP3 player for playback.
 
-<div style="max-width: 70%; margin: 0 auto;">
-
-![panel](/images/Auto-Ringing_Phones/panel.jpg)
-
-</div>
+<img class="shrunk" src="/images/Auto-Ringing_Phones/panel.jpg" alt="Panel">
 
 The panel is installed in a waterproof enclosure with just the two RJ12s for each unit's phone line and a 120VAC input cord.
 
