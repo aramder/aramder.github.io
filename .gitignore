@@ -5,6 +5,7 @@ _site
 .bundle
 .sass-cache
 .github
+.vscode
 .venv
 Gemfile
 Gemfile.lock
