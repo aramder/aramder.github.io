@@ -40,7 +40,7 @@ That pinout is the whole interface, and it's simple enough that you don't strict
 
 ![ORC Rev A (green, right) next to the OEM PMUN1046A control PCB (blue, left), angled view](/images/ORC/side_by_side_angle.jpg)
 
-My replacement keeps the same two-domain shape as Motorola's - isolated logic on one side, coil drive on the other - but with parts I can actually buy and firmware I can actually write:
+My replacement keeps the same two-domain shape as Motorola's - isolated logic on one side, coil drive on the other - but with parts I can actually buy and firmware I can actually write. The full [schematic is on github](https://github.com/aramder/orc/blob/main/hardware/orc.pdf) if you'd rather just read it:
 
 - **ESP32-C3 Super Mini** - the MCU at the heart of the controller board. It handles the CAN and USB external interfaces, and controls the relays over the isolated I2C barrier.
 - **[SN65HVD230](https://www.ti.com/product/SN65HVD230)** - 3.3 V CAN transceiver. Bus ESD protection is built into the part, and a 120 ohm termination resistor can be connected via a removable jumper.
