@@ -4,7 +4,7 @@ category: misadventures
 title: Open Relay Controller for the Motorola PMUN1046A
 ---
 
-![Open Relay Controller Rev A PCB (green) installed in the PMUN1046A enclosure alongside the OEM Motorola relay board](/images/ORC/ORC_and_relays_in_PMUN1046A.jpg)
+![Open Relay Controller Rev A PCB (green) installed in the PMUN1046A enclosure alongside the OEM Motorola relay board](/images/ORC/ORC_and_relays_in_PMUN1046A.jpg){: style="width: 60%; display: block; margin: 0 auto;"}
 
 The Motorola PMUN1046A is a well-engineered Power Distribution Module, featuring 10 channels of 15 A fused switching. Fortunately, they are commonly available on the used market. Unfortunately, they can only communicate with proprietary Motorola equipment. I decided to make a replacement for the unit's internal controller PCB assembly which can speak CANopen or USB.
 
@@ -40,7 +40,7 @@ That pinout is the whole interface, and it's simple enough that you don't strict
 
 ![ORC Rev A (green, right) next to the OEM PMUN1046A control PCB (blue, left), angled view](/images/ORC/side_by_side_angle.jpg)
 
-My replacement keeps the same two-domain shape as Motorola's - isolated logic on one side, coil drive on the other - but with parts I can actually buy and firmware I can actually write. The full [schematic is on github](https://github.com/aramder/orc/blob/main/hardware/orc.pdf) if you'd rather just read it:
+My replacement keeps the same two-domain shape as Motorola's, with isolated logic on one side, coil drive on the other. The full [schematic is on github](https://github.com/aramder/orc/blob/main/hardware/orc.pdf) if you'd rather just read it:
 
 - **ESP32-C3 Super Mini** - the MCU at the heart of the controller board. It handles the CAN and USB external interfaces, and controls the relays over the isolated I2C barrier.
 - **[SN65HVD230](https://www.ti.com/product/SN65HVD230)** - 3.3 V CAN transceiver. Bus ESD protection is built into the part, and a 120 ohm termination resistor can be connected via a removable jumper.
@@ -55,7 +55,7 @@ Control works over either CAN or USB, from the same firmware, against the same r
 
 The control board uses the original alignment posts and fasteners. The original board-to-board cable mates to a shrouded 0.1" pitch male pin header, so we can just use an unshrouded header and confidently call it a day... until the PCB arrives and the through-hole pins short against the enclosure. Some lead trimming and liberal Kapton tape application allow for a clean (enough) fit in the PMUN1046A's gorgeous cast enclosure.
 
-![ORC Rev A PCB alone in the PMUN1046A enclosure, showing the CAN bus screw terminal, DIP address switches, and USB-C programming port](/images/ORC/ORC_in_PMUN1046A.jpg)
+![ORC Rev A PCB alone in the PMUN1046A enclosure, showing the CAN bus screw terminal, DIP address switches, and USB-C programming port](/images/ORC/ORC_in_PMUN1046A.jpg){: style="width: 60%; display: block; margin: 0 auto;"}
 
 The source for this project, both the firmware and hardware, is available on github at [aramder/orc](https://github.com/aramder/orc).
 
