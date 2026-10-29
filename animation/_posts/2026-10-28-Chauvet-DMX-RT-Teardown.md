@@ -33,6 +33,7 @@ The unit is built from two PCBs. The control board (silkscreen "BL-DMX-12V relay
 
 {% include annotated_image.html
    image="/images/Chauvet_DMX-RT_Teardown/control_board_top.jpg"
+   width="50%"
    alt="Chauvet DMX-RT control board top view showing the GD32F103RCT6 microcontroller under a Chauvet version 1.0 sticker, 8 MHz crystal, four-digit display, buttons, LEDs, and micro SD socket"
    hotspots='[
      {"x":68.0,"y":22.0,"label":"GD32F103RCT6","desc":"GigaDevice GD32F103RCT6: Arm Cortex-M3 microcontroller, 108 MHz, 256 KB flash, 48 KB SRAM, LQFP64","url":"https://www.gd32mcu.com/data/documents/datasheet/GD32F103xx_Datasheet_Rev2.12.pdf"},
@@ -51,9 +52,9 @@ Per the <a href="https://www.gd32mcu.com/data/documents/datasheet/GD32F103xx_Dat
 
 Chauvet's manual shows what the firmware does with it. The menu on the four-digit display has four top-level entries: SEtU (trigger type, single-shot or looped playback, which file to play, delay, and how recording starts and stops), rECo (record a file), rUn (play a file by hand), and vEr (bootloader and application versions). Shows are numbered F000 to F999. The error codes tell us more: err1 through err7 cover file system initialization, a missing working directory, file creation, reading the DMX file tag, a bad file length, and failed DMX data reads. That list shows the firmware mounts a FAT file system on the card and checks a tag and length on each show file before playing it.
 
-![GD32F103RCT6 under the Chauvet version 1.0 sticker](/images/Chauvet_DMX-RT_Teardown/mcu_with_sticker.jpg)
+![GD32F103RCT6 under the Chauvet version 1.0 sticker](/images/Chauvet_DMX-RT_Teardown/mcu_with_sticker.jpg){: style="width: 75%; display: block; margin: 0 auto;"}
 
-![GigaDevice GD32F103RCT6 marking, with the sticker removed](/images/Chauvet_DMX-RT_Teardown/mcu_closeup.jpg)
+![GigaDevice GD32F103RCT6 marking, with the sticker removed](/images/Chauvet_DMX-RT_Teardown/mcu_closeup.jpg){: style="width: 75%; display: block; margin: 0 auto;"}
 
 ### Micro SD Storage
 
@@ -69,6 +70,7 @@ There's no display driver IC anywhere on the board. The four seven-segment digit
 
 {% include annotated_image.html
    image="/images/Chauvet_DMX-RT_Teardown/io_board_top.jpg"
+   width="50%"
    alt="Chauvet DMX-RT I/O and power board showing the DC jack, 7805 and 1117C-3.3 regulators, Mornsun isolated DC/DC converter, four TD 601 optocouplers, 3PEAK TP75176E RS-485 transceiver, and two XLR connectors"
    hotspots='[
      {"x":85.1,"y":69.2,"label":"6-pin connector","desc":"6-pin board-to-board connector (DMX-OUT2) carrying power and signals to the control board"},
@@ -92,7 +94,7 @@ The DC jack feeds an SS210 Schottky diode, then a 7805 5 V linear regulator in a
 
 DMX512 is a communication protocol that uses RS-485 for its physical signaling layer. The RS-485 interface is provided by a **3PEAK TP75176E** (<a href="https://datasheet4u.com/download/1318218/TP75176E.html" target="_blank" rel="noopener">datasheet</a>), a transceiver in the industry-standard 75176 pinout. It is powered from the isolated 5 V rail. A single transceiver serves both XLRs, working half-duplex: the DIR optocoupler switches it between receiving (recording from DMX IN) and driving (playing back to DMX OUT). Because the XLRs share one transceiver, DMX IN is not a pass-through. An upstream controller and the DMX-RT can't both drive the line at once.
 
-![3PEAK TP75176E RS-485 transceiver](/images/Chauvet_DMX-RT_Teardown/rs485_75176e.jpg)
+![3PEAK TP75176E RS-485 transceiver](/images/Chauvet_DMX-RT_Teardown/rs485_75176e.jpg){: style="width: 75%; display: block; margin: 0 auto;"}
 
 ### TD 601 Optocouplers
 
@@ -100,7 +102,7 @@ Four optocouplers marked "TD 601 1A19" sit on the I/O board, all in five-lead sm
 
 The TD 601 looks like a logic-gate optocoupler in the HCPL-M601 family. Those are rated at 10 Mbd, far above the 250 kbit/s that DMX512 needs.
 
-![TD 601 1A19 optocouplers](/images/Chauvet_DMX-RT_Teardown/optocouplers_u1_u4.jpg)
+![TD 601 1A19 optocouplers](/images/Chauvet_DMX-RT_Teardown/optocouplers_u1_u4.jpg){: style="width: 75%; display: block; margin: 0 auto;"}
 
 ## System Architecture
 
@@ -197,7 +199,7 @@ Nothing in the file separates these parts. The preamble is simply the first 512 
 
 The frame interval is what sets playback speed. Leave it at zero and the DMX-RT plays the frames as fast as it can render them, which looks like a very fast show. A 512-channel record is 531 bytes, so a 30 second show at 30 fps comes to about 478 KB.
 
-A few details are still unexplained, including the trailing pad and what makes the recorder roll over to a second file.
+Overall, the file format, MCU selection, presumed concept of operation, and hardware are all good, sensible choices.
 
 ## Resources
 

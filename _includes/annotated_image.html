@@ -19,6 +19,9 @@
                   label  : short name shown in the tooltip header
                   desc   : one-sentence description
                   url    : (optional) link to datasheet or reference
+    width     — (optional) rendered width of the image, e.g. "50%". The image
+                is centered. Defaults to the full column width. Hotspot
+                positions are percentages of the image, so they still line up.
 
   Coordinate tip:
     Open the image in any editor that shows pixel coordinates.
@@ -28,7 +31,7 @@
 
 {% assign ai_id = include.image | slugify %}
 
-<div class="ai-wrap" id="ai-{{ ai_id }}" data-hotspots='{{ include.hotspots }}'>
+<div class="ai-wrap" id="ai-{{ ai_id }}" data-hotspots='{{ include.hotspots }}'{% if include.width %} style="width: {{ include.width }}; display: block; margin: 0 auto;"{% endif %}>
   <img src="{{ include.image }}" alt="{{ include.alt }}" class="ai-img" loading="lazy">
 </div>
 
