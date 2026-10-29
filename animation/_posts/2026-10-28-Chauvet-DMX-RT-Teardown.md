@@ -82,7 +82,9 @@ There's no display driver IC anywhere on the board. The four seven-segment digit
      {"x":68.1,"y":49.2,"label":"TD 601","desc":"TD 601 1A19 optocoupler (DMX TX, RX, or direction control)"},
      {"x":55.5,"y":49.2,"label":"TD 601","desc":"TD 601 1A19 optocoupler (DMX TX, RX, or direction control)"},
      {"x":70.1,"y":70.7,"label":"TD 601 (trigger)","desc":"TD 601 1A19 optocoupler, separate from the other three. Couples the trigger input to the MCU."},
-     {"x":35.5,"y":86.5,"label":"SS210","desc":"SS210: 2 A, 100 V Schottky diode near the DC jack"}
+     {"x":35.5,"y":86.5,"label":"SS210","desc":"SS210: 2 A, 100 V Schottky diode near the DC jack, providing reverse polarity protection"},
+     {"x":47.2,"y":89.5,"label":"TVS diode","desc":"TVS diode across the input rail, protecting the board from supply transients"},
+     {"x":18.9,"y":47,"label":"DMX TVS diodes","desc":"TVS diodes protecting the DMX lines at the XLR connector"}
    ]'
 %}
 
@@ -103,6 +105,40 @@ Four optocouplers marked "TD 601 1A19" sit on the I/O board, all in five-lead sm
 The TD 601 looks like a logic-gate optocoupler in the HCPL-M601 family. Those are rated at 10 Mbd, far above the 250 kbit/s that DMX512 needs.
 
 ![TD 601 1A19 optocouplers](/images/Chauvet_DMX-RT_Teardown/optocouplers_u1_u4.jpg){: style="width: 75%; display: block; margin: 0 auto;"}
+
+## File Format
+
+Chauvet doesn't publish the DMX-RT's show file format. I worked it out from five recordings made on the unit. That lets me build shows in my own tooling and copy them to the card instead of recording them live. Everything below is reverse engineered, not official.
+
+Show files live on the card as `RECORDER/REC000.COD`, `REC001.COD`, and so on. Each file is a 512-byte preamble, then a series of fixed-size records with one record per DMX frame, then a short run of zero padding.
+
+```
+Preamble         512 bytes
+Record 0         19-byte header + one byte per DMX channel
+Record 1         ...
+...
+Record N-1
+Trailing pad     16 to 452 bytes of zeros in the captures
+```
+
+The preamble is almost entirely zeros. Its one meaningful field is the highest value of the seconds counter (see below), stored twice as a 32-bit little-endian integer. In practice that is the show length in seconds minus one.
+
+Each record starts with a 19-byte header:
+
+| Field           | Size    | Meaning                                              |
+| --------------- | ------- | ---------------------------------------------------- |
+| Tag             | 8 bytes | The ASCII string "framedmx"                          |
+| Version         | 1 byte  | Always 1 in the captures                             |
+| Channel count   | 2 bytes | Big-endian, the same in every record of a file       |
+| Frame interval  | 2 bytes | Time between frames in 10 µs units (3333 is 30 fps) |
+| Seconds counter | 1 byte  | Elapsed seconds since the show started               |
+| Reserved        | 5 bytes | Zeros, in two groups                                 |
+
+The header is followed by one byte for each DMX channel. The preamble is little-endian while the channel count and frame interval are big-endian, which is an odd mix.
+
+Nothing in the file separates these parts. The preamble is simply the first 512 bytes, and the first record starts right after it. Records run back to back, and each one is 19 bytes plus its channel count, so record n starts at 512 + n × (19 + channel count). The channel count is stored in the record headers rather than the preamble, which means the first record's header has to be read before the rest can be found. There is no record count or length field anywhere. The "framedmx" tag marks the start of each record, and the records end at the first place where the tag is missing. Everything after that is padding.
+
+The frame interval is what sets playback speed. Leave it at zero and the DMX-RT plays the frames as fast as it can render them, which looks like a very fast show. A 512-channel record is 531 bytes, so a 30 second show at 30 fps comes to about 478 KB.
 
 ## System Architecture
 
@@ -161,43 +197,9 @@ graph LR
 
 The DMX-RT is a tidy, conventional design. One microcontroller does everything, one RS-485 transceiver handles the DMX line, and two linear regulators cover power. The GD32F103 in place of an STM32F103 looks like a routine cost decision on a pin-compatible Cortex-M3.
 
-The DMX interface is isolated from the logic with optocouplers and an isolated 5 V converter. That is good practice.
+The DMX interface is isolated from the logic with optocouplers and an isolated 5 V converter. That is good practice. The I/O board is also designed so it can be assembled as a non-isolated version. Placing R11, R12, R13, R14, and R15 allows the isolated supply and the optical isolators to be depopulated. Naught naughty.
 
-The transceiver is shared between the two XLRs and between transmit and receive. The DMX-RT can listen or drive the line but not both. It can't pass DMX through, and it can't be triggered by a master DMX controller to play back a recording. The DMX-RT4 adds that: its manual describes a DMX Trigger Option that lets a DMX signal trigger four scenes. I've used it on another project and it works well. It's a nice upgrade if you want to give a client a show that their existing DMX system can trigger, and the same goes for the client's client, and their client, down n levels of subcontractors. You buy it once and the whole chain benefits. The payoff is O(n). Everyone subcontracts everything, and n is rarely small.
-
-## File Format
-
-Chauvet doesn't publish the DMX-RT's show file format. I worked it out from five recordings made on the unit. That lets me build shows in my own tooling and copy them to the card instead of recording them live. Everything below is reverse engineered, not official.
-
-Show files live on the card as `RECORDER/REC000.COD`, `REC001.COD`, and so on. Each file is a 512-byte preamble, then a series of fixed-size records with one record per DMX frame, then a short run of zero padding.
-
-```
-Preamble         512 bytes
-Record 0         19-byte header + one byte per DMX channel
-Record 1         ...
-...
-Record N-1
-Trailing pad     16 to 452 bytes of zeros in the captures
-```
-
-The preamble is almost entirely zeros. Its one meaningful field is the highest value of the seconds counter (see below), stored twice as a 32-bit little-endian integer. In practice that is the show length in seconds minus one.
-
-Each record starts with a 19-byte header:
-
-| Field           | Size    | Meaning                                              |
-| --------------- | ------- | ---------------------------------------------------- |
-| Tag             | 8 bytes | The ASCII string "framedmx"                          |
-| Version         | 1 byte  | Always 1 in the captures                             |
-| Channel count   | 2 bytes | Big-endian, the same in every record of a file       |
-| Frame interval  | 2 bytes | Time between frames in 10 µs units (3333 is 30 fps) |
-| Seconds counter | 1 byte  | Elapsed seconds since the show started               |
-| Reserved        | 5 bytes | Zeros, in two groups                                 |
-
-The header is followed by one byte for each DMX channel. The preamble is little-endian while the channel count and frame interval are big-endian, which is an odd mix.
-
-Nothing in the file separates these parts. The preamble is simply the first 512 bytes, and the first record starts right after it. Records run back to back, and each one is 19 bytes plus its channel count, so record n starts at 512 + n × (19 + channel count). The channel count is stored in the record headers rather than the preamble, which means the first record's header has to be read before the rest can be found. There is no record count or length field anywhere. The "framedmx" tag marks the start of each record, and the records end at the first place where the tag is missing. Everything after that is padding.
-
-The frame interval is what sets playback speed. Leave it at zero and the DMX-RT plays the frames as fast as it can render them, which looks like a very fast show. A 512-channel record is 531 bytes, so a 30 second show at 30 fps comes to about 478 KB.
+The transceiver is shared between the two XLRs and between transmit and receive. The DMX-RT can listen or drive the line but not both. It can't pass DMX through, and it can't be triggered by a master DMX controller to play back a recording. The DMX-RT4 adds that: its manual describes a DMX Trigger Option that lets a DMX signal trigger four scenes. I've used it on another project and it works well. It's a nice upgrade if you want to give a client (or the client's client, times n) a show that an existing DMX system can trigger.
 
 Overall, the file format, MCU selection, presumed concept of operation, and hardware are all good, sensible choices.
 
